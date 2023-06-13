@@ -19,10 +19,17 @@ namespace MATINFO.Model
         {
             LesAttributions = new ObservableCollection<Attribution>();
             LesCategories = new ObservableCollection<Categorie>();
+            LesMateriels= new ObservableCollection<Materiel>();
+            LesPersonnels= new ObservableCollection<Personnel>();
             Attribution e = new Attribution();
             LesAttributions = e.FindAll();
             Categorie c = new Categorie();
             LesCategories = c.FindAll();
+            Materiel m = new Materiel();
+            LesMateriels = m.FindAll();
+            Personnel p = new Personnel();
+            LesPersonnels = p.FindAll();
+
         }
     }
 }

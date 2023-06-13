@@ -1,7 +1,9 @@
-﻿using MATINFO.MODEL;
+﻿using MATINFO.Model;
+using MATINFO.MODEL;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -106,9 +108,21 @@ namespace MATINFO
             throw new NotImplementedException();
         }
 
-        ObservableCollection<Materiel> Crud<Materiel>.FindAll()
+        public ObservableCollection<Materiel> FindAll()
         {
-            throw new NotImplementedException();
+            ObservableCollection<Materiel> LesMateriels = new ObservableCollection<Materiel>();
+            DataAccess accesBD = new DataAccess();
+            String requete = "select * from materiel";
+            DataTable datas = accesBD.GetData(requete);
+            if (datas != null)
+            {
+                foreach (DataRow row in datas.Rows)
+                {
+                    Materiel e = new Materiel((string)row["codebarreinventaire"],(string)row["nommateriel"], (string)row["referenceconstructeurmateriel"],new Categorie(),(int)row["idmateriel"]);
+                    LesMateriels.Add(e);
+                }
+            }
+            return LesMateriels;
         }
 
         ObservableCollection<Materiel> Crud<Materiel>.FindBySelection(string criteres)
