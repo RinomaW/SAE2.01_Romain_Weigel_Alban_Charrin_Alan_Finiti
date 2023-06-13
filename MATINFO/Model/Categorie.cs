@@ -96,7 +96,7 @@ namespace MATINFO
         {
             ObservableCollection<Categorie> LesCategorie = new ObservableCollection<Categorie>();
             DataAccess accesBD = new DataAccess();
-            String requete = "select nomcategorie from categorie_materiel;";
+            String requete = "select nomcategorie from categorie_materiel";
             DataTable datas = accesBD.GetData(requete);
             if (datas != null)
             {
