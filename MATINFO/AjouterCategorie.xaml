@@ -22,9 +22,9 @@
                 x:Name="TBNomCate"
                 Width="180"
                 Height="26"
-                MouseLeftButtonDown="TextBox_MouseLeftButtonDown"
+                
                 Text="Nom de la catégorie"
-                TextWrapping="Wrap" TextChanged="TBNomCate_TextChanged" />
+                TextWrapping="Wrap" GotFocus="TBNomCate_GotFocus"/>
             <Rectangle Width="100" Height="15" />
             <Button
                 Width="200"

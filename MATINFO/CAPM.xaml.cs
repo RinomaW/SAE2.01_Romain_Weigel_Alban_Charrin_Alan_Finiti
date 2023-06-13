@@ -30,9 +30,9 @@ namespace MATINFO
         }
 
 
-
         private void BTCate_Click(object sender, RoutedEventArgs e)
         {
+            this.Visibility = Visibility.Hidden;
             AjouterCategorie ajoutCate = new AjouterCategorie();
             ajoutCate.Show();
         }
