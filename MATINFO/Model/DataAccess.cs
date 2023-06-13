@@ -3,6 +3,7 @@
 // Created: samedi 26 novembre 2022 11:00:28
 // Purpose: Definition of Class DataAccess
 
+using System;
 using System.Data;
 using System.Windows;
 using Npgsql;
@@ -34,15 +35,15 @@ namespace MATINFO.Model
           {
               NpgSQLConnect = new NpgsqlConnection
               {
-                  ConnectionString = "Server=srv-peda-new;port=5433;Database=weigelr;Search Path=Sae;uid=weigelr;password=VUFdOL;" // A MODIFIER POUR VOTR BD
+                  ConnectionString = "Server=srv-peda-new;port=5433;Database=weigelr;Search Path=sae;uid=weigelr;password=VUFdOL;" // A MODIFIER POUR VOTR BD
               };
               NpgSQLConnect.Open();
                 
                 return NpgSQLConnect.State.Equals(System.Data.ConnectionState.Open);
           }
-          catch
+          catch (Exception e)
           {
-                
+                MessageBox.Show(e.Message);
                 return false;
           }
       }
@@ -93,12 +94,12 @@ namespace MATINFO.Model
                     return null;
                 }
           }
-          catch 
-          {
-              CloseConnection();
-              return null;
-          }
-      }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+                return null;
+            }
+        }
       
       /// <summary>
       /// Permet d'insérer, supprimer ou modifier des données
@@ -119,13 +120,12 @@ namespace MATINFO.Model
               else
                   return 0;
           }
-          catch 
-          {
-                
-                CloseConnection();
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
                 return 0;
-          }
-      }
+            }
+        }
    
    }
 }

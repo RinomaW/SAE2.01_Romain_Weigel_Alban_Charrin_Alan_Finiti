@@ -14,15 +14,15 @@ namespace MATINFO
         private string nomMateriel;
         private string reference;
         private Categorie categorie;
-        private int iD_Materiel = 1;
+        private int iD_Materiel;
         private Attribution attribution;
-        public Materiel(string codeBarre, string nomMateriel, string reference, Categorie categorie)
+        public Materiel(string codeBarre, string nomMateriel, string reference, Categorie categorie, int idmateriel)
         {
             this.CodeBarre = codeBarre;
             this.NomMateriel = nomMateriel;
             this.Reference = reference;
             this.ID_Categorie = categorie.ID_Categorie;
-            this.ID_Materiel++;
+            this.ID_Materiel = idmateriel;
         }
 
         public string CodeBarre
@@ -34,9 +34,7 @@ namespace MATINFO
 
             set
             {
-                if (value.Length == 15)
-                    codeBarre = value.ToUpper();
-                else throw new ArgumentException("valeur non négative ou supérieur à 15");
+                codeBarre = value.ToUpper();
             }
         }
 
@@ -62,10 +60,7 @@ namespace MATINFO
 
             set
             {
-                int number;
-                if (!(int.TryParse(value.Substring(0, 1), out number) || value.Substring(1, 1) != "-" || value.Length != 11))
-                    this.reference = value.ToUpper();
-                else throw new ArgumentException($"{value} is not valid.");
+               this.reference = value.ToUpper();
             }
         }
 

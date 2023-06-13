@@ -13,14 +13,13 @@ namespace MATINFO
     public class Categorie : Crud<Categorie>
     {
         private string nomCategorie;
-        private int iD_Categorie = 1;
+        private int iD_Categorie;
         public HashSet<string> nomUniques;
 
-        public Categorie(string nomCategorie)
+        public Categorie(string nomCategorie, int idCategorie)
         {
-            testNomUnique();
             this.NomCategorie = nomCategorie;
-            this.ID_Categorie++;
+            this.ID_Categorie = idCategorie;
         }
 
         public Categorie()
@@ -94,13 +93,13 @@ namespace MATINFO
         {
             ObservableCollection<Categorie> LesCategorie = new ObservableCollection<Categorie>();
             DataAccess accesBD = new DataAccess();
-            String requete = "select nomcategorie from categorie_materiel";
+            String requete = "select nomcategorie, idcategorie from categorie_materiel";
             DataTable datas = accesBD.GetData(requete);
             if (datas != null)
             {
                 foreach (DataRow row in datas.Rows)
                 {
-                    Categorie e = new Categorie((string)row["nomcategorie"]);
+                    Categorie e = new Categorie((string)row["nomcategorie"], (int)row["idcategorie"]);
                     LesCategorie.Add(e);
                 }
             }

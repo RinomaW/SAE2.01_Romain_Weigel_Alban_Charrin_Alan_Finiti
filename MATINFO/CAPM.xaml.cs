@@ -24,19 +24,13 @@ namespace MATINFO
             InitializeComponent();
         }
 
-        private void Window_Deactivated(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-
-
       
 
-        private void BTcateMBDWN(object sender, MouseButtonEventArgs e)
+
+        private void BTCate_Click(object sender, RoutedEventArgs e)
         {
+            this.Visibility = Visibility.Hidden;
             AjouterCategorie ajoutCate = new AjouterCategorie();
-            this.Close();
             ajoutCate.Show();
         }
 

@@ -9,6 +9,7 @@ using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
+using System.Windows.Media.Animation;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
@@ -24,7 +25,14 @@ namespace MATINFO
             InitializeComponent();
         }
 
-        private void TextBox_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+       
+
+        private void TBNomCate_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void TBNomCate_GotFocus(object sender, RoutedEventArgs e)
         {
             this.TBNomCate.Text = "";
         }

@@ -10,7 +10,7 @@
     Height="260"
     MinWidth="300"
     MinHeight="240"
-    Deactivated="Window_Deactivated"
+ 
     mc:Ignorable="d">
     <Grid>
         <StackPanel>
@@ -24,7 +24,8 @@
                 x:Name="BTCate"
                 Width="200"
                 Height="30"
-                Content="Catégorie" MouseLeftButtonDown="BTcateMBDWN" Click="BTCate_Click">
+                Click="BTCate_Click"
+                Content="Catégorie">
                 <Button.Resources>
                     <Style TargetType="Border">
                         <Setter Property="CornerRadius" Value="10" />
