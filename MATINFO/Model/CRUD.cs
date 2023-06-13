@@ -5,7 +5,7 @@ using System.Text;
 
 namespace MATINFO.Model
 {
-    public abstract class CRUD
+    public interface CRUD
     {
         public virtual void Create()
         {
