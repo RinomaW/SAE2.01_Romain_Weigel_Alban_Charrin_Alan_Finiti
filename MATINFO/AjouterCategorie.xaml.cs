@@ -24,9 +24,11 @@ namespace MATINFO
             InitializeComponent();
         }
 
-        private void TextBox_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+       
+
+        private void TBNomCate_TextChanged(object sender, TextChangedEventArgs e)
         {
-            this.TBNomCate.Text = "";
+
         }
     }
 }
