@@ -10,7 +10,7 @@
     Height="260"
     MinWidth="300"
     MinHeight="240"
-    mc:Ignorable="d">
+    mc:Ignorable="d" Deactivated="Window_Deactivated">
     <Grid>
         <StackPanel>
             <Label
