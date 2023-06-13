@@ -7,9 +7,10 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     Title="CAPM"
     Width="300"
-    Height="300"
+    Height="269"
     MinWidth="300"
-    MinHeight="300"
+    MinHeight="200
+"
     mc:Ignorable="d">
     <Grid>
         <StackPanel>
