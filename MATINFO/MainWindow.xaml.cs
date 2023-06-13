@@ -23,7 +23,7 @@ namespace MATINFO
     {
 
         public MainWindow()
-        {
+        {//feur
             InitializeComponent();
         }
 
