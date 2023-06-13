@@ -20,6 +20,10 @@ namespace MATINFO
             this.ID_Categorie++;
         }
 
+        public Categorie()
+        {
+        }
+
         public string NomCategorie
         {
             get

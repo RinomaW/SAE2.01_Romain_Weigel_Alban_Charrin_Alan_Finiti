@@ -1,6 +1,8 @@
 ﻿using MATINFO.Model;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -30,6 +32,7 @@ namespace MATINFO
             this.Materiel = materiel;
             this.Personnels = personnels;
         }
+        public Attribution() { }
 
         public List<string> CommentaireAttribution
         {
@@ -119,6 +122,22 @@ namespace MATINFO
         public override void Update()
         {
             base.Update();
+        }
+        public ObservableCollection<Attribution> FindAll()
+        {
+            ObservableCollection<Attribution> LesAttribution = new ObservableCollection<Attribution>();
+            DataAccess accesBD = new DataAccess();
+            String requete = "select * from est_attribue;";
+            DataTable datas = accesBD.GetData(requete);
+            if (datas != null)
+            {
+                foreach (DataRow row in datas.Rows)
+                {
+                    Attribution e = new Attribution(new List<string> { (String)row["commentaireattribution"] }, new Materiel("3135131", "projecteur", "3153651351", new Categorie("ordi")), new List<Personnel>());
+                    LesAttribution.Add(e);
+                }
+            }
+            return LesAttribution;
         }
     }
 }
