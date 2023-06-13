@@ -90,7 +90,7 @@ namespace MATINFO
             throw new NotImplementedException();
         }
 
-        ObservableCollection<Categorie> Crud<Categorie>.FindAll()
+        public ObservableCollection<Categorie> FindAll()
         {
             ObservableCollection<Categorie> LesCategorie = new ObservableCollection<Categorie>();
             DataAccess accesBD = new DataAccess();
