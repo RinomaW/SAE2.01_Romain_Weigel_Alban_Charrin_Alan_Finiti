@@ -1,4 +1,5 @@
 ﻿using MATINFO.Model;
+using MATINFO.MODEL;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -9,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace MATINFO
 {
-    public class Categorie : CRUD
+    public class Categorie : Crud<Categorie>
     {
         private string nomCategorie;
         private int iD_Categorie = 1;
@@ -68,31 +69,28 @@ namespace MATINFO
             }
         }
 
-        public override void Create()
+
+        void Crud<Categorie>.Create()
         {
-            base.Create();
+            throw new NotImplementedException();
         }
 
-        public override void Read()
+        void Crud<Categorie>.Read()
         {
-            base.Read();
+            throw new NotImplementedException();
         }
 
-        public override void Update()
+        void Crud<Categorie>.Update()
         {
-            base.Update();
+            throw new NotImplementedException();
         }
 
-        public override void Delete()
+        void Crud<Categorie>.Delete()
         {
-            base.Delete();
+            throw new NotImplementedException();
         }
 
-        public override void Select()
-        {
-            base.Select();
-        }
-        public ObservableCollection<Categorie> FindAll()
+        ObservableCollection<Categorie> Crud<Categorie>.FindAll()
         {
             ObservableCollection<Categorie> LesCategorie = new ObservableCollection<Categorie>();
             DataAccess accesBD = new DataAccess();
@@ -109,5 +107,9 @@ namespace MATINFO
             return LesCategorie;
         }
 
+        ObservableCollection<Categorie> Crud<Categorie>.FindBySelection(string criteres)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
