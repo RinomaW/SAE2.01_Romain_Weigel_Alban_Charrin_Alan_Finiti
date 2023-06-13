@@ -23,5 +23,16 @@ namespace MATINFO
         {
             InitializeComponent();
         }
+
+        private void Window_Deactivated(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+        private void BTcateMBDWN(object sender, MouseButtonEventArgs e)
+        {
+            ModifierCategorie modifCate = new ModifierCategorie();
+            this.Close();
+            modifCate.Show();
+        }
     }
 }
