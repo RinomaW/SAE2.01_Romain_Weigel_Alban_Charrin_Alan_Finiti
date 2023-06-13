@@ -93,18 +93,6 @@ namespace MATINFO
             }
         }
 
-        internal int ID_Attribution
-        {
-            get
-            {
-                return this.attribution.ID_Attribution;
-            }
-
-            set
-            {
-                this.attribution.ID_Attribution = value;
-            }
-        }
 
         public override void Create()
         {
