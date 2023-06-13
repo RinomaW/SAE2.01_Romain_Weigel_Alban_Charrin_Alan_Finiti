@@ -15,14 +15,12 @@ namespace MATINFO
         private Materiel materiel;
         private Personnel personnels;
         private DateTime dateAttribution;
-        private int iD_Attribution = 1;
         public Attribution(string commentaireAttribution, Materiel materiel, Personnel personnels)
         {
             this.CommentaireAttribution = commentaireAttribution;
             this.DateAttribution = DateTime.Today;
             this.Materiel = materiel;
             this.Personnels = personnels;
-            this.ID_Attribution++;
         }
 
         public Attribution(string commentaireAttribution, DateTime dateAttribution, Materiel materiel,Personnel personnels)
@@ -60,18 +58,6 @@ namespace MATINFO
             }
         }
 
-        public int ID_Attribution
-        {
-            get
-            {
-                return iD_Attribution;
-            }
-
-            set
-            {
-                iD_Attribution = value;
-            }
-        }
 
         internal Materiel Materiel
         {
@@ -134,7 +120,7 @@ namespace MATINFO
             {
                 foreach (DataRow row in datas.Rows)
                 {
-                    Attribution e = new Attribution("commentaireattribution" , new Materiel("3135131", "projecteur", "3153651351", new Categorie("ordi")), new Personnel());
+                    Attribution e = new Attribution(row["commentaireattribution"].ToString(), DateTime.Parse(row["dateattribution"].ToString()), new Materiel("3135131", "projecteur", "3153651351", new Categorie("ordi")), new Personnel());
                     LesAttribution.Add(e);
                 }
             }
