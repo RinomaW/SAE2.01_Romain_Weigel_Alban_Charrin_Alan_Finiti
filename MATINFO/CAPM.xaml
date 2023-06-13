@@ -10,7 +10,8 @@
     Height="260"
     MinWidth="300"
     MinHeight="240"
-    mc:Ignorable="d" Deactivated="Window_Deactivated">
+    Deactivated="Window_Deactivated"
+    mc:Ignorable="d">
     <Grid>
         <StackPanel>
             <Label
@@ -20,9 +21,12 @@
                 FontSize="18" />
             <Rectangle Width="100" Height="15" />
             <Button
+                x:Name="BTCate"
                 Width="200"
                 Height="30"
-                Content="Catégorie">
+                Click="Button_Click"
+                Content="Catégorie"
+                MouseLeftButtonDown="BTcateClick">
                 <Button.Resources>
                     <Style TargetType="Border">
                         <Setter Property="CornerRadius" Value="10" />
@@ -32,6 +36,7 @@
 
             <Rectangle Width="100" Height="15" />
             <Button
+                x:Name="BTAttri"
                 Width="200"
                 Height="30"
                 Content="Attribution">
@@ -43,6 +48,7 @@
             </Button>
             <Rectangle Width="100" Height="15" />
             <Button
+                x:Name="BTPerso"
                 Width="200"
                 Height="30"
                 Content="Personnel">
@@ -54,6 +60,7 @@
             </Button>
             <Rectangle Width="100" Height="15" />
             <Button
+                x:Name="BPMate"
                 Width="200"
                 Height="30"
                 Content="Matériel">
