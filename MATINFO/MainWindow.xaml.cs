@@ -30,7 +30,7 @@ namespace MATINFO
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             CAPM CAPM = new CAPM();
-            this.Visibility = Visibility.Hidden;
+            
             CAPM.Show();
         }
     }
