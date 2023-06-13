@@ -29,11 +29,14 @@ namespace MATINFO
             this.Close();
         }
 
-        private void BTcateClick(object sender, MouseButtonEventArgs e)
-        {
-            this.Close();
+
+
+        private void BTcateMBDWN(object sender, RoutedEventArgs e)
+        { 
             AjouterCategorie ajoutCate = new AjouterCategorie();
+            this.Close();
             ajoutCate.Show();
+           
         }
     }
 }

@@ -25,7 +25,7 @@
                 Width="200"
                 Height="30"
                 Click="BTcateClick"
-                Content="Catégorie"
+                Content="Catégorie">
                 <Button.Resources>
                     <Style TargetType="Border">
                         <Setter Property="CornerRadius" Value="10" />
