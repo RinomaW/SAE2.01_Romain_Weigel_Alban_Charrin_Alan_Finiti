@@ -16,27 +16,65 @@
             <Label
                 HorizontalAlignment="Center"
                 Content="Ajouter"
-                FontFamily="" />
+                FontFamily="72"
+                FontSize="18" />
             <Rectangle
                 Width="100"
                 Height="15"
                 Stroke="Black" />
-            <Button Height="30" Content="Catégorie" />
+            <Button
+                Width="200"
+                Height="30"
+                Content="Catégorie">
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="10" />
+                    </Style>
+                </Button.Resources>
+            </Button>
+
             <Rectangle
                 Width="100"
                 Height="15"
                 Stroke="Black" />
-            <Button Height="30" Content="Attribution" />
+            <Button
+                Width="200"
+                Height="30"
+                Content="Attribution">
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="10" />
+                    </Style>
+                </Button.Resources>
+            </Button>
             <Rectangle
                 Width="100"
                 Height="15"
                 Stroke="Black" />
-            <Button Height="30" Content="Personnel" />
+            <Button
+                Width="200"
+                Height="30"
+                Content="Personnel">
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="10" />
+                    </Style>
+                </Button.Resources>
+            </Button>
             <Rectangle
                 Width="100"
                 Height="15"
                 Stroke="Black" />
-            <Button Height="30" Content="Matériel" />
+            <Button
+                Width="200"
+                Height="30"
+                Content="Matériel">
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="10" />
+                    </Style>
+                </Button.Resources>
+            </Button>
         </StackPanel>
     </Grid>
 </Window>
