@@ -13,7 +13,7 @@
     MinHeight="700"
     mc:Ignorable="d">
     <Window.Resources>
-        <model:ApplicationData x:Name="applicationData"/>
+        <model:ApplicationData  x:Name="applicationData"/>
     </Window.Resources>
 
     <Grid>
