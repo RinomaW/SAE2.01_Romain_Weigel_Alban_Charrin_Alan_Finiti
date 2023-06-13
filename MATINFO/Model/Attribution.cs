@@ -15,14 +15,12 @@ namespace MATINFO
         private Materiel materiel;
         private Personnel personnels;
         private DateTime dateAttribution;
-        private int iD_Attribution = 1;
         public Attribution(string commentaireAttribution, Materiel materiel, Personnel personnels)
         {
             this.CommentaireAttribution = commentaireAttribution;
             this.DateAttribution = DateTime.Today;
             this.Materiel = materiel;
             this.Personnels = personnels;
-            this.ID_Attribution++;
         }
 
         public Attribution(string commentaireAttribution, DateTime dateAttribution, Materiel materiel,Personnel personnels)
@@ -60,18 +58,6 @@ namespace MATINFO
             }
         }
 
-        public int ID_Attribution
-        {
-            get
-            {
-                return iD_Attribution;
-            }
-
-            set
-            {
-                iD_Attribution = value;
-            }
-        }
 
         internal Materiel Materiel
         {
