@@ -15,18 +15,18 @@ using System.Windows.Shapes;
 namespace MATINFO
 {
     /// <summary>
-    /// Logique d'interaction pour CAPM.xaml
+    /// Logique d'interaction pour AjouterCategorie.xaml
     /// </summary>
-    public partial class CAPM : Window
+    public partial class AjouterCategorie : Window
     {
-        public CAPM()
+        public AjouterCategorie()
         {
             InitializeComponent();
         }
 
-        private void Window_Deactivated(object sender, EventArgs e)
+        private void TextBox_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-            this.Close();
+
         }
     }
 }

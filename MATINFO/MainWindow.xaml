@@ -67,7 +67,14 @@
             Margin="10,0,0,225"
             HorizontalAlignment="Left"
             VerticalAlignment="Bottom"
-            Content="Ajouter" />
+            Click="Button_Click"
+            Content="Ajouter">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="10" />
+                </Style>
+            </Button.Resources>
+        </Button>
         <Button
             Width="100"
             Height="25"
@@ -75,14 +82,26 @@
             HorizontalAlignment="Left"
             VerticalAlignment="Bottom"
             Content="Modifier"
-            RenderTransformOrigin="-0.208,-2.158" />
+            RenderTransformOrigin="-0.208,-2.158">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="10" />
+                </Style>
+            </Button.Resources>
+        </Button>
         <Button
             Width="100"
             Height="25"
             Margin="10,0,0,165"
             HorizontalAlignment="Left"
             VerticalAlignment="Bottom"
-            Content="Supprimer" />
+            Content="Supprimer">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="10" />
+                </Style>
+            </Button.Resources>
+        </Button>
 
     </Grid>
 </Window>

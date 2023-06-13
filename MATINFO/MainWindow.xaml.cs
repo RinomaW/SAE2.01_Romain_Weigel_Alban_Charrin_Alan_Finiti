@@ -26,5 +26,12 @@ namespace MATINFO
         {
             InitializeComponent();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            CAPM CAPM = new CAPM();
+            
+            CAPM.Show();
+        }
     }
 }
