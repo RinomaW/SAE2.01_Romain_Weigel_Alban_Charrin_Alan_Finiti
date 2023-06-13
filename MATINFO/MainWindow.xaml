@@ -4,8 +4,8 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:local="clr-namespace:MATINFO"
-        xmlns:model="clr-namespace:MATINFO.Model"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:model="clr-namespace:MATINFO.Model"
     Title="MainWindow"
     Width="600"
     Height="600"
@@ -13,7 +13,7 @@
     MinHeight="700"
     mc:Ignorable="d">
     <Window.DataContext>
-        <model:ApplicationData x:Name="applicationData"/>
+        <model:ApplicationData x:Name="applicationData" />
     </Window.DataContext>
 
     <Grid>
@@ -22,17 +22,20 @@
             <ColumnDefinition Width="1*" />
             <ColumnDefinition Width="1*" />
         </Grid.ColumnDefinitions>
-        <ListView Margin="10,10,75,300" d:ItemsSource="{Binding Path=LesCategorie}">
+        <ListView Margin="10,10,75,300" d:ItemsSource="{Binding Path=LesCategories}">
             <ListView.View>
                 <GridView>
-                    <GridViewColumn Header="Categorie" DisplayMemberBinding="{Binding Path=NomCategorie}" />
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=NomCategorie}" Header="Categorie" />
                 </GridView>
             </ListView.View>
         </ListView>
-        <ListView  Grid.Column="1" Margin="10,10,75,300" d:ItemsSource="{Binding Path=LesAttribution}" >
+        <ListView
+            Grid.Column="1"
+            Margin="10,10,75,300"
+            d:ItemsSource="{Binding Path=LesAttribution}">
             <ListView.View>
                 <GridView>
-                    <GridViewColumn Header="Date" DisplayMemberBinding="{Binding Path=DateAttribution}"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=DateAttribution}" Header="Date" />
                 </GridView>
             </ListView.View>
         </ListView>

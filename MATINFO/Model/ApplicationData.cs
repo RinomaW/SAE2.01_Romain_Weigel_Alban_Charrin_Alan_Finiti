@@ -12,15 +12,15 @@ namespace MATINFO.Model
 
 
         public ObservableCollection<Attribution> LesAttribution { get; set; }
-        public ObservableCollection<Categorie> LesCategorie { get; set; }
+        public ObservableCollection<Categorie> LesCategories { get; set; }
         public ApplicationData()    
         {
             LesAttribution = new ObservableCollection<Attribution>();
-            LesCategorie = new ObservableCollection<Categorie>();
+            LesCategories = new ObservableCollection<Categorie>();
             Attribution e = new Attribution();
             LesAttribution = e.FindAll();
             Categorie c = new Categorie();
-            LesCategorie = c.FindAll();
+            LesCategories = c.FindAll();
         }
     }
 }
