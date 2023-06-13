@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MATINFO.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -24,7 +25,9 @@ namespace MATINFO
         public MainWindow()
         {
             InitializeComponent();
-
+            DataAccess accesBD = new DataAccess();
+            bool res = accesBD.OpenConnection();
+            MessageBox.Show("Résultat de la connexion : " + res);
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)

@@ -22,10 +22,10 @@
             <ColumnDefinition Width="1*" />
             <ColumnDefinition Width="1*" />
         </Grid.ColumnDefinitions>
-        <ListView Margin="10,10,75,300" >
+        <ListView Margin="10,10,75,300" d:ItemsSource="{Binding Path=LesCategorie}">
             <ListView.View>
                 <GridView>
-                    <GridViewColumn />
+                    <GridViewColumn Header="Categorie" DisplayMemberBinding="{Binding Path=NomCategorie}" />
                 </GridView>
             </ListView.View>
         </ListView>
