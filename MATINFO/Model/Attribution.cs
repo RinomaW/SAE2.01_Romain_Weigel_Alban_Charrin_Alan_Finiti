@@ -1,4 +1,5 @@
 ﻿using MATINFO.Model;
+using MATINFO.MODEL;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -9,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace MATINFO
 {
-    public class Attribution : CRUD
+    public class Attribution : Crud<Attribution>
     {
         private string commentaireAttribution;
         private Materiel materiel;
@@ -86,30 +87,7 @@ namespace MATINFO
         }
 
 
-        public override void Create()
-        {
-            base.Create();
-        }
-
-        public override void Delete()
-        {
-            base.Delete();
-        }
-
-        public override void Read()
-        {
-            base.Read();
-        }
-
-        public override void Select()
-        {
-            base.Select();
-        }
-
-        public override void Update()
-        {
-            base.Update();
-        }
+       
         public ObservableCollection<Attribution> FindAll()
         {
             ObservableCollection<Attribution> LesAttribution = new ObservableCollection<Attribution>();
@@ -125,6 +103,36 @@ namespace MATINFO
                 }
             }
             return LesAttribution;
+        }
+
+        void Crud<Attribution>.Create()
+        {
+            throw new NotImplementedException();
+        }
+
+        void Crud<Attribution>.Read()
+        {
+            throw new NotImplementedException();
+        }
+
+        void Crud<Attribution>.Update()
+        {
+            throw new NotImplementedException();
+        }
+
+        void Crud<Attribution>.Delete()
+        {
+            throw new NotImplementedException();
+        }
+
+        ObservableCollection<Attribution> Crud<Attribution>.FindAll()
+        {
+            throw new NotImplementedException();
+        }
+
+        ObservableCollection<Attribution> Crud<Attribution>.FindBySelection(string criteres)
+        {
+            throw new NotImplementedException();
         }
     }
 }
