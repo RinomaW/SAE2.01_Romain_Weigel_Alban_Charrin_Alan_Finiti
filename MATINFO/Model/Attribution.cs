@@ -134,7 +134,7 @@ namespace MATINFO
             {
                 foreach (DataRow row in datas.Rows)
                 {
-                    Attribution e = new Attribution(new List<string> { (String)row["commentaireattribution"] }, new Materiel("3135131", "projecteur", "3153651351", new Categorie("ordi")), new List<Personnel>());
+                    Attribution e = new Attribution("commentaireattribution" , new Materiel("3135131", "projecteur", "3153651351", new Categorie("ordi")), new Personnel());
                     LesAttribution.Add(e);
                 }
             }
