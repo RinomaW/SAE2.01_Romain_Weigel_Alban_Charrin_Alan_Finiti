@@ -25,12 +25,11 @@
         <ListView Margin="10,10,75,300" d:ItemsSource="{Binding Path=LesAttribution}">
             <ListView.View>
                 <GridView>
-                    <GridViewColumn Header="Nom" DisplayMemberBinding="{Binding Path=Nom}"/>
-                    <GridViewColumn Header="Prenom" DisplayMemberBinding="{Binding Path=Prenom}"/>
+                    <GridViewColumn Header="Nom" DisplayMemberBinding="{Binding Path=DateAttribution}"/>
                 </GridView>
             </ListView.View>
         </ListView>
-        <ListView  Grid.Column="1" Margin="10,10,75,300" d:ItemsSource="{Binding Path=}" >
+        <ListView  Grid.Column="1" Margin="10,10,75,300"  >
             <ListView.View>
                 <GridView>
                     <GridViewColumn />

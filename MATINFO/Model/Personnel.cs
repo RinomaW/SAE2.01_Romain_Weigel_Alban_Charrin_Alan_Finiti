@@ -12,6 +12,11 @@ namespace MATINFO
         private string nomPersonnel;
         private string prenomPersonnel;
         private int iD_Personnel = 1;
+
+        public Personnel()
+        {
+        }
+
         public Personnel(string emailPersonnel, string nomPersonnel, string prenomPersonnel)
         {
             this.Email = emailPersonnel;
