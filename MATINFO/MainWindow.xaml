@@ -12,9 +12,9 @@
     MinWidth="600"
     MinHeight="700"
     mc:Ignorable="d">
-    <Window.Resources>
+    <Window.DataContext>
         <model:ApplicationData x:Name="applicationData"/>
-    </Window.Resources>
+    </Window.DataContext>
 
     <Grid>
         <Grid.ColumnDefinitions>
