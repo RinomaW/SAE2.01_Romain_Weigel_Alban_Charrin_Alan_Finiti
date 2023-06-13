@@ -91,7 +91,7 @@ namespace MATINFO
 
         public ObservableCollection<Categorie> FindAll()
         {
-            ObservableCollection<Categorie> LesCategorie = new ObservableCollection<Categorie>();
+            ObservableCollection<Categorie> LesCategories = new ObservableCollection<Categorie>();
             DataAccess accesBD = new DataAccess();
             String requete = "select nomcategorie, idcategorie from categorie_materiel";
             DataTable datas = accesBD.GetData(requete);
@@ -100,10 +100,10 @@ namespace MATINFO
                 foreach (DataRow row in datas.Rows)
                 {
                     Categorie e = new Categorie((string)row["nomcategorie"], (int)row["idcategorie"]);
-                    LesCategorie.Add(e);
+                    LesCategories.Add(e);
                 }
             }
-            return LesCategorie;
+            return LesCategories;
         }
 
         ObservableCollection<Categorie> Crud<Categorie>.FindBySelection(string criteres)
