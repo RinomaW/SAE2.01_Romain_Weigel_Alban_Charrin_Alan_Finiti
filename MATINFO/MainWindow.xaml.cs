@@ -33,5 +33,11 @@ namespace MATINFO
             
             CAPM.Show();
         }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            Modifier Modifier = new Modifier();
+            Modifier.Show();
+        }
     }
 }

@@ -82,7 +82,7 @@
             HorizontalAlignment="Left"
             VerticalAlignment="Bottom"
             Content="Modifier"
-            RenderTransformOrigin="-0.208,-2.158">
+            RenderTransformOrigin="-0.208,-2.158" Click="Button_Click_1">
             <Button.Resources>
                 <Style TargetType="Border">
                     <Setter Property="CornerRadius" Value="10" />

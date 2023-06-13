@@ -15,11 +15,11 @@ using System.Windows.Shapes;
 namespace MATINFO
 {
     /// <summary>
-    /// Logique d'interaction pour Window1.xaml
+    /// Logique d'interaction pour Modifier.xaml
     /// </summary>
-    public partial class Window1 : Window
+    public partial class Modifier : Window
     {
-        public Window1()
+        public Modifier()
         {
             InitializeComponent();
         }
