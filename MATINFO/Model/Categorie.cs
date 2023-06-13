@@ -20,7 +20,7 @@ namespace MATINFO
             this.ID_Categorie++;
         }
 
-        public CategorieMateriel()
+        public Categorie()
         {
         }
 

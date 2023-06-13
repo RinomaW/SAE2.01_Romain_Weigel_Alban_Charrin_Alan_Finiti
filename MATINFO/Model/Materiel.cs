@@ -14,7 +14,7 @@ namespace MATINFO
         private Categorie categorie;
         private int iD_Materiel = 1;
         private Attribution attribution;
-        public Materiel(string codeBarre, string nomMateriel, string reference, Categorie categorie, Attribution attribution)
+        public Materiel(string codeBarre, string nomMateriel, string reference, Categorie categorie)
         {
             this.CodeBarre = codeBarre;
             this.NomMateriel = nomMateriel;
