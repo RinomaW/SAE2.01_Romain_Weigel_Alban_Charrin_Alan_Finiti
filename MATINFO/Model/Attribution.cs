@@ -1,50 +1,46 @@
-﻿using System;
+﻿using MATINFO.Model;
+using System;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MATINFO.Model
+namespace MATINFO
 {
     public class Attribution : CRUD
     {
-        private List<string> commentaires;
+        private List<string> commentaireAttribution;
         private Materiel materiel;
-        private List <Personnel> personnels;
+        private List<Personnel> personnels;
         private DateTime dateAttribution;
-
-        public Attribution()
+        private int iD_Attribution = 1;
+        public Attribution(List<string> commentaireAttribution, Materiel materiel, List<Personnel> personnels)
         {
-        }
-
-        public Attribution(List<string> commentaires, Materiel materiel, List<Personnel> personnels)
-        {
-            this.Commentaires = commentaires;
+            this.CommentaireAttribution = commentaireAttribution;
             this.DateAttribution = DateTime.Today;
             this.Materiel = materiel;
             this.Personnels = personnels;
+            this.ID_Attribution++;
         }
 
-        public Attribution(List<string> commentaires, DateTime dateAttribution, Materiel materiel, List<Personnel> personnels)
+        public Attribution(List<string> commentaireAttribution, DateTime dateAttribution, Materiel materiel, List<Personnel> personnels)
         {
-            this.Commentaires = commentaires;
+            this.CommentaireAttribution = commentaireAttribution;
             this.DateAttribution = dateAttribution;
             this.Materiel = materiel;
             this.Personnels = personnels;
         }
 
-        public List<string> Commentaires
+        public List<string> CommentaireAttribution
         {
             get
             {
-                return commentaires;
+                return commentaireAttribution;
             }
 
             set
             {
-                commentaires = value;
+                commentaireAttribution = value;
             }
         }
 
@@ -58,6 +54,19 @@ namespace MATINFO.Model
             set
             {
                 dateAttribution = value;
+            }
+        }
+
+        public int ID_Attribution
+        {
+            get
+            {
+                return iD_Attribution;
+            }
+
+            set
+            {
+                iD_Attribution = value;
             }
         }
 
@@ -102,26 +111,14 @@ namespace MATINFO.Model
             base.Read();
         }
 
+        public override void Select()
+        {
+            base.Select();
+        }
+
         public override void Update()
         {
             base.Update();
-        }
-
-        public ObservableCollection<Attribution> FindAll()
-        {
-            ObservableCollection<Attribution> LesAttribution = new ObservableCollection<Attribution>();
-            DataAccess accesBD = new DataAccess();
-            String requete = "select * from est_attribue;";
-            DataTable datas = accesBD.GetData(requete);
-            if (datas != null)
-            {
-                foreach (DataRow row in datas.Rows)
-                {
-                    Attribution e = new Attribution(new List<string> { (String)row["commentaireattribution"] }, new Materiel ("3135131", "projecteur","3153651351", new CategorieMateriel("ordi")),new List <Personnel>());
-                    LesAttribution.Add(e);
-                }
-            }
-            return LesAttribution;
         }
     }
 }
