@@ -1,12 +1,14 @@
-﻿using System;
+﻿using MATINFO.MODEL;
+using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace MATINFO
 {
-    public class Personnel : CRUD
+    public class Personnel : Crud<Personnel>
     {
         private string emailPersonnel;
         private string nomPersonnel;
@@ -89,34 +91,36 @@ namespace MATINFO
             }
         }
 
-        public override void Create()
+
+
+        void Crud<Personnel>.Create()
         {
-            base.Create();
+            throw new NotImplementedException();
         }
 
-        public override void Delete()
+        void Crud<Personnel>.Delete()
         {
-            base.Delete();
+            throw new NotImplementedException();
         }
 
-        public override void Find()
+        ObservableCollection<Personnel> Crud<Personnel>.FindAll()
         {
-            base.Find();
+            throw new NotImplementedException();
         }
 
-        public override void Read()
+        ObservableCollection<Personnel> Crud<Personnel>.FindBySelection(string criteres)
         {
-            base.Read();
+            throw new NotImplementedException();
         }
 
-        public override void Select()
+        void Crud<Personnel>.Read()
         {
-            base.Select();
+            throw new NotImplementedException();
         }
 
-        public override void Update()
+        void Crud<Personnel>.Update()
         {
-            base.Update();
+            throw new NotImplementedException();
         }
     }
 

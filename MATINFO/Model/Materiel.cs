@@ -1,12 +1,14 @@
-﻿using System;
+﻿using MATINFO.MODEL;
+using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace MATINFO
 {
-    public class Materiel : CRUD
+    public class Materiel : Crud<Materiel>
     {
         private string codeBarre;
         private string nomMateriel;
@@ -93,34 +95,35 @@ namespace MATINFO
             }
         }
 
-        public override void Create()
+
+        void Crud<Materiel>.Create()
         {
-            base.Create();
+            throw new NotImplementedException();
         }
 
-        public override void Delete()
+        void Crud<Materiel>.Delete()
         {
-            base.Delete();
+            throw new NotImplementedException();
         }
 
-        public override void Find()
+        ObservableCollection<Materiel> Crud<Materiel>.FindAll()
         {
-            base.Find();
+            throw new NotImplementedException();
         }
 
-        public override void Read()
+        ObservableCollection<Materiel> Crud<Materiel>.FindBySelection(string criteres)
         {
-            base.Read();
+            throw new NotImplementedException();
         }
 
-        public override void Select()
+        void Crud<Materiel>.Read()
         {
-            base.Select();
+            throw new NotImplementedException();
         }
 
-        public override void Update()
+        void Crud<Materiel>.Update()
         {
-            base.Update();
+            throw new NotImplementedException();
         }
     }
 }

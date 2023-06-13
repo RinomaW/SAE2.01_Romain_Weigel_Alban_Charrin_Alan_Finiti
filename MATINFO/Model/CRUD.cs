@@ -1,38 +1,25 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿// File:    Crud.cs
+// Author:  nmege
+// Created: vendredi 20 décembre 2013 09:15:09
+// Purpose: Definition of Interface Crud
 
-namespace MATINFO
+using System.Collections.ObjectModel;
+
+namespace MATINFO.MODEL
 {
-    public abstract class CRUD
+    public interface Crud<T>
     {
-        public virtual void Create()
-        {
-            throw new System.NotImplementedException();
-        }
+        void Create();
 
-        public virtual void Read()
-        {
-            throw new System.NotImplementedException();
-        }
+        void Read();
 
-        public virtual void Update()
-        {
-            throw new System.NotImplementedException();
-        }
+        void Update();
 
-        public virtual void Delete()
-        {
-            throw new System.NotImplementedException();
-        }
-        public virtual void Select()
-        {
-            throw new System.NotImplementedException();
-        }
-        public virtual void Find()
-        {
-            throw new System.NotImplementedException();
-        }
+        void Delete();
+
+        ObservableCollection<T> FindAll();
+
+        ObservableCollection<T> FindBySelection(string criteres);
+
     }
 }
