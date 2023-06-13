@@ -11,7 +11,7 @@
     Height="600"
     MinWidth="600"
     MinHeight="700"
-    mc:Ignorable="d" Closed="Window_Closed">
+    mc:Ignorable="d">
     <Window.DataContext>
         <model:ApplicationData x:Name="applicationData" />
     </Window.DataContext>
@@ -81,8 +81,9 @@
             Margin="10,0,0,195"
             HorizontalAlignment="Left"
             VerticalAlignment="Bottom"
+            Click="Button_Click_1"
             Content="Modifier"
-            RenderTransformOrigin="-0.208,-2.158" Click="Button_Click_1">
+            RenderTransformOrigin="-0.208,-2.158">
             <Button.Resources>
                 <Style TargetType="Border">
                     <Setter Property="CornerRadius" Value="10" />
