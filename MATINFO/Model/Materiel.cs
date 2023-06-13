@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MATINFO.Model
 {
-    internal class Materiel : CRUD
+    public class Materiel : CRUD
     {
         private string codeBarre;
         private string nomMateriel;
