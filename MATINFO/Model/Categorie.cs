@@ -1,6 +1,8 @@
 ﻿using MATINFO.Model;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -28,14 +30,14 @@ namespace MATINFO
         {
             get
             {
-                return this.nomCategorie;
+                return this.NomCategorie;
             }
 
             set
             {
-                if (this.nomCategorie is null)
+                if (this.NomCategorie is null)
                     throw new ArgumentNullException("Ce champ ne peut pas être null");
-                this.nomCategorie = value;
+                this.NomCategorie = value;
             }
         }
 
@@ -51,6 +53,7 @@ namespace MATINFO
                 this.iD_Categorie = value;
             }
         }
+
 
         public void testNomUnique()
         {
@@ -90,5 +93,22 @@ namespace MATINFO
         {
             base.Select();
         }
+        public ObservableCollection<Categorie> FindAll()
+        {
+            ObservableCollection<Categorie> LesCategorie = new ObservableCollection<Categorie>();
+            DataAccess accesBD = new DataAccess();
+            String requete = "select * from categorie_materiel;";
+            DataTable datas = accesBD.GetData(requete);
+            if (datas != null)
+            {
+                foreach (DataRow row in datas.Rows)
+                {
+                    Categorie e = new Categorie(row["nomcategorie"].ToString());
+                    LesCategorie.Add(e);
+                }
+            }
+            return LesCategorie;
+        }
+
     }
 }
