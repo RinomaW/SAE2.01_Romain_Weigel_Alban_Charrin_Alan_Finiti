@@ -1,7 +1,9 @@
-﻿using MATINFO.MODEL;
+﻿using MATINFO.Model;
+using MATINFO.MODEL;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -103,9 +105,21 @@ namespace MATINFO
             throw new NotImplementedException();
         }
 
-        ObservableCollection<Personnel> Crud<Personnel>.FindAll()
+        public ObservableCollection<Personnel> FindAll()
         {
-            throw new NotImplementedException();
+            ObservableCollection<Personnel> LesPersonnel = new ObservableCollection<Personnel>();
+            DataAccess accesBD = new DataAccess();
+            String requete = "select emailpersonnel, nompersonnel, prenompersonnel from personnel";
+            DataTable datas = accesBD.GetData(requete);
+            if (datas != null)
+            {
+                foreach (DataRow row in datas.Rows)
+                {
+                    Personnel e = new Personnel(row["emailpersonnel"].ToString(), row["nompersonnel"].ToString(), row["prenompersonnel"].ToString());
+                    LesPersonnel.Add(e);
+                }
+            }
+            return LesPersonnel;
         }
 
         ObservableCollection<Personnel> Crud<Personnel>.FindBySelection(string criteres)
