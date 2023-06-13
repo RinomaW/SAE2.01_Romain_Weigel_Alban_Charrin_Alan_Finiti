@@ -109,7 +109,7 @@ namespace MATINFO.Model
 
         public ObservableCollection<Attribution> FindAll()
         {
-            ObservableCollection<Attribution> lesEtudiants = new ObservableCollection<Attribution>();
+            ObservableCollection<Attribution> LesAttribution = new ObservableCollection<Attribution>();
             DataAccess accesBD = new DataAccess();
             String requete = "select * from est_attribue;";
             DataTable datas = accesBD.GetData(requete);
@@ -118,10 +118,10 @@ namespace MATINFO.Model
                 foreach (DataRow row in datas.Rows)
                 {
                     Attribution e = new Attribution(new List<string> { (String)row["commentaireattribution"] }, new Materiel ("3135131", "projecteur","3153651351", new CategorieMateriel("ordi")),new List <Personnel>());
-                    lesEtudiants.Add(e);
+                    LesAttribution.Add(e);
                 }
             }
-            return lesEtudiants;
+            return LesAttribution;
         }
     }
 }

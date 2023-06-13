@@ -18,6 +18,10 @@ namespace MATINFO.Model
             this.NomCategorie = nomCategorie;
         }
 
+        public CategorieMateriel()
+        {
+        }
+
         public string NomCategorie
         {
             get
