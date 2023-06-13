@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace MATINFO.Model
+namespace MATINFO
 {
     public abstract class CRUD
     {
@@ -23,6 +23,14 @@ namespace MATINFO.Model
         }
 
         public virtual void Delete()
+        {
+            throw new System.NotImplementedException();
+        }
+        public virtual void Select()
+        {
+            throw new System.NotImplementedException();
+        }
+        public virtual void Find()
         {
             throw new System.NotImplementedException();
         }

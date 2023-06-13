@@ -4,37 +4,38 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MATINFO.Model
+namespace MATINFO
 {
     public class Personnel : CRUD
     {
-        private string email;
+        private string emailPersonnel;
         private string nomPersonnel;
-        private string prenom;
-
-        public Personnel(string email, string nomPersonnel, string prenom)
+        private string prenomPersonnel;
+        private int iD_Personnel = 1;
+        public Personnel(string emailPersonnel, string nomPersonnel, string prenomPersonnel)
         {
-            this.Email = email;
+            this.Email = emailPersonnel;
             this.NomPersonnel = nomPersonnel;
-            this.Prenom = prenom;
+            this.PrenomPersonnel = prenomPersonnel;
+            this.ID_Personnel++;
         }
 
         public string Email
         {
             get
             {
-                return email;
+                return emailPersonnel;
             }
 
             set
             {
-                int atIndex = email.IndexOf("@");
-                int dotIndex = email.LastIndexOf(".");
+                int atIndex = emailPersonnel.IndexOf("@");
+                int dotIndex = emailPersonnel.LastIndexOf(".");
 
                 if (atIndex > 0 && atIndex > dotIndex)
                 {
-                    email = value;
-                    
+                    emailPersonnel = value;
+
                 }
                 else throw new ArgumentException("l'email n'est pas conforme");
 
@@ -57,16 +58,29 @@ namespace MATINFO.Model
             }
         }
 
-        public string Prenom
+        public string PrenomPersonnel
         {
             get
             {
-                return this.prenom;
+                return this.prenomPersonnel;
             }
 
             set
             {
-                this.prenom = value.Substring(0, 1).ToUpper() + value.Substring(1);
+                this.prenomPersonnel = value.Substring(0, 1).ToUpper() + value.Substring(1);
+            }
+        }
+
+        public int ID_Personnel
+        {
+            get
+            {
+                return this.iD_Personnel;
+            }
+
+            set
+            {
+                this.iD_Personnel = value;
             }
         }
 
@@ -80,9 +94,19 @@ namespace MATINFO.Model
             base.Delete();
         }
 
+        public override void Find()
+        {
+            base.Find();
+        }
+
         public override void Read()
         {
             base.Read();
+        }
+
+        public override void Select()
+        {
+            base.Select();
         }
 
         public override void Update()
