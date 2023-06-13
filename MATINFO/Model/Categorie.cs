@@ -30,14 +30,13 @@ namespace MATINFO
         {
             get
             {
-                return this.NomCategorie;
+                return this.nomCategorie;
             }
-
             set
             {
-                if (this.NomCategorie is null)
+                if (value is null)
                     throw new ArgumentNullException("Ce champ ne peut pas être null");
-                this.NomCategorie = value;
+                this.nomCategorie = value;
             }
         }
 
@@ -97,13 +96,13 @@ namespace MATINFO
         {
             ObservableCollection<Categorie> LesCategorie = new ObservableCollection<Categorie>();
             DataAccess accesBD = new DataAccess();
-            String requete = "select * from categorie_materiel;";
+            String requete = "select nomcategorie from categorie_materiel;";
             DataTable datas = accesBD.GetData(requete);
             if (datas != null)
             {
                 foreach (DataRow row in datas.Rows)
                 {
-                    Categorie e = new Categorie(row["nomcategorie"].ToString());
+                    Categorie e = new Categorie((string)row["nomcategorie"]);
                     LesCategorie.Add(e);
                 }
             }

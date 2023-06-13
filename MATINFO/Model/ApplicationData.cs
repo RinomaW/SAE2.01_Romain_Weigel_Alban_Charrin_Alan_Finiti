@@ -9,10 +9,14 @@ namespace MATINFO.Model
 {
     public class ApplicationData
     {
+
+
         public ObservableCollection<Attribution> LesAttribution { get; set; }
         public ObservableCollection<Categorie> LesCategorie { get; set; }
         public ApplicationData()    
         {
+            LesAttribution = new ObservableCollection<Attribution>();
+            LesCategorie = new ObservableCollection<Categorie>();
             Attribution e = new Attribution();
             LesAttribution = e.FindAll();
             Categorie c = new Categorie();
