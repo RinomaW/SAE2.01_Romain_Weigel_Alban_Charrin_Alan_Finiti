@@ -5,11 +5,11 @@
     <TargetFramework>net6.0-windows</TargetFramework>
     <Nullable>enable</Nullable>
     <UseWPF>true</UseWPF>
-    <ApplicationIcon>usmbéh.ico</ApplicationIcon>
+    <ApplicationIcon>usmbéh2.ico</ApplicationIcon>
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Include="usmbéh.ico" />
+    <Content Include="usmbéh2.ico" />
   </ItemGroup>
 
   <ItemGroup>
