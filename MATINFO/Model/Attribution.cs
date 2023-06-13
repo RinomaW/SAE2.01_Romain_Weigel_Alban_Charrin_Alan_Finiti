@@ -30,6 +30,7 @@ namespace MATINFO
             this.Materiel = materiel;
             this.Personnels = personnels;
         }
+        public Attribution() { }
 
         public List<string> CommentaireAttribution
         {
