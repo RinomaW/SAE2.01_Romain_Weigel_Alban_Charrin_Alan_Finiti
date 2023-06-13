@@ -38,16 +38,7 @@ namespace MATINFO
 
             set
             {
-                int atIndex = emailPersonnel.IndexOf("@");
-                int dotIndex = emailPersonnel.LastIndexOf(".");
-
-                if (atIndex > 0 && atIndex > dotIndex)
-                {
                     emailPersonnel = value;
-
-                }
-                else throw new ArgumentException("l'email n'est pas conforme");
-
             }
         }
 

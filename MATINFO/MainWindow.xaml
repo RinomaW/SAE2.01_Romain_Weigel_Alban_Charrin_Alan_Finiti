@@ -25,7 +25,7 @@
         <ListView Margin="10,10,75,300" ItemsSource="{Binding Path=LesCategories}">
             <ListView.View>
                 <GridView>
-                    <GridViewColumn DisplayMemberBinding="{Binding Path=NomCategorie}" Header="Categorie" />
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=NomCategorie}" Header="Categorie" Width="Auto"/>
                 </GridView>
             </ListView.View>
         </ListView>
@@ -35,7 +35,7 @@
             ItemsSource="{Binding Path=LesAttributions}">
             <ListView.View>
                 <GridView>
-                    <GridViewColumn DisplayMemberBinding="{Binding Path=DateAttribution.Date }" Header="Date" />
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=DateAttribution.Date }" Header="Date" Width="Auto"/>
                 </GridView>
             </ListView.View>
         </ListView>
@@ -45,7 +45,7 @@
             ItemsSource="{Binding Path=LesMateriels}">
             <ListView.View>
                 <GridView>
-                    <GridViewColumn DisplayMemberBinding="{Binding Path=NomMateriel }" Header="Nom"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=NomMateriel }" Header="Nom" Width="Auto"/>
                 </GridView>
             </ListView.View>
         </ListView>
@@ -58,7 +58,7 @@
             <ListView.View>
                 <GridView>
                     <GridViewColumn DisplayMemberBinding="{Binding Path=NomPersonnel }" Header="Nom"/>
-                    <GridViewColumn DisplayMemberBinding="{Binding Path=PrenomPersonnel }" Header="Prenom"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=PrenomPersonnel }" Header="Prenom" />
                 </GridView>
             </ListView.View>
         </ListView>

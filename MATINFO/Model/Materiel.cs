@@ -28,7 +28,7 @@ namespace MATINFO
             this.CodeBarre = codeBarre;
             this.NomMateriel = nomMateriel;
             this.Reference = reference;
-            this.ID_Categorie = categorie.ID_Categorie;
+            this.Categorie = categorie;
             this.ID_Materiel = idmateriel;
         }
 
@@ -84,16 +84,16 @@ namespace MATINFO
             }
         }
 
-        internal int ID_Categorie
+        public Categorie Categorie
         {
             get
             {
-                return this.categorie.ID_Categorie;
+                return this.categorie;
             }
 
             set
             {
-                this.categorie.ID_Categorie = value;
+                this.categorie = value;
             }
         }
 
