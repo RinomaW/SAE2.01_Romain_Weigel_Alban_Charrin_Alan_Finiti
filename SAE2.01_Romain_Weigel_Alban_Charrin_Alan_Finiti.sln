@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33530.505
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MATINFO", "MATINFO\MATINFO.csproj", "{9F35F7FA-9451-4E9C-8E07-EFC378CC9ABC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MATINFOTests", "MATINFOTests\MATINFOTests.csproj", "{AC8CDC9D-3ECA-48F0-85FF-4FD96AFC0C2F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9F35F7FA-9451-4E9C-8E07-EFC378CC9ABC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9F35F7FA-9451-4E9C-8E07-EFC378CC9ABC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9F35F7FA-9451-4E9C-8E07-EFC378CC9ABC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9F35F7FA-9451-4E9C-8E07-EFC378CC9ABC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AC8CDC9D-3ECA-48F0-85FF-4FD96AFC0C2F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC8CDC9D-3ECA-48F0-85FF-4FD96AFC0C2F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC8CDC9D-3ECA-48F0-85FF-4FD96AFC0C2F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC8CDC9D-3ECA-48F0-85FF-4FD96AFC0C2F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D9551BC4-EE12-470E-A100-0519A1AAFA4B}
+	EndGlobalSection
+EndGlobal
