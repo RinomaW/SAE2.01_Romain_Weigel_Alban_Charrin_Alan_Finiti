@@ -33,5 +33,10 @@ namespace MATINFO
             
             CAPM.Show();
         }
+
+        private void Window_Closed(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

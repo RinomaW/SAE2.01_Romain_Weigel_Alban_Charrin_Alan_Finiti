@@ -24,10 +24,7 @@ namespace MATINFO
             InitializeComponent();
         }
 
-        private void Window_Deactivated(object sender, EventArgs e)
-        {
-            this.Close();
-        }
+      
 
 
         private void BTCate_Click(object sender, RoutedEventArgs e)
