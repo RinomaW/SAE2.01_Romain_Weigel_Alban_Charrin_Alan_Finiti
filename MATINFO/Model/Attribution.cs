@@ -98,7 +98,8 @@ namespace MATINFO
             {
                 foreach (DataRow row in datas.Rows)
                 {
-                    Attribution e = new Attribution(row["commentaireattribution"].ToString(), DateTime.Parse(row["dateattribution"].ToString()), new Materiel(), new Personnel());
+                    DateTime date = DateTime.Parse(row["dateattribution"].ToString());
+                    Attribution e = new Attribution(row["commentaireattribution"].ToString(), new DateTime(date.Year, date.Month, date.Day), new Materiel(), new Personnel()); 
                     LesAttribution.Add(e);
                 }
             }

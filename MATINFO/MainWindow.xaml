@@ -32,10 +32,10 @@
         <ListView
             Grid.Column="1"
             Margin="10,10,75,300"
-            ItemsSource="{Binding Path=LesAttribution}">
+            ItemsSource="{Binding Path=LesAttributions}">
             <ListView.View>
                 <GridView>
-                    <GridViewColumn DisplayMemberBinding="{Binding Path=DateAttribution}" Header="Date" />
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=DateAttribution.Date }" Header="Date" />
                 </GridView>
             </ListView.View>
         </ListView>
