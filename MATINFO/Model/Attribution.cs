@@ -11,12 +11,12 @@ namespace MATINFO
 {
     public class Attribution : CRUD
     {
-        private List<string> commentaireAttribution;
+        private string commentaireAttribution;
         private Materiel materiel;
-        private List<Personnel> personnels;
+        private Personnel personnels;
         private DateTime dateAttribution;
         private int iD_Attribution = 1;
-        public Attribution(List<string> commentaireAttribution, Materiel materiel, List<Personnel> personnels)
+        public Attribution(string commentaireAttribution, Materiel materiel, Personnel personnels)
         {
             this.CommentaireAttribution = commentaireAttribution;
             this.DateAttribution = DateTime.Today;
@@ -25,7 +25,7 @@ namespace MATINFO
             this.ID_Attribution++;
         }
 
-        public Attribution(List<string> commentaireAttribution, DateTime dateAttribution, Materiel materiel, List<Personnel> personnels)
+        public Attribution(string commentaireAttribution, DateTime dateAttribution, Materiel materiel,Personnel personnels)
         {
             this.CommentaireAttribution = commentaireAttribution;
             this.DateAttribution = dateAttribution;
@@ -34,7 +34,7 @@ namespace MATINFO
         }
         public Attribution() { }
 
-        public List<string> CommentaireAttribution
+        public string CommentaireAttribution
         {
             get
             {
@@ -86,7 +86,7 @@ namespace MATINFO
             }
         }
 
-        internal List<Personnel> Personnels
+        internal Personnel Personnels
         {
             get
             {
