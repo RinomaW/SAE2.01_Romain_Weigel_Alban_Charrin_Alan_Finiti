@@ -24,8 +24,7 @@
                 x:Name="BTCate"
                 Width="200"
                 Height="30"
-                Click="BTcateClick"
-                Content="Catégorie"
+                Content="Catégorie" MouseLeftButtonDown="BTcateMBDWN">
                 <Button.Resources>
                     <Style TargetType="Border">
                         <Setter Property="CornerRadius" Value="10" />
