@@ -1,23 +1,20 @@
 ﻿using MATINFO.Model;
 using MATINFO.MODEL;
 using System;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace MATINFO
 {
     public class Materiel : Crud<Materiel>
     {
+        private Categorie uneCategorie;
         private string codeBarre;
         private string nomMateriel;
         private string reference;
         private int idCategorie;
         private int iD_Materiel;
-        private Attribution attribution;
+        ObservableCollection<Attribution> lesAttributions;
 
         public Materiel()
         {
@@ -94,6 +91,33 @@ namespace MATINFO
             set
             {
                 idCategorie = value;
+            }
+        }
+
+
+        public Categorie UneCategorie
+        {
+            get
+            {
+                return uneCategorie;
+            }
+
+            set
+            {
+                uneCategorie = value;
+            }
+        }
+
+        public ObservableCollection<Attribution> LesAttributions
+        {
+            get
+            {
+                return lesAttributions;
+            }
+
+            set
+            {
+                lesAttributions = value;
             }
         }
 
