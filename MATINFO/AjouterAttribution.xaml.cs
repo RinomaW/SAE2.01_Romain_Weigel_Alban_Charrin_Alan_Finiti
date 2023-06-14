@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -27,6 +28,15 @@ namespace MATINFO
         private void TBComm_GotFocus(object sender, RoutedEventArgs e)
         {
             this.TBComm.Text = "";
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            System.Diagnostics.Process.Start(new ProcessStartInfo
+            {
+                FileName = "https://www.youtube.com/watch?v=xvFZjo5PgG0",
+                UseShellExecute = true
+            });
         }
     }
 }
