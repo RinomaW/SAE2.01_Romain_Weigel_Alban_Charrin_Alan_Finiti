@@ -1,5 +1,7 @@
-﻿using System;
+﻿using MATINFO.Model;
+using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Diagnostics;
 using System.Linq;
 using System.Text;
@@ -11,15 +13,18 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Media.Media3D;
 using System.Windows.Shapes;
 
 namespace MATINFO
 {
+
     /// <summary>
     /// Logique d'interaction pour AjouterAttribution.xaml
     /// </summary>
     public partial class AjouterAttribution : Window
     {
+        string tbtexte;
         public AjouterAttribution()
         {
             InitializeComponent();
@@ -32,7 +37,17 @@ namespace MATINFO
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+           //string texte = "insert into attribution values ('" +id perso ""+"" id materiel ""+"" DateOnly"" + ",'"+tbtexte +"')";
+           //DataAccess accesBD = new DataAccess();
+           //String requete = 
+           //accesBD.SetData(requete);
             
+        }
+
+        private void TBComm_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            //string tbtexte = TBComm.Text;
+
         }
     }
 }
