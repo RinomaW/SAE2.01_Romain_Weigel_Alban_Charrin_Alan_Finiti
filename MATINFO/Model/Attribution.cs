@@ -142,7 +142,7 @@ namespace MATINFO
             throw new NotImplementedException();
         }
 
-        void Crud<Attribution>.Update()
+        public void Update()
         {
             throw new NotImplementedException();
         }

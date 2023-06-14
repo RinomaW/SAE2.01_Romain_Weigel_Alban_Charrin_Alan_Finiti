@@ -19,17 +19,18 @@ namespace MATINFO
     /// </summary>
     public partial class ModifierCategorie : Window
     {
-        
+        public Categorie categorieSelectionnee = new Categorie();
         public ModifierCategorie()
         {
             InitializeComponent();
             lvModifierCategorie.SelectedIndex= 0;
+            
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            Categorie categorieSelectionnee = lvModifierCategorie.SelectedItem as Categorie;
-            ModifierCategorieFinal modifierCategorieFinal= new ModifierCategorieFinal();
+            categorieSelectionnee = lvModifierCategorie.SelectedItem as Categorie;
+            ModifierCategorieFinal modifierCategorieFinal= new ModifierCategorieFinal(categorieSelectionnee);
             modifierCategorieFinal.Show();
         }
     }

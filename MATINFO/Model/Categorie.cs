@@ -83,9 +83,11 @@ namespace MATINFO
         }
 
 
-        void Crud<Categorie>.Create()
+        public void Create(string texte)
         {
-            throw new NotImplementedException();
+            String requete = "insert into categorie values ('" + texte + "')";
+            DataAccess accesBD = new DataAccess();
+            accesBD.SetData(requete);
         }
 
         void Crud<Categorie>.Read()
@@ -93,9 +95,11 @@ namespace MATINFO
             throw new NotImplementedException();
         }
 
-        void Crud<Categorie>.Update()
+        public void Update(string nomChangement)
         {
-            throw new NotImplementedException();
+            DataAccess accesBD= new DataAccess();
+            String requete = "UPDATE Categorie SET nomcategorie = " + nomChangement + " WHERE nomcategorie = " + this.nomCategorie;
+            accesBD.SetData(requete);
         }
 
         void Crud<Categorie>.Delete()
