@@ -25,7 +25,7 @@ namespace MATINFO
         public MainWindow()
         {//feur
             InitializeComponent();
-            lvCategorie.SelectedIndex= 0;
+
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -43,10 +43,7 @@ namespace MATINFO
 
         private void lvCategorie_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            if (lvCategorie.SelectedIndex != 0)
-            {
-                lvMateriel.SelectedItem = lvCategorie.SelectedItem;
-            }
+
         }
     }
 }
