@@ -39,7 +39,7 @@
                     Height="21"
                     GotFocus="TBComm_GotFocus"
                     Text="Commentaire"
-                    TextWrapping="Wrap" />
+                    TextWrapping="Wrap" TextChanged="TBComm_TextChanged" />
             </StackPanel>
             <Rectangle Height="51" Stroke="#00000000" Width="100"/>
             <Rectangle Height="100" Stroke="#00000000" Width="100"/>
