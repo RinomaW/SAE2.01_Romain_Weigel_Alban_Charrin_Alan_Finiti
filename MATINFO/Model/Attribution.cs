@@ -13,23 +13,23 @@ namespace MATINFO
     public class Attribution : Crud<Attribution>
     {
         private string commentaireAttribution;
-        private Materiel materiel;
-        private Personnel personnels;
+        private int idMateriel;
+        private int idPersonnels;
         private DateTime dateAttribution;
-        public Attribution(string commentaireAttribution, Materiel materiel, Personnel personnels)
+        public Attribution(string commentaireAttribution, int idMateriel, int idPersonnels)
         {
             this.CommentaireAttribution = commentaireAttribution;
             this.DateAttribution = DateTime.Today;
-            this.Materiel = materiel;
-            this.Personnels = personnels;
+            this.IdMateriel = idMateriel;
+            this.IdPersonnels = idPersonnels;
         }
 
-        public Attribution(string commentaireAttribution, DateTime dateAttribution, Materiel materiel,Personnel personnels)
+        public Attribution(string commentaireAttribution, DateTime dateAttribution, int idMateriel, int idPersonnels)
         {
             this.CommentaireAttribution = commentaireAttribution;
             this.DateAttribution = dateAttribution;
-            this.Materiel = materiel;
-            this.Personnels = personnels;
+            this.IdMateriel = idMateriel;
+            this.IdPersonnels = idPersonnels;
         }
         public Attribution() { }
 
@@ -59,35 +59,32 @@ namespace MATINFO
             }
         }
 
-
-        internal Materiel Materiel
+        public int IdMateriel
         {
             get
             {
-                return materiel;
+                return idMateriel;
             }
 
             set
             {
-                materiel = value;
+                idMateriel = value;
             }
         }
 
-        internal Personnel Personnels
+        public int IdPersonnels
         {
             get
             {
-                return this.personnels;
+                return idPersonnels;
             }
 
             set
             {
-                this.personnels = value;
+                idPersonnels = value;
             }
         }
 
-
-       
         public ObservableCollection<Attribution> FindAll()
         {
             ObservableCollection<Attribution> LesAttribution = new ObservableCollection<Attribution>();
@@ -99,7 +96,7 @@ namespace MATINFO
                 foreach (DataRow row in datas.Rows)
                 {
                     DateTime date = DateTime.Parse(row["dateattribution"].ToString());
-                    Attribution e = new Attribution(row["commentaireattribution"].ToString(), new DateTime(date.Year, date.Month, date.Day), new Materiel(), new Personnel()); 
+                    Attribution e = new Attribution(row["commentaireattribution"].ToString(), new DateTime(date.Year, date.Month, date.Day), (int)row["idmateriel"], (int)row["idcategorie"]); 
                     LesAttribution.Add(e);
                 }
             }

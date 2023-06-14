@@ -15,7 +15,7 @@ namespace MATINFO
         private string codeBarre;
         private string nomMateriel;
         private string reference;
-        private Categorie categorie;
+        private int idCategorie;
         private int iD_Materiel;
         private Attribution attribution;
 
@@ -23,12 +23,12 @@ namespace MATINFO
         {
         }
 
-        public Materiel(string codeBarre, string nomMateriel, string reference, Categorie categorie, int idmateriel)
+        public Materiel(string codeBarre, string nomMateriel, string reference, int idCategorie, int idmateriel)
         {
             this.CodeBarre = codeBarre;
             this.NomMateriel = nomMateriel;
             this.Reference = reference;
-            this.Categorie = categorie;
+            this.IdCategorie = idCategorie;
             this.ID_Materiel = idmateriel;
         }
 
@@ -84,19 +84,18 @@ namespace MATINFO
             }
         }
 
-        public Categorie Categorie
+        public int IdCategorie
         {
             get
             {
-                return this.categorie;
+                return idCategorie;
             }
 
             set
             {
-                this.categorie = value;
+                idCategorie = value;
             }
         }
-
 
         void Crud<Materiel>.Create()
         {
@@ -118,7 +117,7 @@ namespace MATINFO
             {
                 foreach (DataRow row in datas.Rows)
                 {
-                    Materiel e = new Materiel((string)row["codebarreinventaire"],(string)row["nommateriel"], (string)row["referenceconstructeurmateriel"],new Categorie(),(int)row["idmateriel"]);
+                    Materiel e = new Materiel((string)row["codebarreinventaire"],(string)row["nommateriel"], (string)row["referenceconstructeurmateriel"], (int)row["idcategorie"],(int)row["idmateriel"]);
                     LesMateriels.Add(e);
                 }
             }
