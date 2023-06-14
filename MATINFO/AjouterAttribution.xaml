@@ -47,7 +47,7 @@
                 Width="200"
                 Height="30"
                 Content="Créer"
-                RenderTransformOrigin="0.56,4.168">
+                RenderTransformOrigin="0.56,4.168" Click="Button_Click">
                 <Button.Resources>
                     <Style TargetType="{x:Type Border}">
                         <Setter Property="CornerRadius" Value="10" />
