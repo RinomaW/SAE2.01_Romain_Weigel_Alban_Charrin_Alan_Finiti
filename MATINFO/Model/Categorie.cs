@@ -12,9 +12,11 @@ namespace MATINFO
 {
     public class Categorie : Crud<Categorie>
     {
+
         private string nomCategorie;
         private int iD_Categorie;
         public HashSet<string> nomUniques;
+        ObservableCollection<Materiel> lesMateriel;
 
         public Categorie(string nomCategorie, int idCategorie)
         {
@@ -53,6 +55,18 @@ namespace MATINFO
             }
         }
 
+        public ObservableCollection<Materiel> LesMateriel
+        {
+            get
+            {
+                return lesMateriel;
+            }
+
+            set
+            {
+                lesMateriel = value;
+            }
+        }
 
         public void testNomUnique()
         {

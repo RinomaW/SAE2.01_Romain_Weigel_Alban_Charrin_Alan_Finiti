@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace MATINFO.Model
@@ -29,6 +30,18 @@ namespace MATINFO.Model
             LesMateriels = m.FindAll();
             Personnel p = new Personnel();
             LesPersonnels = p.FindAll();
+
+            // pour chaque étudiant, on affecte la référence de son groupe
+            foreach (Materiel unMat in LesMateriels.ToList())
+            {
+                unMat.UneCategorie = LesCategories.ToList().Find(g => g.ID_Categorie == unMat.IdCategorie);
+            }
+            // pour chaque groupe, on affecte toutes les références des étudiants appartenant au groupe
+            foreach (Categorie uneCategorie in LesCategories.ToList())
+            {
+                uneCategorie.LesMateriel = new ObservableCollection<Materiel>(
+                LesMateriels.ToList().FindAll(e => e.IdCategorie == uneCategorie.ID_Categorie));
+            }
 
         }
     }
