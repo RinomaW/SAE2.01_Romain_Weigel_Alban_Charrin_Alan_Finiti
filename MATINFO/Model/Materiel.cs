@@ -12,6 +12,7 @@ namespace MATINFO
 {
     public class Materiel : Crud<Materiel>
     {
+        private Categorie uneCategorie;
         private string codeBarre;
         private string nomMateriel;
         private string reference;
@@ -94,6 +95,20 @@ namespace MATINFO
             set
             {
                 idCategorie = value;
+            }
+        }
+
+
+        public Categorie UneCategorie
+        {
+            get
+            {
+                return uneCategorie;
+            }
+
+            set
+            {
+                uneCategorie = value;
             }
         }
 
