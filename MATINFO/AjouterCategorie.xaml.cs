@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MATINFO.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -25,16 +26,25 @@ namespace MATINFO
             InitializeComponent();
         }
 
-       
+        string texte;
 
         private void TBNomCate_TextChanged(object sender, TextChangedEventArgs e)
         {
-
+            texte = this.TBNomCate.Text;
         }
 
         private void TBNomCate_GotFocus(object sender, RoutedEventArgs e)
         {
             this.TBNomCate.Text = "";
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            String requete = "insert into categorie values ('" +texte+"')";
+            DataAccess accesBD = new DataAccess();
+            accesBD.SetData(requete);
+        }
+
+        
     }
 }

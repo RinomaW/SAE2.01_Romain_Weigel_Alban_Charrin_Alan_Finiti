@@ -10,7 +10,8 @@
     Height="201"
     MinWidth="300"
     MinHeight="220"
-    mc:Ignorable="d" WindowStartupLocation="CenterScreen">
+    WindowStartupLocation="CenterScreen"
+    mc:Ignorable="d">
     <Grid>
         <StackPanel>
             <Label
@@ -22,13 +23,14 @@
                 x:Name="TBNomCate"
                 Width="180"
                 Height="26"
-                
+                GotFocus="TBNomCate_GotFocus"
                 Text="Nom de la catégorie"
-                TextWrapping="Wrap" GotFocus="TBNomCate_GotFocus"/>
+                TextWrapping="Wrap" />
             <Rectangle Width="100" Height="15" />
             <Button
                 Width="200"
                 Height="30"
+                Click="Button_Click"
                 Content="Créer">
                 <Button.Resources>
                     <Style TargetType="Border">

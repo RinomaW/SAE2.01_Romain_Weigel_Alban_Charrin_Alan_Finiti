@@ -34,5 +34,11 @@ namespace MATINFO
             this.Close();
             modifCate.Show();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            ModifierCategorie modifierCategorie = new ModifierCategorie();
+            modifierCategorie.Show();
+        }
     }
 }
