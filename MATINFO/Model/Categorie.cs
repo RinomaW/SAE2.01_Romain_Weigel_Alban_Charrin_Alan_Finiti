@@ -93,9 +93,11 @@ namespace MATINFO
             throw new NotImplementedException();
         }
 
-        void Crud<Categorie>.Update()
+        void Crud<Categorie>.Update(string nomChangement)
         {
-            throw new NotImplementedException();
+            DataAccess accesBD= new DataAccess();
+            String requete = "UPDATE Categorie SET nomcategorie = " + nomChangement + " WHERE nomcategorie = " + this.nomCategorie;
+            accesBD.SetData(requete);
         }
 
         void Crud<Categorie>.Delete()
