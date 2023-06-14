@@ -83,7 +83,7 @@ namespace MATINFO
         }
 
 
-        void Crud<Categorie>.Create()
+        public void Create()
         {
             throw new NotImplementedException();
         }
