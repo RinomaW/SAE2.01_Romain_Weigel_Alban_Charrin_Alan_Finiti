@@ -19,14 +19,16 @@ namespace MATINFO
     /// </summary>
     public partial class ModifierCategorieFinal : Window
     {
-        public ModifierCategorieFinal()
+        private Categorie CategorieModifiee { get; set; }
+        public ModifierCategorieFinal(Categorie categorieModifiee)
         {
+            this.CategorieModifiee = categorieModifiee;
             InitializeComponent();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            (Categorie)modifierCategorie.categorieSelectionnee.Update(tbModifierCategorieFinal.Text);
+            CategorieModifiee.Update(tbModifierCategorieFinal.Text);
         }
 
         

@@ -83,7 +83,7 @@ namespace MATINFO
         }
 
 
-        void Crud<Categorie>.Create()
+        public void Create()
         {
             String requete = "insert into categorie values ('" + texte + "')";
             DataAccess accesBD = new DataAccess();
@@ -95,7 +95,7 @@ namespace MATINFO
             throw new NotImplementedException();
         }
 
-        void Crud<Categorie>.Update(string nomChangement)
+        public void Update(string nomChangement)
         {
             DataAccess accesBD= new DataAccess();
             String requete = "UPDATE Categorie SET nomcategorie = " + nomChangement + " WHERE nomcategorie = " + this.nomCategorie;
