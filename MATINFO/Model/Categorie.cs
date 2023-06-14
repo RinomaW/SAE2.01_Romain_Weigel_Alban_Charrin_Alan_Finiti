@@ -93,7 +93,7 @@ namespace MATINFO
             throw new NotImplementedException();
         }
 
-        void Crud<Categorie>.Update(string nomChangement)
+        public void Update(string nomChangement)
         {
             DataAccess accesBD= new DataAccess();
             String requete = "UPDATE Categorie SET nomcategorie = " + nomChangement + " WHERE nomcategorie = " + this.nomCategorie;

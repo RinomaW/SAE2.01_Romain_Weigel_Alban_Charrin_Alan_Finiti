@@ -30,7 +30,7 @@ namespace MATINFO
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             categorieSelectionnee = lvModifierCategorie.SelectedItem as Categorie;
-            ModifierCategorieFinal modifierCategorieFinal= new ModifierCategorieFinal();
+            ModifierCategorieFinal modifierCategorieFinal= new ModifierCategorieFinal(categorieSelectionnee);
             modifierCategorieFinal.Show();
         }
     }
