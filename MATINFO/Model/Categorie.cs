@@ -85,7 +85,9 @@ namespace MATINFO
 
         void Crud<Categorie>.Create()
         {
-            throw new NotImplementedException();
+            String requete = "insert into categorie values ('" + texte + "')";
+            DataAccess accesBD = new DataAccess();
+            accesBD.SetData(requete);
         }
 
         void Crud<Categorie>.Read()
