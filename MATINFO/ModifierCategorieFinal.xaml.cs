@@ -26,7 +26,7 @@ namespace MATINFO
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            
+            (Categorie)modifierCategorie.categorieSelectionnee.Update(tbModifierCategorieFinal.Text);
         }
 
         
