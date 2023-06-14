@@ -24,7 +24,7 @@ namespace MATINFO
             InitializeComponent();
         }
 
-        private void TBComm_TextChanged(object sender, TextChangedEventArgs e)
+        private void TBComm_GotFocus(object sender, RoutedEventArgs e)
         {
             this.TBComm.Text = "";
         }

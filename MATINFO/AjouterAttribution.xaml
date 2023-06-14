@@ -39,7 +39,7 @@
                     Height="21"
                     GotFocus="TBComm_GotFocus"
                     Text="Commentaire"
-                    TextWrapping="Wrap" />
+                    TextWrapping="Wrap"  />
             </StackPanel>
             <Button
                 Width="200"
