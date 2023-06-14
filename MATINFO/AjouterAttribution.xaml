@@ -41,6 +41,8 @@
                     Text="Commentaire"
                     TextWrapping="Wrap" />
             </StackPanel>
+            <Rectangle Height="51" Stroke="#00000000" Width="100"/>
+            <Rectangle Height="100" Stroke="#00000000" Width="100"/>
             <Button
                 Width="200"
                 Height="30"
