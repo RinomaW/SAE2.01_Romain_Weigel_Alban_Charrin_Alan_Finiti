@@ -83,7 +83,7 @@ namespace MATINFO
         }
 
 
-        public void Create()
+        public void Create(string texte)
         {
             String requete = "insert into categorie values ('" + texte + "')";
             DataAccess accesBD = new DataAccess();
