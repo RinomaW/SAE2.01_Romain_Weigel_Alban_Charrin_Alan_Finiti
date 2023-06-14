@@ -16,6 +16,7 @@ namespace MATINFO
         private string nomPersonnel;
         private string prenomPersonnel;
         private int iD_Personnel = 1;
+        ObservableCollection<Attribution> lesAttributions;
 
         public Personnel()
         {
@@ -84,7 +85,18 @@ namespace MATINFO
             }
         }
 
+        public ObservableCollection<Attribution> LesAttributions
+        {
+            get
+            {
+                return lesAttributions;
+            }
 
+            set
+            {
+                lesAttributions = value;
+            }
+        }
 
         void Crud<Personnel>.Create()
         {

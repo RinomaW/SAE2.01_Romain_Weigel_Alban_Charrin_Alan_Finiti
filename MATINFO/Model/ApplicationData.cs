@@ -31,16 +31,38 @@ namespace MATINFO.Model
             Personnel p = new Personnel();
             LesPersonnels = p.FindAll();
 
-            // pour chaque étudiant, on affecte la référence de son groupe
             foreach (Materiel unMat in LesMateriels.ToList())
             {
                 unMat.UneCategorie = LesCategories.ToList().Find(g => g.ID_Categorie == unMat.IdCategorie);
             }
-            // pour chaque groupe, on affecte toutes les références des étudiants appartenant au groupe
             foreach (Categorie uneCategorie in LesCategories.ToList())
             {
                 uneCategorie.LesMateriel = new ObservableCollection<Materiel>(
                 LesMateriels.ToList().FindAll(e => e.IdCategorie == uneCategorie.ID_Categorie));
+            }
+
+            foreach (Attribution uneAtr in LesAttributions.ToList())
+            {
+                uneAtr.LesMateriel = new ObservableCollection<Materiel>(
+                LesMateriels.ToList().FindAll(e => e.ID_Materiel == uneAtr.IdMateriel));
+            }
+
+            foreach (Attribution uneAtr in LesAttributions.ToList())
+            {
+                uneAtr.LesPersonnels = new ObservableCollection<Personnel>(
+                LesPersonnels.ToList().FindAll(e => e.ID_Personnel == uneAtr.IdPersonnels));
+            }
+
+            foreach (Materiel unMat in LesMateriels.ToList())
+            {
+                unMat.LesAttributions = new ObservableCollection<Attribution>(
+                LesAttributions.ToList().FindAll(e => e.IdMateriel == unMat.ID_Materiel));
+            }
+
+            foreach (Personnel unPer in LesPersonnels.ToList())
+            {
+                unPer.LesAttributions = new ObservableCollection<Attribution>(
+                LesAttributions.ToList().FindAll(e => e.IdPersonnels == unPer.ID_Personnel));
             }
 
         }

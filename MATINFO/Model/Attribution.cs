@@ -16,6 +16,9 @@ namespace MATINFO
         private int idMateriel;
         private int idPersonnels;
         private DateTime dateAttribution;
+        ObservableCollection<Materiel> lesMateriel;
+        ObservableCollection<Personnel> lesPersonnels;
+
         public Attribution(string commentaireAttribution, int idMateriel, int idPersonnels)
         {
             this.CommentaireAttribution = commentaireAttribution;
@@ -85,18 +88,43 @@ namespace MATINFO
             }
         }
 
+        public ObservableCollection<Materiel> LesMateriel
+        {
+            get
+            {
+                return lesMateriel;
+            }
+
+            set
+            {
+                lesMateriel = value;
+            }
+        }
+
+        public ObservableCollection<Personnel> LesPersonnels
+        {
+            get
+            {
+                return lesPersonnels;
+            }
+
+            set
+            {
+                lesPersonnels = value;
+            }
+        }
+
         public ObservableCollection<Attribution> FindAll()
         {
             ObservableCollection<Attribution> LesAttribution = new ObservableCollection<Attribution>();
             DataAccess accesBD = new DataAccess();
-            String requete = "select * from est_attribue;";
+            String requete = "select commentaireattribution,dateattribution,idmateriel,idpersonnel from est_attribue;";
             DataTable datas = accesBD.GetData(requete);
             if (datas != null)
             {
                 foreach (DataRow row in datas.Rows)
                 {
-                    DateTime date = DateTime.Parse(row["dateattribution"].ToString());
-                    Attribution e = new Attribution(row["commentaireattribution"].ToString(), new DateTime(date.Year, date.Month, date.Day), (int)row["idmateriel"], (int)row["idcategorie"]); 
+                    Attribution e = new Attribution(row["commentaireattribution"].ToString(), DateTime.Parse(row["dateattribution"].ToString()), (int)row["idmateriel"], (int)row["idpersonnel"]); 
                     LesAttribution.Add(e);
                 }
             }
