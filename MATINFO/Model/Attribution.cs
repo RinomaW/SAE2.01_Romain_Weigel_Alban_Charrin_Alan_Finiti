@@ -16,6 +16,9 @@ namespace MATINFO
         private int idMateriel;
         private int idPersonnels;
         private DateTime dateAttribution;
+        ObservableCollection<Materiel> lesMateriel;
+        ObservableCollection<Personnel> lesPersonnels;
+
         public Attribution(string commentaireAttribution, int idMateriel, int idPersonnels)
         {
             this.CommentaireAttribution = commentaireAttribution;
@@ -82,6 +85,32 @@ namespace MATINFO
             set
             {
                 idPersonnels = value;
+            }
+        }
+
+        public ObservableCollection<Materiel> LesMateriel
+        {
+            get
+            {
+                return lesMateriel;
+            }
+
+            set
+            {
+                lesMateriel = value;
+            }
+        }
+
+        public ObservableCollection<Personnel> LesPersonnels
+        {
+            get
+            {
+                return lesPersonnels;
+            }
+
+            set
+            {
+                lesPersonnels = value;
             }
         }
 
