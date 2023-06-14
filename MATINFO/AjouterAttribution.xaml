@@ -16,11 +16,11 @@
         <StackPanel>
             <StackPanel Height="50" Orientation="Horizontal">
                 <Label
-                    Width="88"
-                    Height="37"
+                    Width="100"
+                    Height="26"
                     Content="Nom :"
                     FontFamily="72"
-                    FontSize="18" />
+                    FontSize="14" />
                 <DatePicker Width="172" Height="28" />
             </StackPanel>
             <Rectangle Width="100" Height="15" />
@@ -39,7 +39,7 @@
                     Height="21"
                     GotFocus="TBComm_GotFocus"
                     Text="Commentaire"
-                    TextWrapping="Wrap"  />
+                    TextWrapping="Wrap" />
             </StackPanel>
             <Button
                 Width="200"

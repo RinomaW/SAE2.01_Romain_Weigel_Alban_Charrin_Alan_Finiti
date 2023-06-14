@@ -34,6 +34,11 @@ namespace MATINFO
             ajoutCate.Show();
         }
 
-        
+        private void BTAttri_Click(object sender, RoutedEventArgs e)
+        {
+            this.Visibility = Visibility.Hidden;
+            AjouterAttribution ajoutAttri = new AjouterAttribution();
+            ajoutAttri.Show();
+        }
     }
 }
