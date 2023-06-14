@@ -40,7 +40,7 @@ namespace MATINFO
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            String requete = "insert into categorie values ('" +texte+"')";
+            String requete = "insert into categorie values ('" + texte + "')";
             DataAccess accesBD = new DataAccess();
             accesBD.SetData(requete);
         }
