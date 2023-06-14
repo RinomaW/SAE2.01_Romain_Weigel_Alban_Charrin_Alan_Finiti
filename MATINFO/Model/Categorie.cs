@@ -90,7 +90,7 @@ namespace MATINFO
             accesBD.SetData(requete);
         }
 
-        void Crud<Categorie>.Read()
+        public void Read()
         {
             throw new NotImplementedException();
         }
@@ -102,9 +102,11 @@ namespace MATINFO
             accesBD.SetData(requete);
         }
 
-        void Crud<Categorie>.Delete()
+        public void Delete()
         {
-            throw new NotImplementedException();
+            DataAccess accesBD = new DataAccess();
+            String requete = "DELETE FROM Categorie WHERE nomcategorie = " + this.nomCategorie;
+            accesBD.SetData(requete);
         }
 
         public ObservableCollection<Categorie> FindAll()
