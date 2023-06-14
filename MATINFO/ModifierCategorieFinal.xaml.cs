@@ -15,22 +15,20 @@ using System.Windows.Shapes;
 namespace MATINFO
 {
     /// <summary>
-    /// Logique d'interaction pour ModifierCategorie.xaml
+    /// Logique d'interaction pour ModifierCategorieFinal.xaml
     /// </summary>
-    public partial class ModifierCategorie : Window
+    public partial class ModifierCategorieFinal : Window
     {
-        
-        public ModifierCategorie()
+        public ModifierCategorieFinal()
         {
             InitializeComponent();
-            lvModifierCategorie.SelectedIndex= 0;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            Categorie categorieSelectionnee = lvModifierCategorie.SelectedItem as Categorie;
-            ModifierCategorieFinal modifierCategorieFinal= new ModifierCategorieFinal();
-            modifierCategorieFinal.Show();
+            
         }
+
+        
     }
 }
