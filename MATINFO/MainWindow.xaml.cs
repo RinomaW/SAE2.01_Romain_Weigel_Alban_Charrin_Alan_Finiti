@@ -25,6 +25,7 @@ namespace MATINFO
         public MainWindow()
         {//feur
             InitializeComponent();
+
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -38,6 +39,11 @@ namespace MATINFO
         {
             Modifier Modifier = new Modifier();
             Modifier.Show();
+        }
+
+        private void lvCategorie_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
         }
     }
 }
