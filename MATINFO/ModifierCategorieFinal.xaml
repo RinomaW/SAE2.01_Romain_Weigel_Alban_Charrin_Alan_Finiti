@@ -5,15 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MATINFO"
         mc:Ignorable="d"
-        Title="ModifierCategorieFinal" Height="170" Width="300" MinHeight=" 170" MinWidth="300">
+        Title="ModifierCategorieFinal" Height="170" Width="300" MinHeight=" 170" MinWidth="300" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <Label Content="Nouveau nom :" HorizontalAlignment="Left" Margin="15,39,0,0" VerticalAlignment="Top" Width="94"/>
-        <TextBox x:Name="tbModifierCategorieFinal" HorizontalAlignment="Left" Margin="109,27,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="171" Height="50" Grid.ColumnSpan="2"/>
-        <Button Content="Modifier" HorizontalAlignment="Left" Margin="106,102,0,0" VerticalAlignment="Top" Height="32" Width="88" Grid.ColumnSpan="2">
+        <Label Content="Nouveau nom :" Margin="15,39,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="94"/>
+        <TextBox x:Name="tbModifierCategorieFinal" Margin="109,27,20,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="50" Grid.ColumnSpan="2"/>
+        <Button Content="Modifier" Margin="106,0,106,20" Grid.ColumnSpan="2" Height="32" VerticalAlignment="Bottom">
             <Button.Resources>
                 <Style TargetType="Border">
                     <Setter Property="CornerRadius" Value="10" />

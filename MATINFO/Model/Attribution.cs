@@ -170,5 +170,10 @@ namespace MATINFO.Model
         {
             throw new NotImplementedException();
         }
+
+        public void Create()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

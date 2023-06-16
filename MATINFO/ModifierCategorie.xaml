@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MATINFO"
         mc:Ignorable="d"
-        Title="ModifierCategorie" Height="650" Width="300" MinHeight=" 500" MinWidth="300">
+        Title="ModifierCategorie" Height="650" Width="300" MinHeight=" 500" MinWidth="300" WindowStartupLocation="CenterScreen">
     <Grid>
         <ListView x:Name="lvModifierCategorie" ItemsSource="{Binding Path =LesCategories}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="50,50,0,0" Width="200" Height="400" >
             <ListView.View>

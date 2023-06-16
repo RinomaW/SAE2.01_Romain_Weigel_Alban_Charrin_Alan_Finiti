@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MATINFO.Tests
+namespace MATINFO.Model
 {
     [TestClass()]
     public class CategorieTests
@@ -14,32 +14,53 @@ namespace MATINFO.Tests
         [TestInitialize()]
         public void Init()
         {
-            Categorie categoriePC = new Categorie("");
+            Categorie categoriePC = new Categorie("PC");
+            Categorie categorieImprimante = new Categorie("Imprimante");
+            Personnel ab = new Personnel("a.b@gmail.com", "a" ,"b");
+            Personnel ac = new Personnel("b", "c", "b.c@gmail.com");
         }
         [TestMethod()]
-        public void CategorieTest()
+        [ExpectedException(null)]
+        public void CategorieTestTrue()
         {
-            Assert.Fail();
+            Categorie categoriePC = new Categorie("PC"); 
         }
 
         [TestMethod()]
-        public void CategorieTest1()
+        [ExpectedException(typeof(ArgumentException))]
+        public void CategorieTestTropLong()
         {
-            Assert.Fail();
+            Categorie categorieTropLong = new Categorie("ordinateur quantique ultra fin et portable utilisé a des fins personnelles");
         }
 
         [TestMethod()]
-        public void testNomUniqueTest()
+        [ExpectedException(typeof(ArgumentNullException))]
+        public void CategorieTestNull()
         {
-            Assert.Fail();
+            Categorie categorienull = new Categorie("");
         }
 
         [TestMethod()]
-        public void CreateTest()
+        [ExpectedException(typeof(ArgumentException))]
+        public void CategorieTestExisteDeja()
         {
-            Assert.Fail();
+            Categorie categorieexistedeja1 = new Categorie("Imprimante");
+            Categorie categorieexistedeja2 = new Categorie("Imprimante");
         }
 
+        [TestMethod()]
+        public void CreateTestCategorieTrue()
+        {
+            Categorie catCreateTrue = new Categorie();
+            //Assert.IsTrue(catCreateTrue.Create("PC"));
+        }
+
+        [TestMethod()]
+        public void CreateTestCategorieFalse()
+        {
+            Personnel catCreateFalse = new Personnel();
+            //Assert.IsFalse(catCreateFalse.Create("a.b@gmail.com", "a", "b"));
+        }
         [TestMethod()]
         public void ReadTest()
         {
