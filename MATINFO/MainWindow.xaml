@@ -120,7 +120,7 @@
             Margin="10,0,0,165"
             HorizontalAlignment="Left"
             VerticalAlignment="Bottom"
-            Content="Supprimer">
+            Content="Supprimer" Click="Button_Click_2">
             <Button.Resources>
                 <Style TargetType="Border">
                     <Setter Property="CornerRadius" Value="10" />

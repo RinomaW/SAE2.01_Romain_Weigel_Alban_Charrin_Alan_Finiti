@@ -19,6 +19,24 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="Supprimer\CAPMSuppr.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Supprimer\SupprimerAttribution.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Supprimer\SupprimerCategorie.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Supprimer\SupprimerMateriel.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Supprimer\SupprimerPersonnel.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Ajouter\AjouterMateriel.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Ajouter\AjouterPersonnel.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
