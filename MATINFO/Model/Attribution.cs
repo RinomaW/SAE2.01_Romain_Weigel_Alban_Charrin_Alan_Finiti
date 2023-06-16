@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MATINFO
+namespace MATINFO.Model
 {
     public class Attribution : Crud<Attribution>
     {
@@ -157,6 +157,11 @@ namespace MATINFO
         }
 
         ObservableCollection<Attribution> Crud<Attribution>.FindBySelection(string criteres)
+        {
+            throw new NotImplementedException();
+        }
+
+        void Crud<Attribution>.Update(string txt)
         {
             throw new NotImplementedException();
         }

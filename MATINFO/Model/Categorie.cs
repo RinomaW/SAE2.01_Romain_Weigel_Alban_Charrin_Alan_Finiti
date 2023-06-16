@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MATINFO
+namespace MATINFO.Model
 {
     public class Categorie : Crud<Categorie>
     {
@@ -85,7 +85,7 @@ namespace MATINFO
 
         public void Create(string texte)
         {
-            String requete = "insert into categorie values ('" + texte + "')";
+            String requete = "INSERT INTO categorie VALUES ('" + texte + "')";
             DataAccess accesBD = new DataAccess();
             accesBD.SetData(requete);
         }
@@ -98,7 +98,7 @@ namespace MATINFO
         public void Update(string nomChangement)
         {
             DataAccess accesBD= new DataAccess();
-            String requete = "UPDATE Categorie SET nomcategorie = " + nomChangement + " WHERE nomcategorie = " + this.nomCategorie;
+            String requete = "UPDATE Categorie SET nomcategorie = " + nomChangement + " WHERE nomcategorie = " +this.nomCategorie;
             accesBD.SetData(requete);
         }
 
@@ -125,6 +125,11 @@ namespace MATINFO
         }
 
         ObservableCollection<Categorie> Crud<Categorie>.FindBySelection(string criteres)
+        {
+            throw new NotImplementedException();
+        }
+
+        void Crud<Categorie>.Create()
         {
             throw new NotImplementedException();
         }

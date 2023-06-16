@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MATINFO
+namespace MATINFO.Model
 {
     public class Personnel : Crud<Personnel>
     {
@@ -135,7 +135,8 @@ namespace MATINFO
             throw new NotImplementedException();
         }
 
-        void Crud<Personnel>.Update()
+
+        void Crud<Personnel>.Update(string txt)
         {
             throw new NotImplementedException();
         }
