@@ -13,6 +13,7 @@ namespace MATINFO.Model
 
 
         public ObservableCollection<Attribution> LesAttributions { get; set; }
+        
         public ObservableCollection<Categorie> LesCategories { get; set; }
         public ObservableCollection<Materiel> LesMateriels { get; set; }
         public ObservableCollection<Personnel> LesPersonnels { get; set; }
@@ -31,7 +32,8 @@ namespace MATINFO.Model
             LesMateriels = m.FindAll();
             Personnel p = new Personnel();
             LesPersonnels = p.FindAll();
-
+            LesCategories.Add(new Categorie("zboub"));
+            LesMateriels.Add(new Materiel("FEZJGVSD15", "PC numéro 92", "DSFHKFHDFB", 1, 1));
             foreach (Materiel unMat in LesMateriels.ToList())
             {
                 unMat.UneCategorie = LesCategories.ToList().Find(g => g.ID_Categorie == unMat.IdCategorie);

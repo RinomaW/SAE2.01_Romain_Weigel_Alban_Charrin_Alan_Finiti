@@ -15,7 +15,10 @@
             <ListView x:Name="lvMaterielSelectionne" Margin="0,0,-2,0" Height="307" ItemsSource="{Binding Path= LesMateriels}">
                 <ListView.View>
                     <GridView>
-                        <GridViewColumn Header="Nom du matériel" DisplayMemberBinding="{Binding NomMateriel}" Width="425"/>
+                        <GridViewColumn Header="Nom" DisplayMemberBinding="{Binding NomMateriel}" Width="100"/>
+                        <GridViewColumn Header="Code Barre" DisplayMemberBinding="{Binding CodeBarre}" Width="100"/>
+                        <GridViewColumn Header="Référence" DisplayMemberBinding="{Binding Reference}" Width="125"/>
+                        <GridViewColumn Header="Categorie" DisplayMemberBinding="{Binding IdCategorie}" Width="100"/>
                     </GridView>
                 </ListView.View>
             </ListView>
