@@ -1,6 +1,7 @@
 ﻿using MATINFO.Model;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -18,14 +19,18 @@ namespace MATINFO
     /// <summary>
     /// Logique d'interaction pour ModifierCategorie.xaml
     /// </summary>
+    
     public partial class ModifierCategorie : Window
     {
+
+        public ObservableCollection<Categorie> LesCategories { get; set; }
         public Categorie categorieSelectionnee = new Categorie();
         public ModifierCategorie()
         {
             InitializeComponent();
             lvModifierCategorie.SelectedIndex= 0;
-            
+            this.DataContext = LesCategories;
+
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
