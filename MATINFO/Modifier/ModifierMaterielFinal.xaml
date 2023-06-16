@@ -23,9 +23,9 @@
                 </Style>
             </Button.Resources>
         </Button>
-        <TextBox x:Name="tbNom" HorizontalAlignment="Left" Margin="250,50,0,0" TextWrapping="Wrap" Text="Nom" VerticalAlignment="Top" Width="223" Height="38" FontSize="16"/>
-        <TextBox x:Name="tbCodeBarre" HorizontalAlignment="Left" Margin="250,122,0,0" TextWrapping="Wrap" Text="Code Barre" VerticalAlignment="Top" Width="223" Height="38" FontStyle="Italic" FontSize="16"/>
-        <TextBox x:Name="tbRef" HorizontalAlignment="Left" Margin="250,198,0,0" TextWrapping="Wrap" Text="Référence" VerticalAlignment="Top" Width="223" Height="42" FontStyle="Italic" FontSize="16"/>
+        <TextBox x:Name="tbNom" HorizontalAlignment="Left" Margin="250,50,0,0" TextWrapping="Wrap" Text ="{Binding Path =LesMateriels, BindingGroupName= Nom}" VerticalAlignment="Top" Width="223" Height="38" FontSize="16"/>
+        <TextBox x:Name="tbCodeBarre" HorizontalAlignment="Left" Margin="250,122,0,0" TextWrapping="Wrap" Text ="{Binding XPath= LesMateriels,BindingGroupName= CodeBarre}" VerticalAlignment="Top" Width="223" Height="38" FontStyle="Italic" FontSize="16"/>
+        <TextBox x:Name="tbRef" HorizontalAlignment="Left" Margin="250,198,0,0" TextWrapping="Wrap" Text ="{Binding Path =LesMateriels, BindingGroupName= Reference}" VerticalAlignment="Top" Width="223" Height="42" FontStyle="Italic" FontSize="16"/>
         <ComboBox x:Name="cbCategorieChoix" Margin="250,285,0,0" SelectedIndex="0"  ItemsSource="{Binding LesCategories}" DisplayMemberPath="NomCategorie" SelectedValuePath="IdCategorie" HorizontalAlignment="Left" VerticalAlignment="Top" Width="200" Height="30" RenderTransformOrigin="0.5,0.5" Grid.ColumnSpan="2">
             <ComboBox.RenderTransform>
                 <TransformGroup>

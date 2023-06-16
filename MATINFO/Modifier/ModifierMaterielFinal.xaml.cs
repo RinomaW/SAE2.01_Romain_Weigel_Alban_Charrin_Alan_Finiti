@@ -27,9 +27,10 @@ namespace MATINFO.Mofifier
             InitializeComponent();
         }
 
+        // changer le zboub en l'item selectionné dans le menu déroulant mais je sais pas faire
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            MaterielSelectionne.Update(tbCodeBarre.Text, tbNom.Text, tbRef.Text, cbCategorieChoix.Text);
+            MaterielSelectionne.Update(tbCodeBarre.Text, tbNom.Text, tbRef.Text, "zboub");
         }
     }
 }
