@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Data;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -22,12 +23,12 @@ namespace MATINFO.Model
         {
         }
 
-        public Personnel(string emailPersonnel, string nomPersonnel, string prenomPersonnel)
+        public Personnel(string emailPersonnel, string nomPersonnel, string prenomPersonnel, int iD_Personnel)
         {
             this.Email = emailPersonnel;
             this.NomPersonnel = nomPersonnel;
             this.PrenomPersonnel = prenomPersonnel;
-            this.ID_Personnel++;
+            this.ID_Personnel = iD_Personnel;
         }
 
         public string Email
@@ -118,8 +119,8 @@ namespace MATINFO.Model
             {
                 foreach (DataRow row in datas.Rows)
                 {
-                    Personnel e = new Personnel(row["emailpersonnel"].ToString(), row["nompersonnel"].ToString(), row["prenompersonnel"].ToString());
-                    LesPersonnel.Add(e);
+                    //Personnel e = new Personnel(row["emailpersonnel"].ToString(), row["nompersonnel"].ToString(), row["prenompersonnel"].ToString());
+                    //LesPersonnel.Add(e);
                 }
             }
             return LesPersonnel;

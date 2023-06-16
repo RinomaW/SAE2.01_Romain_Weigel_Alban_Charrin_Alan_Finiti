@@ -32,8 +32,11 @@ namespace MATINFO.Model
             LesMateriels = m.FindAll();
             Personnel p = new Personnel();
             LesPersonnels = p.FindAll();
-            LesCategories.Add(new Categorie("zboub"));
+            LesCategories.Add(new Categorie("zboub",1));
             LesMateriels.Add(new Materiel("FEZJGVSD15", "PC numéro 92", "DSFHKFHDFB", 1, 1));
+            Personnel cedric = new Personnel("cedric.diggory@gmail.com", "diggory", "cedric",1);
+            LesPersonnels.Add(cedric);
+            LesAttributions.Add(new Attribution("cedric aime les zboubs", DateTime.Today, 1, 1));
             foreach (Materiel unMat in LesMateriels.ToList())
             {
                 unMat.UneCategorie = LesCategories.ToList().Find(g => g.ID_Categorie == unMat.IdCategorie);
