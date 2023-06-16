@@ -16,7 +16,7 @@ namespace MATINFO.Model
         private string nomCategorie;
         private int iD_Categorie;
         public HashSet<string> nomUniques;
-        ObservableCollection<Materiel> lesMateriel;
+        ObservableCollection<Materiel> lesMateriels;
 
         public Categorie(string nomCategorie, int idCategorie)
         {
@@ -58,16 +58,16 @@ namespace MATINFO.Model
             }
         }
 
-        public ObservableCollection<Materiel> LesMateriel
+        public ObservableCollection<Materiel> LesMateriels
         {
             get
             {
-                return lesMateriel;
+                return lesMateriels;
             }
 
             set
             {
-                lesMateriel = value;
+                lesMateriels = value;
             }
         }
 

@@ -37,7 +37,7 @@ namespace MATINFO.Model
             }
             foreach (Categorie uneCategorie in LesCategories.ToList())
             {
-                uneCategorie.LesMateriel = new ObservableCollection<Materiel>(
+                uneCategorie.LesMateriels = new ObservableCollection<Materiel>(
                 LesMateriels.ToList().FindAll(e => e.IdCategorie == uneCategorie.ID_Categorie));
             }
 
