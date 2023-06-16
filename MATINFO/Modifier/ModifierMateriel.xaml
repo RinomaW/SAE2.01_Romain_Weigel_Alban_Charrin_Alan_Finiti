@@ -7,17 +7,18 @@
         xmlns:model="clr-namespace:MATINFO.Model"
         mc:Ignorable="d"
         Title="ModifierMateriel" Height="435" Width="498" MinHeight="500" MinWidth="500" WindowStartupLocation="CenterScreen">
-
     <Window.DataContext>
-        <model:ApplicationData x:Name="applicationData"/>
+        <model:ApplicationData x:Name="applicationData" />
     </Window.DataContext>
-    
     <Grid>
         <GroupBox Header="Matériels" Margin="34,27,24,0" FontWeight="Bold" Height="331" VerticalAlignment="Top">
-            <ListView x:Name="lvMaterielSelectionne" Margin="0,0,-2,0" Height="307" ItemsSource="{Binding LesMateriels}">
+            <ListView x:Name="lvMaterielSelectionne" Margin="0,0,-2,0" Height="307" ItemsSource="{Binding Path= LesMateriels}">
                 <ListView.View>
                     <GridView>
-                        <GridViewColumn Header="nom" DisplayMemberBinding="{Binding NomMateriel}" Width="400"/>
+                        <GridViewColumn Header="Nom" DisplayMemberBinding="{Binding NomMateriel}" Width="100"/>
+                        <GridViewColumn Header="Code Barre" DisplayMemberBinding="{Binding CodeBarre}" Width="100"/>
+                        <GridViewColumn Header="Référence" DisplayMemberBinding="{Binding Reference}" Width="125"/>
+                        <GridViewColumn Header="Categorie" DisplayMemberBinding="{Binding IdCategorie}" Width="100"/>
                     </GridView>
                 </ListView.View>
             </ListView>

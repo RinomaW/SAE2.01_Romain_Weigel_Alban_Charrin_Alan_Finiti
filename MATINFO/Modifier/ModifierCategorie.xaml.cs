@@ -29,7 +29,7 @@ namespace MATINFO
         {
             InitializeComponent();
             lvModifierCategorie.SelectedIndex= 0;
-            this.DataContext = LesCategories;
+            this.DataContext = applicationData;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)

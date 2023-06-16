@@ -25,7 +25,7 @@ namespace MATINFO
         public MainWindow()
         {//feur
             InitializeComponent();
-
+            DataContext = applicationData;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
