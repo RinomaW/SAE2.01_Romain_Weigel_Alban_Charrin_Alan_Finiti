@@ -51,7 +51,7 @@
             <Button
                 Width="200"
                 Height="30"
-                Content="Matériel">
+                Content="Matériel" Click="Button_Click_1">
                 <Button.Resources>
                     <Style TargetType="Border">
                         <Setter Property="CornerRadius" Value="10" />

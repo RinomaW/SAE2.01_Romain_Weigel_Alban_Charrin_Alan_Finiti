@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MATINFO.Mofifier;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -39,6 +40,12 @@ namespace MATINFO
         {
             ModifierCategorie modifierCategorie = new ModifierCategorie();
             modifierCategorie.Show();
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            ModifierMateriel modifierMateriel = new ModifierMateriel();
+            modifierMateriel.Show();
         }
     }
 }
