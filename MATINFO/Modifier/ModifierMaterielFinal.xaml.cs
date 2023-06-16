@@ -25,6 +25,7 @@ namespace MATINFO.Mofifier
         {
             this.MaterielSelectionne= materiel;
             InitializeComponent();
+            this.DataContext = materiel;
         }
 
         // changer le zboub en l'item selectionné dans le menu déroulant mais je sais pas faire
