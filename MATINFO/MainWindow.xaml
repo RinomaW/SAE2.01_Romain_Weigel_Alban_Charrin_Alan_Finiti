@@ -42,12 +42,12 @@
             <ListView
                 x:Name="lvCategorie"
                 Margin="10,10,75,300"
-                ItemsSource="{Binding LesAttributions}">
+                ItemsSource="{Binding LesCategories}">
                 <ListView.View>
                     <GridView>
                         <GridViewColumn
                             Width="105"
-                            DisplayMemberBinding="{Binding UnMateriel.UneCategorie.NomCategorie}"
+                            DisplayMemberBinding="{Binding NomCategorie}"
                             Header="Categorie" />
                     </GridView>
                 </ListView.View>
@@ -59,12 +59,12 @@
                 Grid.Column="2"
                 Margin="10,300,75,10"
                 DataContext="{Binding SelectedItem, ElementName=lvCategorie}"
-                ItemsSource="{Binding LesAttributions}">
+                ItemsSource="{Binding LesMateriels}">
                 <ListView.View>
                     <GridView>
                         <GridViewColumn
                             Width="110"
-                            DisplayMemberBinding="{Binding Path=UnMateriel.NomMateriel}"
+                            DisplayMemberBinding="{Binding Path=UneCategorie.NomCategorie}"
                             Header="Nom" />
                     </GridView>
                 </ListView.View>
@@ -75,16 +75,16 @@
                 Height="275"
                 Margin="10,10,75,300"
                 VerticalAlignment="Top"
-                ItemsSource="{Binding LesAttributions}">
+                ItemsSource="{Binding LesPersonnels}">
                 <ListView.View>
                     <GridView>
                         <GridViewColumn
                             Width="52"
-                            DisplayMemberBinding="{Binding Path=UnPersonnel.NomPersonnel}"
+                            DisplayMemberBinding="{Binding Path=NomPersonnel}"
                             Header="Nom" />
                         <GridViewColumn
                             Width="52"
-                            DisplayMemberBinding="{Binding Path=UnPersonnel.PrenomPersonnel}"
+                            DisplayMemberBinding="{Binding Path=PrenomPersonnel}"
                             Header="Prenom" />
                     </GridView>
                 </ListView.View>
