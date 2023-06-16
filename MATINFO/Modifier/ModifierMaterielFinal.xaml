@@ -1,0 +1,27 @@
+﻿<Window x:Class="MATINFO.Mofifier.ModifierMaterielFinal"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MATINFO.Mofifier"
+        mc:Ignorable="d"
+        Title="ModifierMaterielFinal" Height="500" Width="500" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Label Content="Nom :" HorizontalAlignment="Left" Margin="46,50,0,0" VerticalAlignment="Top" Height="38" Width="90" FontSize="24" FontWeight="Bold"/>
+        <Label Content="Code Barre :" HorizontalAlignment="Left" Margin="46,120,0,0" VerticalAlignment="Top" Height="40" Width="153" FontSize="24" FontWeight="Bold"/>
+        <Label Content="Référence :" HorizontalAlignment="Left" Margin="46,196,0,0" VerticalAlignment="Top" Height="46" Width="153" FontSize="24" FontWeight="Bold"/>
+        <Label Content="Catégorie :" HorizontalAlignment="Left" Margin="46,278,0,0" VerticalAlignment="Top" Height="41" Width="153" FontSize="24" FontWeight="Bold"/>
+        <Button Content="Modifier" HorizontalAlignment="Center" Margin="0,383,0,0" VerticalAlignment="Top" Height="46" Width="124" FontSize="16">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="15" />
+                </Style>
+            </Button.Resources>
+        </Button>
+        <TextBox HorizontalAlignment="Left" Margin="250,50,0,0" TextWrapping="Wrap" Text="Nom" VerticalAlignment="Top" Width="223" Height="38" FontSize="16"/>
+        <TextBox HorizontalAlignment="Left" Margin="250,122,0,0" TextWrapping="Wrap" Text="Code Barre" VerticalAlignment="Top" Width="223" Height="38" FontStyle="Italic" FontSize="16"/>
+        <TextBox HorizontalAlignment="Left" Margin="250,198,0,0" TextWrapping="Wrap" Text="Référence" VerticalAlignment="Top" Width="223" Height="42" FontStyle="Italic" FontSize="16"/>
+        <ComboBox HorizontalAlignment="Left" Margin="250,293,0,0" VerticalAlignment="Top" Width="223" Height="26"/>
+
+    </Grid>
+</Window>
