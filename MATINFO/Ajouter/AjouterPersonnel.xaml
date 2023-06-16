@@ -46,7 +46,7 @@
                    
                     TextWrapping="Wrap" GotFocus="TBPrenom_GotFocus"   />
             </StackPanel>
-            <Rectangle Height="15" Stroke="#00000000" Width="100"/>
+            <Rectangle Height="15" Stroke="#00000000" Width="100" />
             <StackPanel
                 Height="67"
                 Orientation="Horizontal">
