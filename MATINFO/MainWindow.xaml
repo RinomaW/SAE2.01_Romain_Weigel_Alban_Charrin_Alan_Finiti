@@ -32,8 +32,8 @@
             <ListView.View>
                 <GridView>
                     <GridViewColumn
-                        Width="Auto"
-                        DisplayMemberBinding="{Binding Path=DateAttribution.Date}"
+                        Width="105"
+                        DisplayMemberBinding="{Binding Path=DateAttribution}"
                         Header="Date" />
                 </GridView>
             </ListView.View>
@@ -44,28 +44,28 @@
             <ListView
                 x:Name="lvCategorie"
                 Margin="10,10,75,300"
-                DataContext="{Binding Path=SelectedItem, ElementName=lvAttribution}"
-                ItemsSource="{Binding LesCategorie}">
+                DataContext="{Binding Path=SelectedItem, ElementName=lvMateriel}"
+                ItemsSource="{Binding UneCategorie}">
                 <ListView.View>
                     <GridView>
                         <GridViewColumn
-                            Width="Auto"
+                            Width="105"
                             DisplayMemberBinding="{Binding Path=NomCategorie}"
                             Header="Categorie" />
                     </GridView>
                 </ListView.View>
             </ListView>
         </Grid>
-        <Grid Grid.Column="2" DataContext="{Binding Path=SelectedIndex, ElementName=lvAttribution}">
+        <Grid Grid.Column="2" >
             <ListView
                 x:Name="lvMateriel"
                 Grid.Column="2"
                 Margin="10,300,75,10"
-                ItemsSource="{Binding}">
+                DataContext="{Binding Path=SelectedItem, ElementName=lvAttribution}" ItemsSource="{Binding LesMateriels}">
                 <ListView.View>
                     <GridView>
                         <GridViewColumn
-                            Width="Auto"
+                            Width="110"
                             DisplayMemberBinding="{Binding Path=NomMateriel}"
                             Header="Nom" />
                     </GridView>
@@ -76,11 +76,11 @@
                 Height="275"
                 Margin="10,10,75,300"
                 VerticalAlignment="Top"
-                ItemsSource="{Binding Path=LesPersonnels}">
+                DataContext="{Binding Path=SelectedItem, ElementName=lvAttribution}" ItemsSource="{Binding LesPersonnels}">
                 <ListView.View>
                     <GridView>
-                        <GridViewColumn DisplayMemberBinding="{Binding Path=NomPersonnel}" Header="Nom" />
-                        <GridViewColumn DisplayMemberBinding="{Binding Path=PrenomPersonnel}" Header="Prenom" />
+                        <GridViewColumn DisplayMemberBinding="{Binding Path=NomPersonnel}" Header="Nom" Width="52"/>
+                        <GridViewColumn DisplayMemberBinding="{Binding Path=PrenomPersonnel}" Header="Prenom" Width="52"/>
                     </GridView>
                 </ListView.View>
             </ListView>

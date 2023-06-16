@@ -9,11 +9,19 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Include="usmbéh2.ico" />
+    <Content Include="usmbéh2.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Npgsql" Version="7.0.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Ajouter\AjouterPersonnel.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
 
 </Project>
