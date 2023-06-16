@@ -5,13 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MATINFO"
         mc:Ignorable="d"
-        Title="ModifierCategorieFinal" Height="170" Width="300" MinHeight=" 170" MinWidth="300" WindowStartupLocation="CenterScreen">
+        Title="ModifierCategorieFinal" Height="170" Width="400" MinHeight=" 170" MinWidth="400" WindowStartupLocation="CenterScreen">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <Label Content="Nouveau nom :" Margin="15,39,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="94"/>
+        <Label Content="Nouveau nom :" Margin="15,39,0,0" HorizontalAlignment="Left" Width="94" Height="26" VerticalAlignment="Top"/>
         <TextBox x:Name="tbModifierCategorieFinal" Margin="109,27,20,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="50" Grid.ColumnSpan="2"/>
         <Button Content="Modifier" Margin="106,0,106,20" Grid.ColumnSpan="2" Height="32" VerticalAlignment="Bottom">
             <Button.Resources>
