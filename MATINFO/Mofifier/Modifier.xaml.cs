@@ -35,12 +35,14 @@ namespace MATINFO
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            this.Visibility = Visibility.Hidden;
             ModifierCategorie modifierCategorie = new ModifierCategorie();
             modifierCategorie.Show();
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
+            this.Visibility = Visibility.Hidden;
             ModifierMateriel modifierMateriel = new ModifierMateriel();
             modifierMateriel.Show();
         }

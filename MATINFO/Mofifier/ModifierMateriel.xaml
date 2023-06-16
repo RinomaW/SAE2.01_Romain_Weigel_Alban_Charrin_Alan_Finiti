@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MATINFO.Mofifier"
         mc:Ignorable="d"
-        Title="ModifierMateriel" Height="435" Width="498" MinHeight="500" MinWidth="500">
+        Title="ModifierMateriel" Height="435" Width="498" MinHeight="500" MinWidth="500" WindowStartupLocation="CenterScreen">
     <Grid>
         <GroupBox Header="Matériels" Margin="34,27,24,0" FontWeight="Bold" Height="331" VerticalAlignment="Top">
             <ListView x:Name="lvMaterielSelectionne" Margin="0,0,-2,0" Height="307">
