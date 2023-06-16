@@ -7,9 +7,9 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:model="clr-namespace:MATINFO.Model"
     Title="MainWindow"
-    Width="600"
+    Width="1200"
     Height="600"
-    MinWidth="600"
+    MinWidth="1200"
     MinHeight="700"
     WindowStartupLocation="CenterScreen"
     mc:Ignorable="d">
@@ -19,41 +19,38 @@
 
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="1*" />
-            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="2*" />
             <ColumnDefinition Width="1*" />
         </Grid.ColumnDefinitions>
 
         <ListView
             x:Name="lvAttribution"
             Grid.Column="0"
-            Margin="10,10,75,300"
+            Margin="10,10,5,300"
             DataContext="{Binding SelectedItem, ElementName=lvMateriel}"
             ItemsSource="{Binding Path=LesAttributions}">
             <ListView.View>
                 <GridView>
                     <GridViewColumn
-                        Width="105"
+                        Width="65"
                         DisplayMemberBinding="{Binding Path=DateAttribution}"
                         Header="Date" />
+                    <GridViewColumn
+                        Width="110"
+                        DisplayMemberBinding="{Binding Path=UnPersonnel.NomPersonnel}"
+                        Header="NomPersonnel" />
+                    <GridViewColumn
+                        Width="110"
+                        DisplayMemberBinding="{Binding Path=UnPersonnel.PrenomPersonnel}"
+                        Header="PrenomPersonnel" />
+                    <GridViewColumn
+                        Width="500"
+                        DisplayMemberBinding="{Binding Path=CommentaireAttribution}"
+                        Header="Commentaire" />
                 </GridView>
             </ListView.View>
         </ListView>
-        <Grid Grid.Column="1" Margin="0,0,10,0">
-            <ListView
-                x:Name="lvCategorie"
-                Margin="10,10,75,300"
-                ItemsSource="{Binding LesCategories}">
-                <ListView.View>
-                    <GridView>
-                        <GridViewColumn
-                            Width="105"
-                            DisplayMemberBinding="{Binding NomCategorie}"
-                            Header="Categorie" />
-                    </GridView>
-                </ListView.View>
-            </ListView>
-        </Grid>
+        
         <Grid Grid.Column="2">
             <ListView
                 x:Name="lvMateriel"
@@ -64,30 +61,25 @@
                 <ListView.View>
                     <GridView>
                         <GridViewColumn
-                            Width="110"
+                            Width="305"
                             DisplayMemberBinding="{Binding Path=NomMateriel}"
                             Header="Nom" />
                     </GridView>
                 </ListView.View>
             </ListView>
             <ListView
-                x:Name="lvPersonnel"
+                x:Name="lvCategorie"
                 Grid.Column="2"
                 Height="275"
                 Margin="10,10,75,300"
                 VerticalAlignment="Top"
-                DataContext="{Binding SelectedItem, ElementName=lvCategorie}"
-                ItemsSource="{Binding LesPersonnels}">
+                ItemsSource="{Binding LesCategories}">
                 <ListView.View>
                     <GridView>
                         <GridViewColumn
-                            Width="52"
-                            DisplayMemberBinding="{Binding Path=NomPersonnel}"
+                            Width="305"
+                            DisplayMemberBinding="{Binding Path=NomCategorie}"
                             Header="Nom" />
-                        <GridViewColumn
-                            Width="52"
-                            DisplayMemberBinding="{Binding Path=PrenomPersonnel}"
-                            Header="Prenom" />
                     </GridView>
                 </ListView.View>
             </ListView>
