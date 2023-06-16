@@ -10,8 +10,8 @@
     Height="260"
     MinWidth="300"
     MinHeight="240"
- 
-    mc:Ignorable="d" WindowStartupLocation="CenterScreen">
+    WindowStartupLocation="CenterScreen"
+    mc:Ignorable="d">
     <Grid>
         <StackPanel>
             <Label
@@ -38,7 +38,8 @@
                 x:Name="BTAttri"
                 Width="200"
                 Height="30"
-                Content="Attribution" Click="BTAttri_Click">
+                Click="BTAttri_Click"
+                Content="Attribution">
                 <Button.Resources>
                     <Style TargetType="Border">
                         <Setter Property="CornerRadius" Value="10" />
@@ -50,6 +51,7 @@
                 x:Name="BTPerso"
                 Width="200"
                 Height="30"
+                Click="BTPerso_Click"
                 Content="Personnel">
                 <Button.Resources>
                     <Style TargetType="Border">
