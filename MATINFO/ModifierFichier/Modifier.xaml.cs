@@ -1,4 +1,5 @@
-﻿using MATINFO.Mofifier;
+﻿using MATINFO.Modifier;
+using MATINFO.Mofifier;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,14 +19,14 @@ namespace MATINFO
     /// <summary>
     /// Logique d'interaction pour Modifier.xaml
     /// </summary>
-    public partial class Modifier : Window
+    public partial class ActionModifier : Window
     {
-        public Modifier()
+        public ActionModifier()
         {
             InitializeComponent();
         }
 
-        
+
         private void BTcateMBDWN(object sender, MouseButtonEventArgs e)
         {
             ModifierCategorie modifCate = new ModifierCategorie();
@@ -45,6 +46,13 @@ namespace MATINFO
             this.Visibility = Visibility.Hidden;
             ModifierMateriel modifierMateriel = new ModifierMateriel();
             modifierMateriel.Show();
+        }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            this.Visibility = Visibility.Hidden;
+            ModifierPersonnel modifierPersonnel = new ModifierPersonnel();
+            modifierPersonnel.Show();
         }
     }
 }

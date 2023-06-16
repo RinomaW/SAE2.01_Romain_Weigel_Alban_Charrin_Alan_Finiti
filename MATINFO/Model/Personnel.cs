@@ -143,9 +143,11 @@ namespace MATINFO.Model
         }
 
 
-        void Crud<Personnel>.Update(string txt)
+        public void Update(string nom, string prenom, string email)
         {
-            throw new NotImplementedException();
+            String requete = "UPDATE Personnel SET emailpersonnel = " + email + "nompersonnel = " + nom + " , prenompersonnel = " + prenom + " WHERE idpersonnel = " + this.ID_Personnel;
+            DataAccess accesBD = new DataAccess();
+            accesBD.SetData(requete);
         }
     }
 

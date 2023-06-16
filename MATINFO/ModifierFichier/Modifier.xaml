@@ -1,4 +1,4 @@
-﻿<Window x:Class="MATINFO.Modifier"
+﻿<Window x:Class="MATINFO.ActionModifier"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -40,7 +40,7 @@
             <Button
                 Width="200"
                 Height="30"
-                Content="Personnel">
+                Content="Personnel" Click="Button_Click_2">
                 <Button.Resources>
                     <Style TargetType="Border">
                         <Setter Property="CornerRadius" Value="10" />
