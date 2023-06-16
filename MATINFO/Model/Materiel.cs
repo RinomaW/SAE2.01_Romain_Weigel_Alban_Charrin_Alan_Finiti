@@ -4,7 +4,7 @@ using System;
 using System.Collections.ObjectModel;
 using System.Data;
 
-namespace MATINFO
+namespace MATINFO.Model
 {
     public class Materiel : Crud<Materiel>
     {
@@ -158,7 +158,7 @@ namespace MATINFO
             throw new NotImplementedException();
         }
 
-        void Crud<Materiel>.Update()
+        void Crud<Materiel>.Update(string txt)
         {
             throw new NotImplementedException();
         }

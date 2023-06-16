@@ -40,12 +40,12 @@
         </ListView>
         <Grid
             Grid.Column="1"
-            Margin="0,0,10,0"
-            DataContext="{Binding Path=SelectedIndex, ElementName=lvAttribution}">
+            Margin="0,0,10,0">
             <ListView
                 x:Name="lvCategorie"
                 Margin="10,10,75,300"
-                ItemsSource="{Binding Path=l}">
+                DataContext="{Binding Path=SelectedItem, ElementName=lvAttribution}"
+                ItemsSource="{Binding LesCategorie}">
                 <ListView.View>
                     <GridView>
                         <GridViewColumn

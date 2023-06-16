@@ -13,7 +13,7 @@
         </Grid.ColumnDefinitions>
         <Label Content="Nouveau nom :" HorizontalAlignment="Left" Margin="15,39,0,0" VerticalAlignment="Top" Width="94"/>
         <TextBox x:Name="tbModifierCategorieFinal" HorizontalAlignment="Left" Margin="109,27,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="171" Height="50" Grid.ColumnSpan="2"/>
-        <Button Content="Modifier" HorizontalAlignment="Left" Margin="106,102,0,0" VerticalAlignment="Top" Height="32" Width="88" Grid.ColumnSpan="2" Click="Button_Click">
+        <Button Content="Modifier" HorizontalAlignment="Left" Margin="106,102,0,0" VerticalAlignment="Top" Height="32" Width="88" Grid.ColumnSpan="2">
             <Button.Resources>
                 <Style TargetType="Border">
                     <Setter Property="CornerRadius" Value="10" />
