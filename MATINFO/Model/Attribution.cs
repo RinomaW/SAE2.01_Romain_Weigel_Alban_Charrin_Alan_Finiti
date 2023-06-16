@@ -144,9 +144,13 @@ namespace MATINFO.Model
             throw new NotImplementedException();
         }
 
-        public void Update()
+        public void Update(string commentaireAttribution, string nomMateriel, string nomPersonnel)
         {
-            throw new NotImplementedException();
+            int idMat = Materiel.Find(nomMateriel).ID_Materiel;
+            int idPerso = Personnel.Find(nomPersonnel).ID_Personnel;
+            DataAccess accesBD = new DataAccess();
+            String requete = "UPDATE Attribution SET commentaireattribution = " + commentaireAttribution + ", idmateriel = " + idMat + ", idpersonnel = " + idPerso + " WHERE dateattribution = " + this.DateAttribution;
+            accesBD.SetData(requete);
         }
 
         public void Delete()

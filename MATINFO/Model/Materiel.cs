@@ -172,5 +172,16 @@ namespace MATINFO.Model
         {
             throw new NotImplementedException();
         }
+        public static Materiel Find(string nomMateriel)
+        {
+            ObservableCollection<Materiel> LesMateriels = new ObservableCollection<Materiel>();
+            Materiel mat = null;
+            foreach (Materiel m in LesMateriels)
+            {
+                if (m.NomMateriel == nomMateriel)
+                    mat = m;
+            }
+            return mat;
+        }
     }
 }

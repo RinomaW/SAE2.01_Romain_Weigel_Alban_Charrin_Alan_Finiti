@@ -154,8 +154,19 @@ namespace MATINFO.Model
         {
             throw new NotImplementedException();
         }
+        public static Personnel Find(string nomPersonnel)
+        {
+            ObservableCollection<Personnel> LesPersonnels = new ObservableCollection<Personnel>();
+            Personnel pers = null;
+            foreach (Personnel p in LesPersonnels)
+            {
+                if (p.NomPersonnel == nomPersonnel)
+                    pers = p;
+            }
+            return pers;
+        }
     }
-
+    
     public class Personnels
     {
     }
