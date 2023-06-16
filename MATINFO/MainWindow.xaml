@@ -42,12 +42,12 @@
             <ListView
                 x:Name="lvCategorie"
                 Margin="10,10,75,300"
-                ItemsSource="{Binding LesCategories}">
+                ItemsSource="{Binding LesAttributions}">
                 <ListView.View>
                     <GridView>
                         <GridViewColumn
                             Width="105"
-                            DisplayMemberBinding="{Binding NomCategorie}"
+                            DisplayMemberBinding="{Binding UnMateriel.UneCategorie.NomCategorie}"
                             Header="Categorie" />
                     </GridView>
                 </ListView.View>
@@ -58,13 +58,13 @@
                 x:Name="lvMateriel"
                 Grid.Column="2"
                 Margin="10,300,75,10"
-                DataContext="{Binding Path=SelectedItem, ElementName=lvCategorie}"
-                ItemsSource="{Binding LesCategories}">
+                DataContext="{Binding SelectedItem, ElementName=lvCategorie}"
+                ItemsSource="{Binding LesAttributions}">
                 <ListView.View>
                     <GridView>
                         <GridViewColumn
                             Width="110"
-                            DisplayMemberBinding="{Binding Path=LesMateriels.NomMateriel}"
+                            DisplayMemberBinding="{Binding Path=UnMateriel.NomMateriel}"
                             Header="Nom" />
                     </GridView>
                 </ListView.View>
