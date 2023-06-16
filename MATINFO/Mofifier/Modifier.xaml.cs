@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MATINFO.Mofifier;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -24,10 +25,7 @@ namespace MATINFO
             InitializeComponent();
         }
 
-        private void Window_Deactivated(object sender, EventArgs e)
-        {
-            this.Close();
-        }
+        
         private void BTcateMBDWN(object sender, MouseButtonEventArgs e)
         {
             ModifierCategorie modifCate = new ModifierCategorie();
@@ -37,8 +35,16 @@ namespace MATINFO
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            this.Visibility = Visibility.Hidden;
             ModifierCategorie modifierCategorie = new ModifierCategorie();
             modifierCategorie.Show();
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            this.Visibility = Visibility.Hidden;
+            ModifierMateriel modifierMateriel = new ModifierMateriel();
+            modifierMateriel.Show();
         }
     }
 }

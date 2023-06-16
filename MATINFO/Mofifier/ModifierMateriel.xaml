@@ -1,0 +1,29 @@
+﻿<Window x:Class="MATINFO.Mofifier.ModifierMateriel"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MATINFO.Mofifier"
+        mc:Ignorable="d"
+        Title="ModifierMateriel" Height="435" Width="498" MinHeight="500" MinWidth="500" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <GroupBox Header="Matériels" Margin="34,27,24,0" FontWeight="Bold" Height="331" VerticalAlignment="Top">
+            <ListView x:Name="lvMaterielSelectionne" Margin="0,0,-2,0" Height="307">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn/>
+                    </GridView>
+                </ListView.View>
+            </ListView>
+        </GroupBox>
+
+        <Button Content="Modifier" Margin="203,0,171,26" VerticalAlignment="Bottom" Height="31" Click="Button_Click">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="10" />
+                </Style>
+            </Button.Resources>
+        </Button>
+
+    </Grid>
+</Window>

@@ -64,7 +64,7 @@
                 x:Name="BPMate"
                 Width="200"
                 Height="30"
-                Content="Matériel">
+                Content="Matériel" Click="BPMate_Click">
                 <Button.Resources>
                     <Style TargetType="Border">
                         <Setter Property="CornerRadius" Value="10" />

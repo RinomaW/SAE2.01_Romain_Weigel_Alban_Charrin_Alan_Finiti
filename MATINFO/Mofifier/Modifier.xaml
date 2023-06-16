@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MATINFO"
         mc:Ignorable="d"
-        Title="Modifier" Height="300" Width="260" MinHeight="300" MinWidth=" 240" Deactivated="Window_Deactivated" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+        Title="Modifier" Height="300" Width="260" MinHeight="300" MinWidth=" 240"  WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
     <Grid>
         <StackPanel>
             <Label
@@ -51,7 +51,7 @@
             <Button
                 Width="200"
                 Height="30"
-                Content="Matériel">
+                Content="Matériel" Click="Button_Click_1">
                 <Button.Resources>
                     <Style TargetType="Border">
                         <Setter Property="CornerRadius" Value="10" />
