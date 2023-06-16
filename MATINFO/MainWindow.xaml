@@ -28,7 +28,7 @@
             x:Name="lvAttribution"
             Grid.Column="0"
             Margin="10,10,75,300"
-            DataContext="{Binding ElementName=lvMateriel}"
+            DataContext="{Binding SelectedItem, ElementName=lvMateriel}"
             ItemsSource="{Binding Path=LesAttributions}">
             <ListView.View>
                 <GridView>
