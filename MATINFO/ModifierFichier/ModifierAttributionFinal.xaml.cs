@@ -29,7 +29,7 @@ namespace MATINFO.ModifierFichier
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            AttributionModifiee.Update();
+            AttributionModifiee.Update(tbCommentaireAttribution.Text,"PC", "Jérôme");
         }
     }
 }
