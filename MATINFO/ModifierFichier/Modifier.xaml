@@ -29,7 +29,7 @@
             <Button
                 Width="200"
                 Height="30"
-                Content="Attribution">
+                Content="Attribution" Click="Button_Click_3">
                 <Button.Resources>
                     <Style TargetType="Border">
                         <Setter Property="CornerRadius" Value="10" />

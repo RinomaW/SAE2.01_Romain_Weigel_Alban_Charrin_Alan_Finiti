@@ -1,4 +1,5 @@
 ﻿using MATINFO.Modifier;
+using MATINFO.ModifierFichier;
 using MATINFO.Mofifier;
 using System;
 using System.Collections.Generic;
@@ -54,5 +55,15 @@ namespace MATINFO
             ModifierPersonnel modifierPersonnel = new ModifierPersonnel();
             modifierPersonnel.Show();
         }
+
+        private void Button_Click_3(object sender, RoutedEventArgs e)
+        {
+            this.Visibility = Visibility.Hidden;
+            ModifierAttribution modifierAttribution = new ModifierAttribution();
+            modifierAttribution.Show();
+        }
     }
+
+
+
 }

@@ -149,6 +149,11 @@ namespace MATINFO.Model
             DataAccess accesBD = new DataAccess();
             accesBD.SetData(requete);
         }
+
+        public void Update(string txt)
+        {
+            throw new NotImplementedException();
+        }
     }
 
     public class Personnels

@@ -37,7 +37,7 @@ namespace MATINFO
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            Modifier Modifier = new Modifier();
+            ActionModifier Modifier = new ActionModifier();
             Modifier.Show();
         }
 
