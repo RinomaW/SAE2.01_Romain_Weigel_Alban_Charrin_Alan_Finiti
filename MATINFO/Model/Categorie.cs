@@ -138,5 +138,16 @@ namespace MATINFO.Model
         {
             throw new NotImplementedException();
         }
+        public static Categorie Find(string nomCategorie)
+        {
+            ObservableCollection<Categorie> LesCategories = new ObservableCollection<Categorie>();
+            Categorie cat = null;
+            foreach (Categorie c in LesCategories)
+            {
+                if (c.NomCategorie == nomCategorie)
+                    cat = c;
+            }
+            return cat;
+        }
     }
 }

@@ -26,5 +26,10 @@ namespace MATINFO.Mofifier
             this.MaterielSelectionne= materiel;
             InitializeComponent();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            MaterielSelectionne.Update(tbCodeBarre.Text, tbNom.Text, tbRef.Text, cbCategorieChoix.Text);
+        }
     }
 }

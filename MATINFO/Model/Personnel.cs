@@ -30,7 +30,13 @@ namespace MATINFO.Model
             this.PrenomPersonnel = prenomPersonnel;
             this.ID_Personnel = iD_Personnel;
         }
-
+        public Personnel(string emailPersonnel, string nomPersonnel, string prenomPersonnel)
+        {
+            this.Email = emailPersonnel;
+            this.NomPersonnel = nomPersonnel;
+            this.PrenomPersonnel = prenomPersonnel;
+            this.ID_Personnel ++;
+        }
         public string Email
         {
             get
@@ -119,8 +125,8 @@ namespace MATINFO.Model
             {
                 foreach (DataRow row in datas.Rows)
                 {
-                    //Personnel e = new Personnel(row["emailpersonnel"].ToString(), row["nompersonnel"].ToString(), row["prenompersonnel"].ToString());
-                    //LesPersonnel.Add(e);
+                    Personnel e = new Personnel(row["emailpersonnel"].ToString(), row["nompersonnel"].ToString(), row["prenompersonnel"].ToString());
+                    LesPersonnel.Add(e);
                 }
             }
             return LesPersonnel;

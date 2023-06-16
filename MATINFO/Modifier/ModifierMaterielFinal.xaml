@@ -16,16 +16,16 @@
         <Label Content="Code Barre :" HorizontalAlignment="Left" Margin="46,120,0,0" VerticalAlignment="Top" Height="40" Width="153" FontSize="24" FontWeight="Bold"/>
         <Label Content="Référence :" HorizontalAlignment="Left" Margin="46,196,0,0" VerticalAlignment="Top" Height="46" Width="153" FontSize="24" FontWeight="Bold"/>
         <Label Content="Catégorie :" HorizontalAlignment="Left" Margin="46,278,0,0" VerticalAlignment="Top" Height="41" Width="153" FontSize="24" FontWeight="Bold"/>
-        <Button Content="Modifier" HorizontalAlignment="Center" Margin="0,383,0,0" VerticalAlignment="Top" Height="46" Width="124" FontSize="16">
+        <Button Content="Modifier" HorizontalAlignment="Center" Margin="0,383,0,0" VerticalAlignment="Top" Height="46" Width="124" FontSize="16" Click="Button_Click">
             <Button.Resources>
                 <Style TargetType="Border">
                     <Setter Property="CornerRadius" Value="15" />
                 </Style>
             </Button.Resources>
         </Button>
-        <TextBox HorizontalAlignment="Left" Margin="250,50,0,0" TextWrapping="Wrap" Text="Nom" VerticalAlignment="Top" Width="223" Height="38" FontSize="16"/>
-        <TextBox HorizontalAlignment="Left" Margin="250,122,0,0" TextWrapping="Wrap" Text="Code Barre" VerticalAlignment="Top" Width="223" Height="38" FontStyle="Italic" FontSize="16"/>
-        <TextBox HorizontalAlignment="Left" Margin="250,198,0,0" TextWrapping="Wrap" Text="Référence" VerticalAlignment="Top" Width="223" Height="42" FontStyle="Italic" FontSize="16"/>
+        <TextBox x:Name="tbNom" HorizontalAlignment="Left" Margin="250,50,0,0" TextWrapping="Wrap" Text="Nom" VerticalAlignment="Top" Width="223" Height="38" FontSize="16"/>
+        <TextBox x:Name="tbCodeBarre" HorizontalAlignment="Left" Margin="250,122,0,0" TextWrapping="Wrap" Text="Code Barre" VerticalAlignment="Top" Width="223" Height="38" FontStyle="Italic" FontSize="16"/>
+        <TextBox x:Name="tbRef" HorizontalAlignment="Left" Margin="250,198,0,0" TextWrapping="Wrap" Text="Référence" VerticalAlignment="Top" Width="223" Height="42" FontStyle="Italic" FontSize="16"/>
         <ComboBox x:Name="cbCategorieChoix" Margin="250,285,0,0" SelectedIndex="0"  ItemsSource="{Binding LesCategories}" DisplayMemberPath="NomCategorie" SelectedValuePath="IdCategorie" HorizontalAlignment="Left" VerticalAlignment="Top" Width="200" Height="30" RenderTransformOrigin="0.5,0.5" Grid.ColumnSpan="2">
             <ComboBox.RenderTransform>
                 <TransformGroup>

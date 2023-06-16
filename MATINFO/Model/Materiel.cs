@@ -6,6 +6,7 @@ using System.Data;
 
 namespace MATINFO.Model
 {
+    public enum IDCATEGORIES_ { }
     public class Materiel : Crud<Materiel>
     {
         private Categorie uneCategorie;
@@ -15,7 +16,7 @@ namespace MATINFO.Model
         private int idCategorie;
         private int iD_Materiel;
         ObservableCollection<Attribution> lesAttributions;
-
+        private IDCATEGORIES_[] iDCATEGORIES_s;
         public Materiel()
         {
         }
@@ -156,6 +157,15 @@ namespace MATINFO.Model
         void Crud<Materiel>.Read()
         {
             throw new NotImplementedException();
+        }
+
+        // Changer le string idcat en un id : pour le moment, il ne peut prendre en argument que le nom de la catégorie
+        public void Update(string codeBarre, string nom , string reference, string idcat)
+        {
+            int id = Categorie.Find(idcat).ID_Categorie;
+            String requete = "UPDATE Materiel SET codebarre = " + codeBarre + " , nommateriel = "+ nom+" , reference = "+ reference + " , idcategorie = " + id + " WHERE idmateriel = " + this.ID_Materiel;
+            DataAccess accesBD = new DataAccess();
+            accesBD.SetData(requete);
         }
 
         void Crud<Materiel>.Update(string txt)
