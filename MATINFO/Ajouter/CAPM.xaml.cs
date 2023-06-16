@@ -47,5 +47,14 @@ namespace MATINFO
             AjouterPersonnel ajoutPerso = new AjouterPersonnel();
             ajoutPerso.Show();
         }
+
+        private void BPMate_Click(object sender, RoutedEventArgs e)
+        {
+            this.Visibility = Visibility.Hidden;
+            AjouterMateriel ajoutMate = new AjouterMateriel();
+            ajoutMate.Show();
+        }
+
+        
     }
 }

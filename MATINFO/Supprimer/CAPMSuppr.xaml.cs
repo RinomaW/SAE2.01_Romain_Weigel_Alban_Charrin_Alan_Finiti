@@ -30,22 +30,29 @@ namespace MATINFO
         private void BTCate_Click(object sender, RoutedEventArgs e)
         {
             this.Visibility = Visibility.Hidden;
-            AjouterCategorie ajoutCate = new AjouterCategorie();
-            ajoutCate.Show();
+            SupprimerCategorie SupprCate = new SupprimerCategorie();
+            SupprCate.Show();
         }
 
         private void BTAttri_Click(object sender, RoutedEventArgs e)
         {
             this.Visibility = Visibility.Hidden;
-            AjouterAttribution ajoutAttri = new AjouterAttribution();
-            ajoutAttri.Show();
+            SupprimerAttribution SupprAttri = new SupprimerAttribution();
+            SupprAttri.Show();
         }
 
         private void BTPerso_Click(object sender, RoutedEventArgs e)
         {
             this.Visibility = Visibility.Hidden;
-            AjouterPersonnel ajoutPerso = new AjouterPersonnel();
-            ajoutPerso.Show();
+            SupprimerPersonnel SupprPerso = new SupprimerPersonnel();
+            SupprPerso.Show();
+        }
+
+        private void BPMate_Click(object sender, RoutedEventArgs e)
+        {
+            this.Visibility = Visibility.Hidden;
+            SupprimerMateriel SupprMate = new SupprimerMateriel();
+            SupprMate.Show();
         }
     }
 }
