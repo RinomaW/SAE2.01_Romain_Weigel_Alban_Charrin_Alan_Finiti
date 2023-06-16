@@ -23,7 +23,10 @@ namespace MATINFO.Model
             this.NomCategorie = nomCategorie;
             this.ID_Categorie = idCategorie;
         }
-
+        public Categorie(string nomCategorie)
+        {
+            this.NomCategorie = nomCategorie;
+        }
         public Categorie()
         {
         }
