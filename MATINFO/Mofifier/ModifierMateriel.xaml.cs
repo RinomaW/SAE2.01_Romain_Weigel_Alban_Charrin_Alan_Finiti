@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MATINFO.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,6 +20,7 @@ namespace MATINFO.Mofifier
     /// </summary>
     public partial class ModifierMateriel : Window
     {
+        public Materiel materielSelectionne;
         public ModifierMateriel()
         {
             InitializeComponent();
@@ -26,7 +28,10 @@ namespace MATINFO.Mofifier
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-
+            this.Visibility= Visibility.Hidden;
+            materielSelectionne = lvMaterielSelectionne.SelectedItem as Materiel;
+            ModifierMaterielFinal modifierMaterielFinal = new ModifierMaterielFinal(materielSelectionne);
+            modifierMaterielFinal.Show();
         }
     }
 }

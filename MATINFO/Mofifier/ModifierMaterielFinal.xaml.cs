@@ -20,10 +20,11 @@ namespace MATINFO.Mofifier
     /// </summary>
     public partial class ModifierMaterielFinal : Window
     {
+        public Materiel MaterielSelectionne { get; set; }
         public ModifierMaterielFinal(Materiel materiel)
         {
+            this.MaterielSelectionne= materiel;
             InitializeComponent();
-            
         }
     }
 }

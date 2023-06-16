@@ -8,7 +8,7 @@
         Title="ModifierMateriel" Height="435" Width="498" MinHeight="500" MinWidth="500">
     <Grid>
         <GroupBox Header="Matériels" Margin="34,27,24,0" FontWeight="Bold" Height="331" VerticalAlignment="Top">
-            <ListView   Margin="0,0,-2,0" Height="307">
+            <ListView x:Name="lvMaterielSelectionne" Margin="0,0,-2,0" Height="307">
                 <ListView.View>
                     <GridView>
                         <GridViewColumn/>
@@ -17,7 +17,7 @@
             </ListView>
         </GroupBox>
 
-        <Button Content="Modifier" Margin="203,0,171,26" VerticalAlignment="Bottom" Height="31">
+        <Button Content="Modifier" Margin="203,0,171,26" VerticalAlignment="Bottom" Height="31" Click="Button_Click">
             <Button.Resources>
                 <Style TargetType="Border">
                     <Setter Property="CornerRadius" Value="10" />
