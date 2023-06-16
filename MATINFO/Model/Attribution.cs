@@ -120,6 +120,7 @@ namespace MATINFO.Model
             DataAccess accesBD = new DataAccess();
             String requete = "select commentaireattribution,dateattribution,idmateriel,idpersonnel from est_attribue;";
             DataTable datas = accesBD.GetData(requete);
+            
             if (datas != null)
             {
                 foreach (DataRow row in datas.Rows)
