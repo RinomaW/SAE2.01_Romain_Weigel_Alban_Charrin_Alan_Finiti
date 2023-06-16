@@ -40,5 +40,12 @@ namespace MATINFO
             AjouterAttribution ajoutAttri = new AjouterAttribution();
             ajoutAttri.Show();
         }
+
+        private void BTPerso_Click(object sender, RoutedEventArgs e)
+        {
+            this.Visibility = Visibility.Hidden;
+            AjouterPersonnel ajoutPerso = new AjouterPersonnel();
+            ajoutPerso.Show();
+        }
     }
 }
