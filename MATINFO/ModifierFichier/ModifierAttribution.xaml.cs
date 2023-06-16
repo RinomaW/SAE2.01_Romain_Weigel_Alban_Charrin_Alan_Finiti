@@ -27,16 +27,9 @@ namespace MATINFO.ModifierFichier
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            if (lvMaterielAttribution.SelectedItem!= null) 
-            { 
-                
-            }
-            else if (lvDateAttribution.SelectedItem!= null) 
-            { 
                 this.Visibility= Visibility.Hidden;
                 ModifierAttributionFinal modifierAttributionFinal = new ModifierAttributionFinal(lvDateAttribution.SelectedItem as Attribution);
                 modifierAttributionFinal.Show();
-            }
         }
     }
 }
