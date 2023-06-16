@@ -19,7 +19,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Update="AjouterPersonnel.xaml.cs">
+    <Compile Update="Ajouter\AjouterPersonnel.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
