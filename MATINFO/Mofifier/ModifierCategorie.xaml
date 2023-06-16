@@ -5,16 +5,16 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MATINFO"
         mc:Ignorable="d"
-        Title="ModifierCategorie" Height="650" Width="300" MinHeight=" 500" MinWidth="300" WindowStartupLocation="CenterScreen">
+        Title="ModifierCategorie" Height="650" Width="300" MinHeight=" 570" MinWidth="300" WindowStartupLocation="CenterScreen">
     <Grid>
-        <ListView x:Name="lvModifierCategorie" ItemsSource="{Binding Path =LesCategories}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="50,50,0,0" Width="200" Height="400" >
+        <ListView x:Name="lvModifierCategorie" ItemsSource="{Binding Path =LesCategories}" Margin="50,50,50,184" >
             <ListView.View>
                 <GridView>
                     <GridViewColumn DisplayMemberBinding="{Binding Path=NomCategorie}" Header="Categorie"/>
                 </GridView>
             </ListView.View>
         </ListView>
-        <Button Content="Modifier" HorizontalAlignment="Center" Margin="0,560,0,0" VerticalAlignment="Top" Height="32" Width="110" Click="Button_Click">
+        <Button Content="Modifier" HorizontalAlignment="Center" Margin="0,0,0,42" Width="110" Click="Button_Click" Height="32" VerticalAlignment="Bottom">
             <Button.Resources>
                 <Style TargetType="Border">
                     <Setter Property="CornerRadius" Value="10" />
