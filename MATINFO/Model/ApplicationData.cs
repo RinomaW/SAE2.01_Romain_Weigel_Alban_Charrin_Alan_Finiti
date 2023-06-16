@@ -43,14 +43,12 @@ namespace MATINFO.Model
 
             foreach (Attribution uneAtr in LesAttributions.ToList())
             {
-                uneAtr.LesMateriels = new ObservableCollection<Materiel>(
-                LesMateriels.ToList().FindAll(e => e.ID_Materiel == uneAtr.IdMateriel));
+                uneAtr.UnMateriel = LesMateriels.ToList().Find(g => g.ID_Materiel == uneAtr.IdMateriel);
             }
 
             foreach (Attribution uneAtr in LesAttributions.ToList())
             {
-                uneAtr.LesPersonnels = new ObservableCollection<Personnel>(
-                LesPersonnels.ToList().FindAll(e => e.ID_Personnel == uneAtr.IdPersonnels));
+                uneAtr.UnPersonnel = LesPersonnels.ToList().Find(g => g.ID_Personnel == uneAtr.IdPersonnels);
             }
 
             foreach (Materiel unMat in LesMateriels.ToList())
