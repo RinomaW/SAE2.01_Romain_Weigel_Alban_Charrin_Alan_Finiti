@@ -23,7 +23,10 @@ namespace MATINFO.Model
             this.NomCategorie = nomCategorie;
             this.ID_Categorie = idCategorie;
         }
-
+        public Categorie(string nomCategorie)
+        {
+            this.NomCategorie = nomCategorie;
+        }
         public Categorie()
         {
         }
@@ -90,7 +93,7 @@ namespace MATINFO.Model
             accesBD.SetData(requete);
         }
 
-        void Crud<Categorie>.Read()
+        public void Read()
         {
             throw new NotImplementedException();
         }
@@ -102,9 +105,11 @@ namespace MATINFO.Model
             accesBD.SetData(requete);
         }
 
-        void Crud<Categorie>.Delete()
+        public void Delete()
         {
-            throw new NotImplementedException();
+            DataAccess accesBD = new DataAccess();
+            String requete = "DELETE FROM Categorie WHERE nomcategorie = " + this.nomCategorie;
+            accesBD.SetData(requete);
         }
 
         public ObservableCollection<Categorie> FindAll()

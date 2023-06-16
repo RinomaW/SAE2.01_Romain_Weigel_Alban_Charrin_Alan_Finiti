@@ -131,9 +131,11 @@ namespace MATINFO.Model
             return LesAttribution;
         }
 
-        void Crud<Attribution>.Create()
+        public void Create(Materiel materiel, Personnel personnel)
         {
-            throw new NotImplementedException();
+            DataAccess accesBD = new DataAccess();
+            String requete = "INSERT INTO attribution values('" + this.dateAttribution + "' AND idmateriel = '" + this.IdMateriel + "' AND idpersonnels = '" + this.IdPersonnels +"'";
+            accesBD.SetData(requete);
         }
 
         void Crud<Attribution>.Read()
@@ -146,9 +148,11 @@ namespace MATINFO.Model
             throw new NotImplementedException();
         }
 
-        void Crud<Attribution>.Delete()
+        public void Delete()
         {
-            throw new NotImplementedException();
+            DataAccess accesBD = new DataAccess();
+            String requete = "DELETE FROM attribution WHERE dateattribution = " + this.dateAttribution + " AND idmateriel = " + this.IdMateriel + " AND idpersonnels = " + this.IdPersonnels;
+            accesBD.SetData(requete);
         }
 
         ObservableCollection<Attribution> Crud<Attribution>.FindAll()
@@ -162,6 +166,11 @@ namespace MATINFO.Model
         }
 
         void Crud<Attribution>.Update(string txt)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Create()
         {
             throw new NotImplementedException();
         }
