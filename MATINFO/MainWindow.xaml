@@ -28,7 +28,6 @@
             x:Name="lvAttribution"
             Grid.Column="0"
             Margin="10,10,75,300"
-            DataContext="{Binding Path=SelectedItem, ElementName=lvPersonnel}"
             ItemsSource="{Binding Path=LesAttributions}">
             <ListView.View>
                 <GridView>
@@ -43,13 +42,12 @@
             <ListView
                 x:Name="lvCategorie"
                 Margin="10,10,75,300"
-                DataContext="{Binding Path=SelectedItem, ElementName=lvMateriel}"
-                ItemsSource="{Binding UneCategorie}">
+                ItemsSource="{Binding LesAttributions}">
                 <ListView.View>
                     <GridView>
                         <GridViewColumn
                             Width="105"
-                            DisplayMemberBinding="{Binding Path=NomCategorie}"
+                            DisplayMemberBinding="{Binding UnMateriel.UneCategorie.NomCategorie}"
                             Header="Categorie" />
                     </GridView>
                 </ListView.View>
@@ -60,13 +58,13 @@
                 x:Name="lvMateriel"
                 Grid.Column="2"
                 Margin="10,300,75,10"
-                DataContext="{Binding Path=SelectedItem, ElementName=lvPersonnel}"
-                ItemsSource="{Binding LesAttributions}">
+                DataContext="{Binding Path=SelectedItem, ElementName=lvCategorie}"
+                ItemsSource="{Binding LesCategories}">
                 <ListView.View>
                     <GridView>
                         <GridViewColumn
                             Width="110"
-                            DisplayMemberBinding="{Binding Path=NomMateriel}"
+                            DisplayMemberBinding="{Binding Path=LesMateriel.NomMateriel}"
                             Header="Nom" />
                     </GridView>
                 </ListView.View>
@@ -77,16 +75,16 @@
                 Height="275"
                 Margin="10,10,75,300"
                 VerticalAlignment="Top"
-                ItemsSource="{Binding LesPersonnels}">
+                ItemsSource="{Binding LesAttributions}">
                 <ListView.View>
                     <GridView>
                         <GridViewColumn
                             Width="52"
-                            DisplayMemberBinding="{Binding Path=NomPersonnel}"
+                            DisplayMemberBinding="{Binding Path=UnPersonnel.NomPersonnel}"
                             Header="Nom" />
                         <GridViewColumn
                             Width="52"
-                            DisplayMemberBinding="{Binding Path=PrenomPersonnel}"
+                            DisplayMemberBinding="{Binding Path=UnPersonnel.NomPersonnel}"
                             Header="Prenom" />
                     </GridView>
                 </ListView.View>
@@ -127,7 +125,8 @@
             Margin="10,0,0,165"
             HorizontalAlignment="Left"
             VerticalAlignment="Bottom"
-            Content="Supprimer" Click="Button_Click_2">
+            Click="Button_Click_2"
+            Content="Supprimer">
             <Button.Resources>
                 <Style TargetType="Border">
                     <Setter Property="CornerRadius" Value="10" />
