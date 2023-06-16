@@ -28,6 +28,7 @@
             x:Name="lvAttribution"
             Grid.Column="0"
             Margin="10,10,75,300"
+            DataContext="{Binding SelectedItem, ElementName=lvPersonnel}"
             ItemsSource="{Binding Path=LesAttributions}">
             <ListView.View>
                 <GridView>
@@ -75,16 +76,16 @@
                 Height="275"
                 Margin="10,10,75,300"
                 VerticalAlignment="Top"
-                ItemsSource="{Binding LesPersonnels}">
+                ItemsSource="{Binding LesAttributions}">
                 <ListView.View>
                     <GridView>
                         <GridViewColumn
                             Width="52"
-                            DisplayMemberBinding="{Binding Path=NomPersonnel}"
+                            DisplayMemberBinding="{Binding Path=UnPersonnel.NomPersonnel}"
                             Header="Nom" />
                         <GridViewColumn
                             Width="52"
-                            DisplayMemberBinding="{Binding Path=PrenomPersonnel}"
+                            DisplayMemberBinding="{Binding Path=UnPersonnel.PrenomPersonnel}"
                             Header="Prenom" />
                     </GridView>
                 </ListView.View>
