@@ -127,9 +127,12 @@ namespace MATINFO.Model
             throw new NotImplementedException();
         }
 
-        void Crud<Materiel>.Delete()
+        public void Delete(string idCategorie)
         {
-            throw new NotImplementedException();
+            int idCat = Categorie.Find(idCategorie).ID_Categorie;
+            DataAccess accesBD = new DataAccess();
+            String requete = "DELETE FROM Materiel WHERE nommateriel = " + this.NomMateriel + ", reference = " + this.Reference + ", codebarre = " + this.CodeBarre + ", idcategorie = " + idCat;
+            accesBD.SetData(requete);
         }
 
         public ObservableCollection<Materiel> FindAll()

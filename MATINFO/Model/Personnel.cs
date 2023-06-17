@@ -110,9 +110,11 @@ namespace MATINFO.Model
             throw new NotImplementedException();
         }
 
-        void Crud<Personnel>.Delete()
+        public void Delete()
         {
-            throw new NotImplementedException();
+            DataAccess accesBD = new DataAccess();
+            String requete = "DELETE FROM Personnel WHERE nompersonnel = " + this.NomPersonnel + " , prenompersonnel = " + this.PrenomPersonnel + " , emailpersonnel = " + this.Email;
+            accesBD.SetData(requete);
         }
 
         public ObservableCollection<Personnel> FindAll()
