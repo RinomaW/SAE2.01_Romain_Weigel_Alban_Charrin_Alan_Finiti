@@ -1,5 +1,4 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using MATINFO;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using MATINFO.Model;
 
-namespace MATINFO.Tests
+namespace MATINFOTests.Model
 {
     [TestClass()]
     public class PersonnelTests
@@ -16,7 +15,7 @@ namespace MATINFO.Tests
         [TestInitialize()]
         public void Init()
         {
-            
+
         }
 
         [TestMethod()]
