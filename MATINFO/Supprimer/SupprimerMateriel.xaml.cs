@@ -42,11 +42,12 @@ namespace MATINFO
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-           //string texte = "insert into attribution values ('" +id perso ""+"" id materiel ""+"" DateOnly"" + ",'"+tbtexte +"')";
-           //DataAccess accesBD = new DataAccess();
-           //String requete = 
-           //accesBD.SetData(requete);
-            
+            //string texte = "insert into attribution values ('" +id perso ""+"" id materiel ""+"" DateOnly"" + ",'"+tbtexte +"')";
+            //DataAccess accesBD = new DataAccess();
+            //String requete = 
+            //accesBD.SetData(requete);
+            Materiel materielSupprimee = lvMaterielSelectionne.SelectedItem as Materiel;
+            materielSupprimee.Delete();
         }
 
         private void TBComm_TextChanged(object sender, TextChangedEventArgs e)

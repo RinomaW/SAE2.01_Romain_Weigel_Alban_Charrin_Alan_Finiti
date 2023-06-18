@@ -40,7 +40,7 @@
         </GroupBox>
 
         <Button
-                Content="Supprimer" Margin="337,0,337,46" Click="Button_Click" Height="49" VerticalAlignment="Bottom" >
+                Content="Supprimer" Margin="337,0,337,46" Click="Button_Click" Height="49" VerticalAlignment="Bottom" FontSize="16" >
             <Button.Resources>
                 <Style TargetType="Border">
                     <Setter Property="CornerRadius" Value="30" />

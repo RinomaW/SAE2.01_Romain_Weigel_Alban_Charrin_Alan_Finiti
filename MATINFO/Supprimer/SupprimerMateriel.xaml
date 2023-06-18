@@ -27,7 +27,7 @@
             </ListView>
         </GroupBox>
 
-        <Button Content="Modifier" Margin="203,0,171,26" VerticalAlignment="Bottom" Height="31" Click="Button_Click">
+        <Button Content="Supprimer" Margin="203,0,171,26" VerticalAlignment="Bottom" Height="31" Click="Button_Click">
             <Button.Resources>
                 <Style TargetType="Border">
                     <Setter Property="CornerRadius" Value="10" />

@@ -127,11 +127,11 @@ namespace MATINFO.Model
             throw new NotImplementedException();
         }
 
-        public void Delete(string idCategorie)
+        public void Delete()
         {
-            int idCat = Categorie.Find(idCategorie).ID_Categorie;
+            
             DataAccess accesBD = new DataAccess();
-            String requete = "DELETE FROM Materiel WHERE nommateriel = " + this.NomMateriel + ", reference = " + this.Reference + ", codebarre = " + this.CodeBarre + ", idcategorie = " + idCat;
+            String requete = "DELETE FROM Materiel WHERE nommateriel = " + this.NomMateriel + ", reference = " + this.Reference + ", codebarre = " + this.CodeBarre + ", idcategorie = " + this.IdCategorie;
             accesBD.SetData(requete);
         }
 

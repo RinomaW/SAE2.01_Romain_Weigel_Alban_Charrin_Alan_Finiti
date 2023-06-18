@@ -37,10 +37,9 @@ namespace MATINFO
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-           //string texte = "insert into attribution values ('" +id perso ""+"" id materiel ""+"" DateOnly"" + ",'"+tbtexte +"')";
-           //DataAccess accesBD = new DataAccess();
-           //String requete = 
-           //accesBD.SetData(requete);
+            
+            Attribution attributionSupprimee = lvDateAttribution.SelectedItem as Attribution;
+            attributionSupprimee.Delete();
             
         }
 

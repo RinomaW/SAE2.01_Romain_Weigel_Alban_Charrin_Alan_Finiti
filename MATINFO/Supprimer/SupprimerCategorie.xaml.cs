@@ -40,7 +40,8 @@ namespace MATINFO
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-           
+            Categorie categorieSupprimee = lvSupprimerCategorie.SelectedItem as Categorie;
+            categorieSupprimee.Delete();
         }
 
         

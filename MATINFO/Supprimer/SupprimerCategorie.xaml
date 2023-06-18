@@ -17,7 +17,7 @@
         <model:ApplicationData x:Name="applicationData" />
     </Window.DataContext>
     <Grid>
-        <ListView x:Name="lvModifierCategorie" ItemsSource="{Binding Path = LesCategories}" Margin="50,50,50,184" >
+        <ListView x:Name="lvSupprimerCategorie" ItemsSource="{Binding Path = LesCategories}" Margin="50,50,50,184" >
             <ListView.View>
                 <GridView>
                     <GridViewColumn DisplayMemberBinding="{Binding NomCategorie}" Header="Categorie" Width="195"/>
