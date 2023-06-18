@@ -54,6 +54,11 @@ namespace MATINFO
             idMate = CBMateriel.Text;
         }
 
+        private void DPDate_SelectedDateChanged(object sender, SelectionChangedEventArgs e)
+        {
+            date = this.DPDate.SelectedDate.Value;
+        }
+
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             String requete = "insert into attribution values ('"+ idPerso +"'" +idMate+"'" +date+"'"+"'"+tbtexte +"')";
@@ -63,9 +68,6 @@ namespace MATINFO
             
         }
 
-        private void DPDate_SelectedDateChanged(object sender, SelectionChangedEventArgs e)
-        {
-            date = this.DPDate.SelectedDate.Value;
-        }
+        
     }
 }
