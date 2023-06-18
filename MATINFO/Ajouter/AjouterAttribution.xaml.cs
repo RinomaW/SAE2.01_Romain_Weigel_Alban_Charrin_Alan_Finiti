@@ -61,7 +61,7 @@ namespace MATINFO
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            String requete = "insert into attribution values ('"+ idPerso +"'," +idMate+"'," +date+"',"+"',"+tbtexte +"')";
+            String requete = "insert into attribution values ('"+idPerso +"'," +idMate+"'," +date+"',"+"',"+tbtexte +"')";
             DataAccess accesBD = new DataAccess();
            accesBD.SetData(requete);
             
