@@ -48,18 +48,17 @@
                 <Label
                     Width="120"
                     Height="30"
-                    Content="Nom Personnel :"
+                    Content="Personnel :"
                     FontSize="14" />
                 <ComboBox Width="163" Height="21"/>
             </StackPanel>
-            <Rectangle Height="15" Stroke="#00000000" Width="100"/>
             <StackPanel
                 Height="67"
                 Orientation="Horizontal">
                 <Label
                     Width="120"
                     Height="30"
-                    Content="Nom Matériel :"
+                    Content="Matériel :"
                     FontSize="14" />
                 <ComboBox Width="163" Height="21"/>
             </StackPanel>
