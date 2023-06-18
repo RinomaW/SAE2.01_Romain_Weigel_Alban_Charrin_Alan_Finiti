@@ -46,20 +46,20 @@ namespace MATINFO
 
         private void CBPersonnel_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            idPerso=
+            //idPerso=
         }
 
         private void CBMateriel_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            idMate=
+            //idMate=
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            String requete = "insert into attribution values ('"+ idPerso +"'" +idMate+"'" +date+"'"+"'"+tbtexte +"'");
-           DataAccess accesBD = new DataAccess();
+           // String requete = "insert into attribution values ('"+ idPerso +"'" +idMate+"'" +date+"'"+"'"+tbtexte +"'");
+          // DataAccess accesBD = new DataAccess();
            
-           accesBD.SetData(requete);
+           //accesBD.SetData(requete);
             
         }
 
