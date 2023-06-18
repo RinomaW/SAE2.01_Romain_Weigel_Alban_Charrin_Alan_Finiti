@@ -25,7 +25,7 @@
                     Content="Date :"
                     FontFamily="72"
                     FontSize="14" />
-                <DatePicker x:Name="DPDate" Width="172" Height="28 " />
+                <DatePicker x:Name="DPDate" Width="172" Height="28 " SelectedDateChanged="DPDate_SelectedDateChanged" />
             </StackPanel>
             <Rectangle Width="100" Height="15" />
             <StackPanel

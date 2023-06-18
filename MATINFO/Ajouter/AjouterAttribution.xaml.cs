@@ -27,7 +27,7 @@ namespace MATINFO
         string tbtexte;
         string idPerso;
         string idMate;
-        string date;
+        DateTime date;
         public AjouterAttribution()
         {
             InitializeComponent();
@@ -46,23 +46,26 @@ namespace MATINFO
 
         private void CBPersonnel_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            //idPerso=
+            idPerso = CBPersonnel.Text;
         }
 
         private void CBMateriel_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            //idMate=
+            idMate = CBMateriel.Text;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-           // String requete = "insert into attribution values ('"+ idPerso +"'" +idMate+"'" +date+"'"+"'"+tbtexte +"'");
-          // DataAccess accesBD = new DataAccess();
+            String requete = "insert into attribution values ('"+ idPerso +"'" +idMate+"'" +date+"'"+"'"+tbtexte +"')";
+            DataAccess accesBD = new DataAccess();
            
-           //accesBD.SetData(requete);
+           accesBD.SetData(requete);
             
         }
 
-       
+        private void DPDate_SelectedDateChanged(object sender, SelectionChangedEventArgs e)
+        {
+            date = this.DPDate.SelectedDate.Value;
+        }
     }
 }
