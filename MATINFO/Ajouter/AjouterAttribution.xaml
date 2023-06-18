@@ -4,6 +4,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:local="clr-namespace:MATINFO"
+    xmlns:model="clr-namespace:MATINFO.Model"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     Title="AjouterAttribution"
     Width="300"
@@ -12,6 +13,9 @@
     MinHeight="300"
     WindowStartupLocation="CenterScreen"
     mc:Ignorable="d">
+    <Window.DataContext>
+        <model:ApplicationData x:Name="applicationData" />
+    </Window.DataContext>
     <Grid>
         <StackPanel>
             <StackPanel Height="50" Orientation="Horizontal">
@@ -36,10 +40,10 @@
                 <TextBox
                     x:Name="TBComm"
                     Width="180"
-                    Height="21"
+                    Height="52"
                     GotFocus="TBComm_GotFocus"
                     Text="Commentaire"
-                    TextWrapping="Wrap" TextChanged="TBComm_TextChanged" />
+                    TextWrapping="Wrap" TextChanged="TBComm_TextChanged" VerticalAlignment="Bottom" />
             </StackPanel>
             <Rectangle Height="15" Stroke="#00000000" Width="100"/>
             <StackPanel
@@ -50,7 +54,7 @@
                     Height="30"
                     Content="Personnel :"
                     FontSize="14" />
-                <ComboBox Width="163" Height="21"/>
+                <ComboBox Width="163" Height="21"  ItemsSource="{Binding LesPersonnels}"/>
             </StackPanel>
             <StackPanel
                 Height="67"
@@ -60,7 +64,7 @@
                     Height="30"
                     Content="Matériel :"
                     FontSize="14" />
-                <ComboBox Width="163" Height="21"/>
+                <ComboBox Width="163" Height="21"  ItemsSource="{Binding LesMateriels}"/>
             </StackPanel>
             <Button
                 Width="200"

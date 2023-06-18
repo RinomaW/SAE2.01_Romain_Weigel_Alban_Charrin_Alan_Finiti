@@ -25,6 +25,9 @@ namespace MATINFO
     public partial class AjouterAttribution : Window
     {
         string tbtexte;
+        string idPerso;
+        string idMate;
+        string date;
         public AjouterAttribution()
         {
             InitializeComponent();
@@ -35,19 +38,31 @@ namespace MATINFO
             this.TBComm.Text = "";
         }
 
+        private void TBComm_TextChanged(object sender, TextChangedEventArgs e)
+        {
+          string tbtexte = TBComm.Text;
+
+        }
+
+        private void CBPersonnel_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            idPerso=
+        }
+
+        private void CBMateriel_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            idMate=
+        }
+
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-           //string texte = "insert into attribution values ('" +id perso ""+"" id materiel ""+"" DateOnly"" + ",'"+tbtexte +"')";
-           //DataAccess accesBD = new DataAccess();
-           //String requete = 
-           //accesBD.SetData(requete);
+            String requete = "insert into attribution values ('"+ idPerso +"'" +idMate+"'" +date+"'"+"'"+tbtexte +"'");
+           DataAccess accesBD = new DataAccess();
+           
+           accesBD.SetData(requete);
             
         }
 
-        private void TBComm_TextChanged(object sender, TextChangedEventArgs e)
-        {
-            //string tbtexte = TBComm.Text;
-
-        }
+       
     }
 }
