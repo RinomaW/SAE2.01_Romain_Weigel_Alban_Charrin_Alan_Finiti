@@ -30,15 +30,15 @@ namespace MATINFO
             InitializeComponent();
         }
 
-        private void TBNom_GotFocus(object sender, RoutedEventArgs e)
-        {
-            this.TBNom.Text = "";
-        }
-
-        private void TBEmail_GotFocus(object sender, RoutedEventArgs e)
-        {
-            this.TBEmail.Text = "";
-        }
+       // private void TBNom_GotFocus(object sender, RoutedEventArgs e)
+       // {
+       //     this.TBNom.Text = "";
+       // }
+       //
+       // private void TBEmail_GotFocus(object sender, RoutedEventArgs e)
+       // {
+       //     this.TBEmail.Text = "";
+       // }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
@@ -56,9 +56,9 @@ namespace MATINFO
 
         }
 
-        private void TBPrenom_GotFocus(object sender, RoutedEventArgs e)
-        {
-            this.TBPrenom.Text = "";
-        }
+      // private void TBPrenom_GotFocus(object sender, RoutedEventArgs e)
+      // {
+      //     this.TBPrenom.Text = "";
+      // }
     }
 }

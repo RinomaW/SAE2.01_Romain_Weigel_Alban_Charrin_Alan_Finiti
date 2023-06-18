@@ -30,10 +30,10 @@ namespace MATINFO
             InitializeComponent();
         }
 
-        private void TBComm_GotFocus(object sender, RoutedEventArgs e)
-        {
-            this.TBComm.Text = "";
-        }
+      //  private void TBComm_GotFocus(object sender, RoutedEventArgs e)
+      //  {
+      //      this.TBComm.Text = "";
+      //  }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {

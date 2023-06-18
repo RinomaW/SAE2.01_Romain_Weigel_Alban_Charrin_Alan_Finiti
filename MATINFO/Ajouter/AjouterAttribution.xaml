@@ -18,7 +18,7 @@
                 <Label
                     Width="100"
                     Height="26"
-                    Content="Nom :"
+                    Content="Date :"
                     FontFamily="72"
                     FontSize="14" />
                 <DatePicker Width="172" Height="28" />
@@ -41,8 +41,28 @@
                     Text="Commentaire"
                     TextWrapping="Wrap" TextChanged="TBComm_TextChanged" />
             </StackPanel>
-            <Rectangle Height="51" Stroke="#00000000" Width="100"/>
-            <Rectangle Height="100" Stroke="#00000000" Width="100"/>
+            <Rectangle Height="15" Stroke="#00000000" Width="100"/>
+            <StackPanel
+                Height="67"
+                Orientation="Horizontal">
+                <Label
+                    Width="120"
+                    Height="30"
+                    Content="Nom Personnel :"
+                    FontSize="14" />
+                <ComboBox Width="163" Height="21"/>
+            </StackPanel>
+            <Rectangle Height="15" Stroke="#00000000" Width="100"/>
+            <StackPanel
+                Height="67"
+                Orientation="Horizontal">
+                <Label
+                    Width="120"
+                    Height="30"
+                    Content="Nom Matériel :"
+                    FontSize="14" />
+                <ComboBox Width="163" Height="21"/>
+            </StackPanel>
             <Button
                 Width="200"
                 Height="30"
