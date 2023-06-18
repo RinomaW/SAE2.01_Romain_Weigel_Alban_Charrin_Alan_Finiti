@@ -4,8 +4,12 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MATINFO.ModifierFichier"
+        xmlns:model="clr-namespace:MATINFO.Model"
         mc:Ignorable="d"
         Title="ModifierPersonnelFinal" Height="500" Width="500" MinHeight="500" MinWidth="500">
+    <Window.DataContext>
+        <model:ApplicationData x:Name="applicationData" />
+    </Window.DataContext>
     <Grid>
         <Label Content="Nom :" HorizontalAlignment="Left" Margin="39,56,0,0" VerticalAlignment="Top" Height="35" Width="86" FontSize="20" FontWeight="Bold"/>
         <Label Content="Prénom :" HorizontalAlignment="Left" Margin="39,134,0,0" VerticalAlignment="Top" Height="59" Width="114" FontSize="20" FontWeight="Bold"/>

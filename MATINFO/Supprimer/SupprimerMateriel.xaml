@@ -4,90 +4,36 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:local="clr-namespace:MATINFO"
+    xmlns:model="clr-namespace:MATINFO.Model"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     Title="SupprimerMateriel"
-    Width="300"
-    Height="355"
-    MinWidth="300"
-    MinHeight="300"
+    Height="435" Width="498" MinHeight="500" MinWidth="500"
     WindowStartupLocation="CenterScreen"
     mc:Ignorable="d">
+    <Window.DataContext>
+        <model:ApplicationData x:Name="applicationData" />
+    </Window.DataContext>
     <Grid>
-        <StackPanel>
-            <StackPanel Height="50" Orientation="Horizontal">
-                <Label
-                    Width="100"
-                    Height="26"
-                    Content="Nom :"
-                    FontFamily="72"
-                    FontSize="14" />
-                <TextBox
-                    x:Name="TBNom"
-                    Width="180"
-                    Height="21"
-                    GotFocus="TBNom_GotFocus"
-                    Text=""
-                    TextWrapping="Wrap" />
-            </StackPanel>
-            <Rectangle Width="100" Height="10" />
-            <StackPanel
-                Height="67"
-                HorizontalAlignment="Left"
-                Orientation="Horizontal">
-                <Label
-                    Width="102"
-                    Height="30"
-                    Content="Code Barre :"
-                    FontSize="14" />
-                <TextBox
-                    x:Name="TBPrenom"
-                    Width="180"
-                    Height="21"
-                    GotFocus="TBPrenom_GotFocus"
-                    TextWrapping="Wrap" />
-            </StackPanel>
-            <Rectangle
-                Width="100"
-                Height="10"
-                Stroke="#00000000" />
-            <StackPanel Height="67" Orientation="Horizontal">
-                <Label
-                    Width="102"
-                    Height="30"
-                    Content="Ref :"
-                    FontSize="14" />
-                <TextBox
-                    x:Name="TBEmail"
-                    Width="180"
-                    Height="21"
-                    GotFocus="TBEmail_GotFocus"
-                    Text=""
-                    TextWrapping="Wrap" />
-            </StackPanel>
-            <StackPanel Height="67" Orientation="Horizontal">
-                <Label
-                    Width="102"
-                    Height="30"
-                    Content="Categorie :"
-                    FontSize="14" />
-                <ComboBox Width="180" Height="30"/>
-            </StackPanel>
-            <Rectangle
-                Width="100"
-                Height="15"
-                Stroke="#00000000" />
-            <Button
-                Width="200"
-                Height="30"
-                Click="Button_Click"
-                Content="Créer"
-                RenderTransformOrigin="0.56,4.168">
-                <Button.Resources>
-                    <Style TargetType="{x:Type Border}">
-                        <Setter Property="CornerRadius" Value="10" />
-                    </Style>
-                </Button.Resources>
-            </Button>
-        </StackPanel>
+        <GroupBox Header="Matériels" Margin="34,27,24,0" FontWeight="Bold" Height="331" VerticalAlignment="Top">
+            <ListView x:Name="lvMaterielSelectionne" Margin="0,0,-2,0" Height="307" ItemsSource="{Binding Path= LesMateriels}">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn Header="Nom" DisplayMemberBinding="{Binding NomMateriel}" Width="100"/>
+                        <GridViewColumn Header="Code Barre" DisplayMemberBinding="{Binding CodeBarre}" Width="100"/>
+                        <GridViewColumn Header="Référence" DisplayMemberBinding="{Binding Reference}" Width="125"/>
+                        <GridViewColumn Header="Categorie" DisplayMemberBinding="{Binding IdCategorie}" Width="100"/>
+                    </GridView>
+                </ListView.View>
+            </ListView>
+        </GroupBox>
+
+        <Button Content="Modifier" Margin="203,0,171,26" VerticalAlignment="Bottom" Height="31" Click="Button_Click">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="10" />
+                </Style>
+            </Button.Resources>
+        </Button>
+
     </Grid>
 </Window>
