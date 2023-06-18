@@ -25,7 +25,7 @@
                     Content="Date :"
                     FontFamily="72"
                     FontSize="14" />
-                <DatePicker Width="172" Height="28" />
+                <DatePicker x:Name="DPDate" Width="172" Height="28" />
             </StackPanel>
             <Rectangle Width="100" Height="15" />
             <StackPanel
@@ -54,7 +54,7 @@
                     Height="30"
                     Content="Personnel :"
                     FontSize="14" />
-                <ComboBox Width="163" Height="21"  ItemsSource="{Binding LesPersonnels}"/>
+                <ComboBox x:Name="CBPersonnel" Width="163" Height="21"  ItemsSource="{Binding LesPersonnels}" SelectionChanged="CBPersonnel_SelectionChanged"/>
             </StackPanel>
             <StackPanel
                 Height="67"
@@ -64,7 +64,7 @@
                     Height="30"
                     Content="Matériel :"
                     FontSize="14" />
-                <ComboBox Width="163" Height="21"  ItemsSource="{Binding LesMateriels}"/>
+                <ComboBox x:Name="CBMateriel" Width="163" Height="21"  ItemsSource="{Binding LesMateriels}" SelectionChanged="CBMateriel_SelectionChanged"/>
             </StackPanel>
             <Button
                 Width="200"
