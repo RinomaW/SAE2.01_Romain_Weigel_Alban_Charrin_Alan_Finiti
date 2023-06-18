@@ -17,7 +17,7 @@
                     <GridView>
                         <GridViewColumn DisplayMemberBinding="{Binding NomPersonnel}" Header="Nom" Width="90"/>
                         <GridViewColumn DisplayMemberBinding="{Binding PrenomPersonnel}" Header="Prénom" Width="100"/>
-                        <GridViewColumn DisplayMemberBinding="{Binding EmailPersonnel}" Header="Adresse Mail" Width="200"/>
+                        <GridViewColumn DisplayMemberBinding="{Binding Email}" Header="Adresse Mail" Width="200"/>
                     </GridView>
                 </ListView.View>
             </ListView>
