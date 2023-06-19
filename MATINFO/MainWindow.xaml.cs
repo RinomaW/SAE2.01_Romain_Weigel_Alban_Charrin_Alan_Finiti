@@ -42,7 +42,7 @@ namespace MATINFO
             if(lvAttribution.SelectedItem!= null) 
             {
                 ModifierAttributionFinal modifierAttributionFinal = new ModifierAttributionFinal(lvAttribution.SelectedItem as Attribution);
-                modifierAttributionFinal.Show();
+                modifierAttributionFinal.Show();                
             }
             else if (lvMateriel.SelectedItem != null)
             {
@@ -71,18 +71,19 @@ namespace MATINFO
         {
             if (lvAttribution.SelectedItem != null)
             {
-                SupprimerAttribution supprimerAttribution = new SupprimerAttribution(lvAttribution.SelectedItem as Attribution);
-                supprimerAttribution.Show();
+                Attribution modifierAttributionFinal = lvAttribution.SelectedItem as Attribution;
+                modifierAttributionFinal.Delete();
+
             }
             else if (lvMateriel.SelectedItem != null)
             {
-                SupprimerMateriel supprimerMateriel = new SupprimerMateriel(lvMateriel.SelectedItem as Materiel);
-                supprimerMateriel.Show();
+                Materiel modifierMaterielFinal = lvMateriel.SelectedItem as Materiel;
+                modifierMaterielFinal.Delete();
             }
             else if (lvCategorie.SelectedItem != null)
             {
-                SupprimerCategorie supprimerCategorie = new SupprimerCategorie(lvCategorie.SelectedItem as Categorie);
-                supprimerCategorie.Show();
+                Categorie modifierCategorieFinal = lvCategorie.SelectedItem as Categorie;
+                modifierCategorieFinal.Delete();
             }
             else
             {
