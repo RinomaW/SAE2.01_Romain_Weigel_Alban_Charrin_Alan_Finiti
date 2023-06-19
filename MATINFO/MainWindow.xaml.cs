@@ -71,34 +71,28 @@ namespace MATINFO
             if (lvAttribution.SelectedItem != null)
             {
                 DoubleClicSupprimer supprimerAttributionFinal = new DoubleClicSupprimer(lvAttribution.SelectedItem as Attribution);
-                supprimerAttributionFinal.Show();
+                supprimerAttributionFinal.ShowDialog();
 
             }
             else if (lvMateriel.SelectedItem != null)
             {
                 DoubleClicSupprimer supprimerMaterielFinal = new DoubleClicSupprimer(lvMateriel.SelectedItem as Materiel);
-                supprimerMaterielFinal .Show();
+                supprimerMaterielFinal.ShowDialog();
             }
             else if (lvCategorie.SelectedItem != null)
             {
                 DoubleClicSupprimer supprimerCategorieFinal = new DoubleClicSupprimer(lvCategorie.SelectedItem as Categorie);
-                supprimerCategorieFinal.Show();
+                supprimerCategorieFinal.ShowDialog();
             }
             else
             {
                 CAPMSuppr supprimer = new CAPMSuppr();
-                supprimer.Show();
+                supprimer.ShowDialog();
             }
-           Refresh();
-
+            applicationData.Recharge();
         }
 
-        public void Refresh()
-        {
-            lvAttribution.Items.Refresh();
-            lvCategorie.Items.Refresh();
-            lvMateriel.Items.Refresh();
-        }
+       
 
         private void lvCategorie_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {

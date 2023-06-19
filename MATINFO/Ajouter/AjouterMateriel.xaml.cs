@@ -29,7 +29,7 @@ namespace MATINFO
         {
             this.Owner = owner;           
             InitializeComponent();
-            DataContext = mat;
+            DataContext = owner;
             this.cbCategorieChoix.ItemsSource = ((ApplicationData)owner.DataContext).LesCategories;
         }
 
@@ -50,7 +50,7 @@ namespace MATINFO
             else
             {
                 new Materiel(TBCodeBarre.Text,TBNom.Text ,TBRef.Text, ((Categorie)cbCategorieChoix.SelectionBoxItem).ID_Categorie).Create();
-                ((ApplicationData)Owner.DataContext).Recharge();
+                ((MainWindow)Owner).applicationData.Recharge();
                 this.Visibility = Visibility.Hidden;
             }
 

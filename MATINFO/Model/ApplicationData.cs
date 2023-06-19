@@ -17,7 +17,6 @@ namespace MATINFO.Model
         public ObservableCollection<Categorie> LesCategories { get; set; }
         public ObservableCollection<Materiel> LesMateriels { get; set; }
         public ObservableCollection<Personnel> LesPersonnels { get; set; }
-        public ObservableCollection<Materiel> LesMaterielsDeCategorie { get; set; }
         public ApplicationData()    
         {
 
@@ -70,6 +69,7 @@ namespace MATINFO.Model
                 unPer.LesAttributions = new ObservableCollection<Attribution>(
                 LesAttributions.ToList().FindAll(e => e.IdPersonnel == unPer.ID_Personnel));
             }
+
         }
     }
 }
