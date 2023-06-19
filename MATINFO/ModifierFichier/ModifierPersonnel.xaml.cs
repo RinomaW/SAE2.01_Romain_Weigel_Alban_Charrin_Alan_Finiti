@@ -24,13 +24,14 @@ namespace MATINFO.Modifier
         public ModifierPersonnel()
         {
             InitializeComponent();
+
         }
 
         private void BTModi_Click(object sender, RoutedEventArgs e)
         {
             this.Visibility= Visibility.Hidden;
-            ModifierPersonnel modifierPersonnel = new ModifierPersonnel();
-            modifierPersonnel.Show();
+            ModifierPersonnelFinal modifierPersonnelFinal = new ModifierPersonnelFinal(lvModifierPersonnel.SelectedItem as Personnel,this.Owner);
+            modifierPersonnelFinal.Show();
         }
 
     }

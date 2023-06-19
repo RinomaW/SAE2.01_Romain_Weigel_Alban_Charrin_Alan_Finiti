@@ -43,12 +43,12 @@ namespace MATINFO
         {
             if(lvAttribution.SelectedItem!= null) 
             {
-                ModifierAttributionFinal modifierAttributionFinal = new ModifierAttributionFinal(lvAttribution.SelectedItem as Attribution);
+                ModifierAttributionFinal modifierAttributionFinal = new ModifierAttributionFinal(lvAttribution.SelectedItem as Attribution, this);
                 modifierAttributionFinal.Show();                
             }
             else if (lvMateriel.SelectedItem != null)
             {
-                ModifierMaterielFinal modifierMaterielFinal = new ModifierMaterielFinal(lvMateriel.SelectedItem as Materiel);
+                ModifierMaterielFinal modifierMaterielFinal = new ModifierMaterielFinal(lvMateriel.SelectedItem as Materiel, this);
                 modifierMaterielFinal.Show();
             }
             else if(lvCategorie.SelectedItem != null)
@@ -148,5 +148,6 @@ namespace MATINFO
                 }
             }
         }
+
     }
 }

@@ -20,15 +20,16 @@ namespace MATINFO.ModifierFichier
     /// </summary>
     public partial class ModifierAttribution : Window
     {
-        public ModifierAttribution()
+        public ModifierAttribution(Window owner)
         {
+            this.Owner = owner;
             InitializeComponent();
         }
 
         private void BTModi_Click(object sender, RoutedEventArgs e)
         {
                 this.Visibility= Visibility.Hidden;
-                ModifierAttributionFinal modifierAttributionFinal = new ModifierAttributionFinal(lvDateAttribution.SelectedItem as Attribution);
+                ModifierAttributionFinal modifierAttributionFinal = new ModifierAttributionFinal(lvDateAttribution.SelectedItem as Attribution, this.Owner);
                 modifierAttributionFinal.Show();
         }
     }

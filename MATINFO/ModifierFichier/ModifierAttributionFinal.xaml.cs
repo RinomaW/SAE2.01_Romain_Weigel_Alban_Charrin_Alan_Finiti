@@ -21,15 +21,21 @@ namespace MATINFO.ModifierFichier
     public partial class ModifierAttributionFinal : Window
     {
         public Attribution AttributionModifiee { get; set; }
-        public ModifierAttributionFinal( Attribution attributionModifiee)
+        public ModifierAttributionFinal( Attribution attributionModifiee, Window owner)
         {
+            this.Owner = owner;
             InitializeComponent();
             this.AttributionModifiee= attributionModifiee;
         }
 
         private void BTModi_Click(object sender, RoutedEventArgs e)
         {
-
+            this.AttributionModifiee.CommentaireAttribution = tbCommentaireAttribution.Text;
+            this.AttributionModifiee.DateAttribution = DateTime.Parse(tbDate.Text);
+            this.AttributionModifiee.IdMateriel = ((Materiel)cbMaterielChoisi.SelectedItem).ID_Materiel;
+            this.AttributionModifiee.IdPersonnels = ((Personnel)cbPersonnelChoisi.SelectedItem).ID_Personnel;
+            AttributionModifiee.Update();
+            this.Close();
         }
     }
 }

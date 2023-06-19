@@ -50,7 +50,7 @@ namespace MATINFO
         private void BTMate_Click(object sender, RoutedEventArgs e)
         {
             this.Visibility = Visibility.Hidden;
-            ModifierMateriel modifierMateriel = new ModifierMateriel();
+            ModifierMateriel modifierMateriel = new ModifierMateriel(this.Owner);
             modifierMateriel.Show();
         }
 
@@ -64,7 +64,7 @@ namespace MATINFO
         private void BTAttri_Click(object sender, RoutedEventArgs e)
         {
             this.Visibility = Visibility.Hidden;
-            ModifierAttribution modifierAttribution = new ModifierAttribution();
+            ModifierAttribution modifierAttribution = new ModifierAttribution(this.Owner);
             modifierAttribution.Show();
         }
     }
