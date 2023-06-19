@@ -45,7 +45,7 @@ namespace MATINFO
         {
             // on doit déclencher la mise à jour du binding
             if (string.IsNullOrWhiteSpace(TBEmail.Text) && string.IsNullOrWhiteSpace(TBNom.Text) && string.IsNullOrWhiteSpace(TBPrenom.Text))
-                MessageBox.Show(this.Owner, "Pas possible!", "Pb", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show(this.Owner, "Impossible! les champs ne peuvent pas etre vides!", "Erreur", MessageBoxButton.OK, MessageBoxImage.Error);
             else
             {
                 new Personnel(TBEmail.Text, TBNom.Text, TBPrenom.Text).Create();

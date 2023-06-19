@@ -46,7 +46,7 @@ namespace MATINFO
         private void BTCreer_Click(object sender, RoutedEventArgs e)
         {
             if (string.IsNullOrWhiteSpace(TBNom.Text) && string.IsNullOrWhiteSpace(TBRef.Text) && string.IsNullOrWhiteSpace(TBCodeBarre.Text))
-                MessageBox.Show(this.Owner, "Pas possible!", "Pb", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show(this.Owner, "Impossible! les champs ne peuvent pas etre vides!", "Erreur", MessageBoxButton.OK, MessageBoxImage.Error);
             else
             {
                 new Materiel(TBCodeBarre.Text,TBNom.Text ,TBRef.Text, ((Categorie)cbCategorieChoix.SelectionBoxItem).ID_Categorie).Create();
