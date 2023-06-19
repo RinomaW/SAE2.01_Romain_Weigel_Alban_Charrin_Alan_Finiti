@@ -25,10 +25,12 @@ namespace MATINFO
     public partial class AjouterMateriel : Window
     {
         
-        public AjouterMateriel(Materiel mat)
+        public AjouterMateriel(Materiel mat, Window owner)
         {
+            this.Owner = owner;           
             InitializeComponent();
             DataContext = mat;
+            this.cbCategorieChoix.ItemsSource = ((ApplicationData)owner.DataContext).LesCategories;
         }
 
         private void TBNom_GotFocus(object sender, RoutedEventArgs e)

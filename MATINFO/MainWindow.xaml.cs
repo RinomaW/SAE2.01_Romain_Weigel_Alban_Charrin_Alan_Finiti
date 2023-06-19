@@ -33,7 +33,7 @@ namespace MATINFO
 
         private void BTAjout(object sender, RoutedEventArgs e)
         {
-            CAPM CAPM = new CAPM();
+            CAPM CAPM = new CAPM(this);
             
             CAPM.Show();
         }

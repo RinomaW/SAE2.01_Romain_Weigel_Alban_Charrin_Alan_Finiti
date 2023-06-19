@@ -20,8 +20,9 @@ namespace MATINFO
     /// </summary>
     public partial class CAPM : Window
     {
-        public CAPM()
+        public CAPM(Window owner)
         {
+            this.Owner= owner;
             InitializeComponent();
         }
 
@@ -36,7 +37,7 @@ namespace MATINFO
         private void BTAttri_Click(object sender, RoutedEventArgs e)
         {
             this.Visibility = Visibility.Hidden;
-            AjouterAttribution ajoutAttri = new AjouterAttribution(new Attribution());
+            AjouterAttribution ajoutAttri = new AjouterAttribution(new Attribution(), Owner);
             ajoutAttri.Show();
         }
 
@@ -50,7 +51,7 @@ namespace MATINFO
         private void BPMate_Click(object sender, RoutedEventArgs e)
         {
             this.Visibility = Visibility.Hidden;
-            AjouterMateriel ajoutMate = new AjouterMateriel(new Materiel());
+            AjouterMateriel ajoutMate = new AjouterMateriel(new Materiel(), Owner);
             ajoutMate.Show();
         }
 
