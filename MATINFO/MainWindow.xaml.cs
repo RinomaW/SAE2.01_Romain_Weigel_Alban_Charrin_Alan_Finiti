@@ -69,9 +69,26 @@ namespace MATINFO
 
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
-            CAPMSuppr CAPMS = new CAPMSuppr();
-
-            CAPMS.Show();
+            if (lvAttribution.SelectedItem != null)
+            {
+                SupprimerAttribution supprimerAttribution = new SupprimerAttribution(lvAttribution.SelectedItem as Attribution);
+                supprimerAttribution.Show();
+            }
+            else if (lvMateriel.SelectedItem != null)
+            {
+                SupprimerMateriel supprimerMateriel = new SupprimerMateriel(lvMateriel.SelectedItem as Materiel);
+                supprimerMateriel.Show();
+            }
+            else if (lvCategorie.SelectedItem != null)
+            {
+                SupprimerCategorie supprimerCategorie = new SupprimerCategorie(lvCategorie.SelectedItem as Categorie);
+                supprimerCategorie.Show();
+            }
+            else
+            {
+                CAPMSuppr supprimer = new CAPMSuppr();
+                supprimer.Show();
+            }
         }
     }
 }
