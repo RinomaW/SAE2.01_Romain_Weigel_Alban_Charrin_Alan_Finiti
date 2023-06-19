@@ -43,7 +43,7 @@ namespace MATINFO
         {
             // on doit déclencher la mise à jour du binding
             if (string.IsNullOrWhiteSpace(TBNomCate.Text) || TBNomCate.Text!= "Nom de la catégorie")
-                MessageBox.Show(this.Owner, "Pas possible!", "Pb", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show(this.Owner, "Impossible! le nom ne peut pas etre vide!", "Erreur", MessageBoxButton.OK, MessageBoxImage.Error);
             else
             {
                 new Categorie(TBNomCate.Text).Create();
