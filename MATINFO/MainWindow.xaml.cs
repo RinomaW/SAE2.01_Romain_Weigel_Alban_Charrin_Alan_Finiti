@@ -3,6 +3,7 @@ using MATINFO.ModifierFichier;
 using MATINFO.Mofifier;
 using MATINFO.Supprimer;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
