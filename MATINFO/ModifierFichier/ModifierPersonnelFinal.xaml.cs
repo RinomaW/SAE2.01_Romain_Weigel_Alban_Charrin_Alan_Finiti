@@ -22,7 +22,7 @@ namespace MATINFO.ModifierFichier
     {
        
         public Personnel PersonnelSelectionne { get; set; }
-        public ModifierPersonnelFinal( Personnel personnelSelectionne)
+        public ModifierPersonnelFinal( Personnel personnelSelectionne, Window owner)
         {
             InitializeComponent();
             this.PersonnelSelectionne= personnelSelectionne;
@@ -30,7 +30,7 @@ namespace MATINFO.ModifierFichier
 
         private void BTModi_Click(object sender, RoutedEventArgs e)
         {
-            PersonnelSelectionne.Update(tbNomPersonnel.Text,tbPrenomPersonnel.Text,tbEmailPersonnel.Text);
+
         }
 
     }

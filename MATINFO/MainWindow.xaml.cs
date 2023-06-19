@@ -3,14 +3,11 @@ using MATINFO.ModifierFichier;
 using MATINFO.Mofifier;
 using MATINFO.Supprimer;
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Automation;
 using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Documents;
@@ -29,8 +26,9 @@ namespace MATINFO
     {
 
         public MainWindow()
-        {
+        {//feur
             InitializeComponent();
+            DataContext = applicationData;
         }
 
         private void BTAjout(object sender, RoutedEventArgs e)
@@ -54,40 +52,36 @@ namespace MATINFO
             }
             else if(lvCategorie.SelectedItem != null)
             {
-                ModifierCategorieFinal modifierCategorieFinal = new ModifierCategorieFinal(lvCategorie.SelectedItem as Categorie);
+                ModifierCategorieFinal modifierCategorieFinal = new ModifierCategorieFinal(lvCategorie.SelectedItem as Categorie, this);
                 modifierCategorieFinal.Show();
             }
             else
             {
-                ActionModifier Modifier = new ActionModifier();
+                ActionModifier Modifier = new ActionModifier(this);
                 Modifier.Show();
             }
-            Refresh();
-
+            
         }
 
 
         private void BTSuppr(object sender, RoutedEventArgs e)
         {
-            
+            //coubeh
             if (lvAttribution.SelectedItem != null)
             {
                 DoubleClicSupprimer supprimerAttributionFinal = new DoubleClicSupprimer(lvAttribution.SelectedItem as Attribution);
                 supprimerAttributionFinal.Show();
-               
 
             }
             else if (lvMateriel.SelectedItem != null)
             {
                 DoubleClicSupprimer supprimerMaterielFinal = new DoubleClicSupprimer(lvMateriel.SelectedItem as Materiel);
-                supprimerMaterielFinal.Show();
-               
+                supprimerMaterielFinal .Show();
             }
             else if (lvCategorie.SelectedItem != null)
             {
                 DoubleClicSupprimer supprimerCategorieFinal = new DoubleClicSupprimer(lvCategorie.SelectedItem as Categorie);
                 supprimerCategorieFinal.Show();
-               
             }
             else
             {

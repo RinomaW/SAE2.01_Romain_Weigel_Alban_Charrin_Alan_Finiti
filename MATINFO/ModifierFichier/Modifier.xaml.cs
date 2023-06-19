@@ -23,17 +23,19 @@ namespace MATINFO
     /// </summary>
     public partial class ActionModifier : Window
     {
-        
 
-        public ActionModifier()
+
+        public ActionModifier(Window owner)
         {
+            this.Owner = owner;
             InitializeComponent();
-            
         }
+
+
 
         private void BTcateMBDWN(object sender, MouseButtonEventArgs e)
         {
-            ModifierCategorie modifCate = new ModifierCategorie();
+            ModifierCategorie modifCate = new ModifierCategorie(this.Owner);
             this.Close();
             modifCate.Show();
         }
@@ -41,7 +43,7 @@ namespace MATINFO
         private void BTCate_Click(object sender, RoutedEventArgs e)
         {
             this.Visibility = Visibility.Hidden;
-            ModifierCategorie modifierCategorie = new ModifierCategorie();
+            ModifierCategorie modifierCategorie = new ModifierCategorie(this.Owner);
             modifierCategorie.Show();
         }
 
@@ -55,8 +57,8 @@ namespace MATINFO
         private void BTPerso_Click(object sender, RoutedEventArgs e)
         {
             this.Visibility = Visibility.Hidden;
-            ModifierPersonnel modifierPersonnelFinal = new ModifierPersonnel();
-            modifierPersonnelFinal.Show();
+            ModifierPersonnel modifierPersonnel = new ModifierPersonnel();
+            modifierPersonnel.Show();
         }
 
         private void BTAttri_Click(object sender, RoutedEventArgs e)

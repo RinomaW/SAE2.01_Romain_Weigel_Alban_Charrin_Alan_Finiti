@@ -72,7 +72,7 @@ namespace MATINFO.Model
 
             set
             {
-                this.reference = value.ToUpper();
+               this.reference = value.ToUpper();
             }
         }
 
@@ -143,7 +143,7 @@ namespace MATINFO.Model
 
         public void Delete()
         {
-
+            
             DataAccess accesBD = new DataAccess();
             String requete = "DELETE FROM Materiel WHERE nommateriel = \'" + this.NomMateriel + "\' AND referenceconstructeurmateriel = \'" + this.Reference + "\' AND codebarreinventaire = \'" + this.CodeBarre + "\' AND idCategorie = \'" + this.IdCategorie + "\'";
             accesBD.SetData(requete);
@@ -159,7 +159,7 @@ namespace MATINFO.Model
             {
                 foreach (DataRow row in datas.Rows)
                 {
-                    Materiel e = new Materiel((string)row["codebarreinventaire"], (string)row["nommateriel"], (string)row["referenceconstructeurmateriel"], (int)row["idcategorie"], (int)row["idmateriel"]);
+                    Materiel e = new Materiel((string)row["codebarreinventaire"],(string)row["nommateriel"], (string)row["referenceconstructeurmateriel"], (int)row["idcategorie"],(int)row["idmateriel"]);
                     LesMateriels.Add(e);
                 }
             }
@@ -179,7 +179,7 @@ namespace MATINFO.Model
         // Changer le string idcat en un id : pour le moment, il ne peut prendre en argument que le nom de la catégorie
         public void Update()
         {
-            String requete = "UPDATE Materiel SET codebarre = " + codeBarre + " , nommateriel = " + this.NomMateriel + " , reference = " + this.Reference + " , idcategorie = " + this.IdCategorie + " WHERE idmateriel = " + this.ID_Materiel;
+            String requete = "UPDATE Materiel SET codebarre = " + codeBarre + " , nommateriel = "+ this.NomMateriel+" , reference = "+ this.Reference + " , idcategorie = " + this.IdCategorie + " WHERE idmateriel = " + this.ID_Materiel;
             DataAccess accesBD = new DataAccess();
             accesBD.SetData(requete);
         }

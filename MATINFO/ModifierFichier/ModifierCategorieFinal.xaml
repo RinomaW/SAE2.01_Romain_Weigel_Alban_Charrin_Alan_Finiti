@@ -38,7 +38,7 @@
             Height="32"
             Margin="106,0,106,20"
             VerticalAlignment="Bottom"
-            Click="BTModi_Click"
+            Click="Button_Click"
             Content="Modifier">
             <Button.Resources>
                 <Style TargetType="Border">

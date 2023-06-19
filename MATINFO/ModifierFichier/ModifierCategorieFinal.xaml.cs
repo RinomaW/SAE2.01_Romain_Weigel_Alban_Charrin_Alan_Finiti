@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -21,20 +22,20 @@ namespace MATINFO
     public partial class ModifierCategorieFinal : Window
     {
         private Categorie CategorieModifiee { get; set; }
-        public ModifierCategorieFinal(Categorie categorieModifiee)
+        public ModifierCategorieFinal(Categorie categorieModifiee, Window owner)
         {
             this.CategorieModifiee = categorieModifiee;
             InitializeComponent();
+            this.DataContext = owner;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            CategorieModifiee.Update(tbModifierCategorieFinal.Text);
+            this.CategorieModifiee.NomCategorie = tbModifierCategorieFinal.Text;
+            CategorieModifiee.Update();
+            this.Close();
         }
 
-        private void BTModi_Click(object sender, RoutedEventArgs e)
-        {
 
-        }
     }
 }

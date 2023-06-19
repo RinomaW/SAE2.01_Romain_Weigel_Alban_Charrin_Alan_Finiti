@@ -13,16 +13,16 @@ namespace MATINFO.Model
 
 
         public ObservableCollection<Attribution> LesAttributions { get; set; }
-
+        
         public ObservableCollection<Categorie> LesCategories { get; set; }
         public ObservableCollection<Materiel> LesMateriels { get; set; }
         public ObservableCollection<Personnel> LesPersonnels { get; set; }
         public ObservableCollection<Materiel> LesMaterielsDeCategorie { get; set; }
-        public ApplicationData()
+        public ApplicationData()    
         {
 
             Recharge();
-
+            
         }
 
         public void Recharge()

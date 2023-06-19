@@ -25,18 +25,18 @@ namespace MATINFO
 
         public ObservableCollection<Categorie> LesCategories { get; set; }
         public Categorie categorieSelectionnee = new Categorie();
-        public ModifierCategorie()
+        public ModifierCategorie(Window owner)
         {
             InitializeComponent();
             lvModifierCategorie.SelectedIndex= 0;
-            this.DataContext = applicationData;
+            this.DataContext = (ApplicationData)owner.DataContext;
         }
 
         private void BTModi_Click(object sender, RoutedEventArgs e)
         {
             this.Visibility = Visibility.Hidden;
             categorieSelectionnee = lvModifierCategorie.SelectedItem as Categorie;
-            ModifierCategorieFinal modifierCategorieFinal= new ModifierCategorieFinal(categorieSelectionnee);
+            ModifierCategorieFinal modifierCategorieFinal= new ModifierCategorieFinal(categorieSelectionnee,this.Owner);
             modifierCategorieFinal.Show();
         }
     }
