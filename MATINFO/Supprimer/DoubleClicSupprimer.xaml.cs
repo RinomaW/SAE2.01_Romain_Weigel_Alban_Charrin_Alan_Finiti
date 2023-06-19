@@ -20,9 +20,9 @@ namespace MATINFO.Supprimer
     /// </summary>
     public partial class DoubleClicSupprimer : Window
     {
-        public Categorie DoubleClicCategorie { get; set; }
-        public Materiel DoubleClicMateriel { get; set; }
-        public Attribution DoubleClicAttribution { get; set; }
+        public Categorie? DoubleClicCategorie { get; set; }
+        public Materiel? DoubleClicMateriel { get; set; }
+        public Attribution? DoubleClicAttribution { get; set; }
         public DoubleClicSupprimer(Object obj)
         {
             InitializeComponent();

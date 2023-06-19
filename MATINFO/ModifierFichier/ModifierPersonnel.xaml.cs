@@ -32,5 +32,6 @@ namespace MATINFO.Modifier
             ModifierPersonnel modifierPersonnel = new ModifierPersonnel();
             modifierPersonnel.Show();
         }
+
     }
 }
