@@ -59,7 +59,7 @@
                 Margin="10,300,75,10"
                 DataContext="{Binding SelectedItem, ElementName=lvCategorie}"
                 ItemsSource="{Binding LesMateriels}"
-                SelectionMode="Multiple" SelectionChanged="lvMateriel_SelectionChanged_1">
+                SelectionMode="Multiple" SelectionChanged="lvMateriel_SelectionChanged">
                 <ListView.View>
                     <GridView>
                         <GridViewColumn
@@ -75,7 +75,7 @@
                 Height="275"
                 Margin="10,10,75,300"
                 VerticalAlignment="Top"
-                ItemsSource="{Binding LesCategories}" SelectionMode="Multiple" SelectionChanged="lvCategorie_SelectionChanged_1">
+                ItemsSource="{Binding LesCategories}" SelectionMode="Multiple" SelectionChanged="lvCategorie_SelectionChanged">
                 <ListView.View>
                     <GridView>
                         <GridViewColumn
