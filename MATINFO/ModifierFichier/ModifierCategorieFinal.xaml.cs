@@ -32,6 +32,9 @@ namespace MATINFO
             CategorieModifiee.Update(tbModifierCategorieFinal.Text);
         }
 
-        
+        private void BTModi_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

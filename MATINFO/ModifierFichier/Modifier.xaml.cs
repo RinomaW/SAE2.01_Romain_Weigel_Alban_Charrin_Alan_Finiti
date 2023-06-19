@@ -51,28 +51,28 @@ namespace MATINFO
             modifCate.Show();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void BTCate_Click(object sender, RoutedEventArgs e)
         {
             this.Visibility = Visibility.Hidden;
             ModifierCategorie modifierCategorie = new ModifierCategorie();
             modifierCategorie.Show();
         }
 
-        private void Button_Click_1(object sender, RoutedEventArgs e)
+        private void BTMate_Click(object sender, RoutedEventArgs e)
         {
             this.Visibility = Visibility.Hidden;
             ModifierMateriel modifierMateriel = new ModifierMateriel();
             modifierMateriel.Show();
         }
 
-        private void Button_Click_2(object sender, RoutedEventArgs e)
+        private void BTPerso_Click(object sender, RoutedEventArgs e)
         {
             this.Visibility = Visibility.Hidden;
             ModifierPersonnelFinal modifierPersonnelFinal = new ModifierPersonnelFinal(p);
             modifierPersonnelFinal.Show();
         }
 
-        private void Button_Click_3(object sender, RoutedEventArgs e)
+        private void BTAttri_Click(object sender, RoutedEventArgs e)
         {
             this.Visibility = Visibility.Hidden;
             ModifierAttribution modifierAttribution = new ModifierAttribution();

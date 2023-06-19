@@ -26,12 +26,13 @@ namespace MATINFO.Mofifier
             InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void BTModi_Click(object sender, RoutedEventArgs e)
         {
             this.Visibility= Visibility.Hidden;
             materielSelectionne = lvMaterielSelectionne.SelectedItem as Materiel;
             ModifierMaterielFinal modifierMaterielFinal = new ModifierMaterielFinal(materielSelectionne);
             modifierMaterielFinal.Show();
         }
+
     }
 }
