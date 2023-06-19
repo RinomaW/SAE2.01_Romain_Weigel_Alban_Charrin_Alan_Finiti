@@ -84,7 +84,7 @@
                 </ListView.View>
             </ListView>
         </Grid>
-        <Button x:Name="BTAjout"
+        <Button x:Name="BTAjout2"
             Width="100"
             Height="25"
             Margin="10,0,0,225"
@@ -98,7 +98,7 @@
                 </Style>
             </Button.Resources>
         </Button>
-        <Button x:Name="BTModi"
+        <Button x:Name="BTModi2"
             Width="100"
             Height="25"
             Margin="10,0,0,195"
@@ -113,7 +113,7 @@
                 </Style>
             </Button.Resources>
         </Button>
-        <Button x:Name="BTSuppr"
+        <Button x:Name="BTSuppr2"
             Width="100"
             Height="25"
             Margin="10,0,0,165"

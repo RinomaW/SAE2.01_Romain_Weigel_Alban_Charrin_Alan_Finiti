@@ -28,7 +28,7 @@ namespace MATINFO.ModifierFichier
             this.PersonnelSelectionne= personnelSelectionne;
         }
 
-        private void ButtBTModi_Clickon_Click(object sender, RoutedEventArgs e)
+        private void BTModi_Click(object sender, RoutedEventArgs e)
         {
             PersonnelSelectionne.Update(tbNomPersonnel.Text,tbPrenomPersonnel.Text,tbEmailPersonnel.Text);
         }
