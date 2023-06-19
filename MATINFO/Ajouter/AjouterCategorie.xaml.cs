@@ -42,7 +42,7 @@ namespace MATINFO
         private void ButCreer_Click(object sender, RoutedEventArgs e)
         {
             // on doit déclencher la mise à jour du binding
-            if (string.IsNullOrWhiteSpace(TBNomCate.Text))
+            if (string.IsNullOrWhiteSpace(TBNomCate.Text) || TBNomCate.Text!= "Nom de la catégorie")
                 MessageBox.Show(this.Owner, "Pas possible!", "Pb", MessageBoxButton.OK, MessageBoxImage.Error);
             else
             {
