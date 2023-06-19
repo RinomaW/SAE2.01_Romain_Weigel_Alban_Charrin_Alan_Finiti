@@ -120,12 +120,12 @@ namespace MATINFO.Model
             DataAccess accesBD = new DataAccess();
             String requete = "select commentaireattribution,dateattribution,idmateriel,idpersonnel from est_attribue;";
             DataTable datas = accesBD.GetData(requete);
-            
+
             if (datas != null)
             {
                 foreach (DataRow row in datas.Rows)
                 {
-                    Attribution e = new Attribution(row["commentaireattribution"].ToString(), DateTime.Parse(row["dateattribution"].ToString()), (int)row["idmateriel"], (int)row["idpersonnel"]); 
+                    Attribution e = new Attribution(row["commentaireattribution"].ToString(), DateTime.Parse(row["dateattribution"].ToString()), (int)row["idmateriel"], (int)row["idpersonnel"]);
                     LesAttribution.Add(e);
                 }
             }
@@ -135,7 +135,7 @@ namespace MATINFO.Model
         public void Create()
         {
             DataAccess accesBD = new DataAccess();
-            String requete = "INSERT INTO est_attribue (idpersonnel, idmateriel, dateattribution, commentaireattribution) values('" + this.IdPersonnels + "','" + this.IdMateriel + "','" + this.DateAttribution +"','" + this.CommentaireAttribution +"');";
+            String requete = "INSERT INTO est_attribue (idpersonnel, idmateriel, dateattribution, commentaireattribution) values('" + this.IdPersonnels + "','" + this.IdMateriel + "','" + this.DateAttribution + "','" + this.CommentaireAttribution + "');";
             accesBD.SetData(requete);
         }
 
@@ -144,12 +144,10 @@ namespace MATINFO.Model
             throw new NotImplementedException();
         }
 
-        public void Update(string commentaireAttribution, string nomMateriel, string nomPersonnel)
+        public void Update()
         {
-            int idMat = Materiel.Find(nomMateriel).ID_Materiel;
-            int idPerso = Personnel.Find(nomPersonnel).ID_Personnel;
             DataAccess accesBD = new DataAccess();
-            String requete = "UPDATE est_attribue SET commentaireattribution = " + commentaireAttribution + ", idmateriel = " + idMat + ", idpersonnel = " + idPerso + " WHERE dateattribution = " + this.DateAttribution;
+            String requete = "UPDATE est_attribue SET commentaireattribution = " + commentaireAttribution + ", idmateriel = " + this.IdMateriel + ", idpersonnel = " + this.IdPersonnels + " WHERE dateattribution = " + this.DateAttribution;
             accesBD.SetData(requete);
         }
 
@@ -170,7 +168,7 @@ namespace MATINFO.Model
             throw new NotImplementedException();
         }
 
-        void Crud<Attribution>.Update(string txt)
+        void Crud<Attribution>.Update()
         {
             throw new NotImplementedException();
         }

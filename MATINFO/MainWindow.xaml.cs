@@ -66,10 +66,6 @@ namespace MATINFO
 
         }
 
-        private void lvCategorie_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-
-        }
 
         private void BTSuppr(object sender, RoutedEventArgs e)
         {
@@ -109,7 +105,40 @@ namespace MATINFO
             lvMateriel.Items.Refresh();
         }
 
-        private void lvCategorie_SelectionChanged_1(object sender, SelectionChangedEventArgs e)
+        private void lvCategorie_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (e.AddedItems.Count > 0)
+            {
+                ListBox listBox = sender as ListBox;
+                var valid = e.AddedItems[0];
+                foreach (var item in new ArrayList(listBox.SelectedItems))
+                {
+                    if (item != valid)
+                    {
+                        listBox.SelectedItems.Remove(item);
+                    }
+                }
+            }
+        }
+
+        private void lvMateriel_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (e.AddedItems.Count > 0)
+            {
+                ListBox listBox = sender as ListBox;
+                var valid = e.AddedItems[0];
+                foreach (var item in new ArrayList(listBox.SelectedItems))
+                {
+                    if (item != valid)
+                    {
+                        listBox.SelectedItems.Remove(item);
+                    }
+                }
+            }
+        }
+
+
+        private void lvAttribution_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             if (e.AddedItems.Count > 0)
             {

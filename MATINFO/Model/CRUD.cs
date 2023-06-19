@@ -13,7 +13,7 @@ namespace MATINFO.MODEL
 
         void Read();
 
-        void Update(string txt);
+        void Update();
 
         void Delete();
 

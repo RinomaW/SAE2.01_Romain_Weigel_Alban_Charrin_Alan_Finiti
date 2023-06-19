@@ -144,7 +144,7 @@ namespace MATINFO.Model
         public void Delete()
         {
             DataAccess accesBD = new DataAccess();
-            String requete = "DELETE FROM Personnel WHERE nompersonnel = \'" + this.NomPersonnel + "\' AND prenompersonnel = \'" + this.PrenomPersonnel + "\' AND emailpersonnel = \'" + this.Email + "\'";
+            String requete = "DELETE FROM Personnel WHERE nompersonnel = \"" + this.NomPersonnel + "\" AND prenompersonnel = \"" + this.PrenomPersonnel + "\" AND emailpersonnel = \"" + this.Email + "\"";
             accesBD.SetData(requete);
         }
 
@@ -176,17 +176,13 @@ namespace MATINFO.Model
         }
 
 
-        public void Update(string nom, string prenom, string email)
+        public void Update()
         {
-            String requete = "UPDATE Personnel SET emailpersonnel = " + email + "nompersonnel = " + nom + " , prenompersonnel = " + prenom + " WHERE idpersonnel = " + this.ID_Personnel;
+            String requete = "UPDATE Personnel SET emailpersonnel = " + this.Email + "nompersonnel = " + this.NomPersonnel + " , prenompersonnel = " + this.PrenomPersonnel + " WHERE idpersonnel = " + this.ID_Personnel;
             DataAccess accesBD = new DataAccess();
             accesBD.SetData(requete);
         }
 
-        public void Update(string txt)
-        {
-            throw new NotImplementedException();
-        }
         public static Personnel Find(string nomPersonnel)
         {
             ObservableCollection<Personnel> LesPersonnels = new ObservableCollection<Personnel>();
