@@ -88,7 +88,7 @@ namespace MATINFO.Model
 
         public void Create()
         {
-            String requete = "INSERT INTO categorie_materiel (nomcategorie) VALUES ('" + this.nomCategorie + "');";
+            String requete = "INSERT INTO categorie (nomcategorie) VALUES ('" + this.nomCategorie + "');";
             DataAccess accesBD = new DataAccess();
             accesBD.SetData(requete);
         }
@@ -108,7 +108,7 @@ namespace MATINFO.Model
         public void Delete()
         {
             DataAccess accesBD = new DataAccess();
-            String requete = "DELETE FROM categorie_materiel WHERE nomcategorie = " + this.nomCategorie;
+            String requete = "DELETE FROM categorie WHERE nomcategorie = " + this.nomCategorie;
             accesBD.SetData(requete);
         }
 

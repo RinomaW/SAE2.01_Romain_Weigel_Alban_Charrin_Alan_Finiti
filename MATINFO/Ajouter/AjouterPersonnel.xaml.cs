@@ -43,14 +43,14 @@ namespace MATINFO
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             // on doit déclencher la mise à jour du binding
-            /*if (string.IsNullOrWhiteSpace(TBEmail.Text) && string.IsNullOrWhiteSpace(TBNom.Text) && string.IsNullOrWhiteSpace(TBPrenom.Text))
+            if (string.IsNullOrWhiteSpace(TBEmail.Text) && string.IsNullOrWhiteSpace(TBNom.Text) && string.IsNullOrWhiteSpace(TBPrenom.Text))
                 MessageBox.Show(this.Owner, "Pas possible!", "Pb", MessageBoxButton.OK, MessageBoxImage.Error);
             else
             {
-                new Categorie(TBNomCate.Text).Create();
+                new Personnel(TBEmail.Text, TBNom.Text).Create();
                 new ApplicationData().Recharge();
                 this.Close();
-            }*/
+            }
 
         }
 
