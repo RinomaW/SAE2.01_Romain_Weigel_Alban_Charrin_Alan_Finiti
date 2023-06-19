@@ -41,7 +41,7 @@ namespace MATINFO
             this.TBEmail.Text = "";
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void BTCreer_Click(object sender, RoutedEventArgs e)
         {
             // on doit déclencher la mise à jour du binding
             if (string.IsNullOrWhiteSpace(TBEmail.Text) && string.IsNullOrWhiteSpace(TBNom.Text) && string.IsNullOrWhiteSpace(TBPrenom.Text))

@@ -91,10 +91,10 @@
                 Width="100"
                 Height="15"
                 Stroke="#00000000" />
-            <Button
+            <Button x:Name="BTCreer"
                 Width="200"
                 Height="30"
-                Click="Button_Click"
+                Click="BTCreer_Click"
                 Content="Créer"
                 RenderTransformOrigin="0.56,4.168">
                 <Button.Resources>

@@ -24,10 +24,16 @@ namespace MATINFO
     /// </summary>
     public partial class SupprimerAttribution : Window
     {
-        string tbtexte;
+        public Attribution Attribution { get; set; }
         public SupprimerAttribution()
         {
             InitializeComponent();
+        }
+        public SupprimerAttribution(Attribution attribution)
+        {
+            InitializeComponent();
+            this.Attribution= attribution;
+            lvDateAttribution.SelectedItem = attribution;
         }
 
       //  private void TBComm_GotFocus(object sender, RoutedEventArgs e)
@@ -43,10 +49,6 @@ namespace MATINFO
             
         }
 
-        private void TBComm_TextChanged(object sender, TextChangedEventArgs e)
-        {
-            //string tbtexte = TBComm.Text;
-
-        }
+        
     }
 }

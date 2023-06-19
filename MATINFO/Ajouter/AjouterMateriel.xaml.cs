@@ -41,7 +41,7 @@ namespace MATINFO
             this.TBRef.Text = "";
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void BTCreer_Click(object sender, RoutedEventArgs e)
         {
             if (string.IsNullOrWhiteSpace(TBNom.Text) && string.IsNullOrWhiteSpace(TBRef.Text) && string.IsNullOrWhiteSpace(TBCodeBarre.Text))
                 MessageBox.Show(this.Owner, "Pas possible!", "Pb", MessageBoxButton.OK, MessageBoxImage.Error);

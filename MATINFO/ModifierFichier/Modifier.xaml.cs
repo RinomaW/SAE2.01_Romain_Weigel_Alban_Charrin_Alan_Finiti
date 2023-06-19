@@ -1,4 +1,5 @@
-﻿using MATINFO.Modifier;
+﻿using MATINFO.Model;
+using MATINFO.Modifier;
 using MATINFO.ModifierFichier;
 using MATINFO.Mofifier;
 using System;
@@ -22,11 +23,26 @@ namespace MATINFO
     /// </summary>
     public partial class ActionModifier : Window
     {
+        private Personnel p; 
+
         public ActionModifier()
         {
             InitializeComponent();
+            Personnel p = new Personnel();
         }
 
+        public Personnel P
+        {
+            get
+            {
+                return p;
+            }
+
+            set
+            {
+                p = value;
+            }
+        }
 
         private void BTcateMBDWN(object sender, MouseButtonEventArgs e)
         {
@@ -35,28 +51,28 @@ namespace MATINFO
             modifCate.Show();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void BTCate_Click(object sender, RoutedEventArgs e)
         {
             this.Visibility = Visibility.Hidden;
             ModifierCategorie modifierCategorie = new ModifierCategorie();
             modifierCategorie.Show();
         }
 
-        private void Button_Click_1(object sender, RoutedEventArgs e)
+        private void BTMate_Click(object sender, RoutedEventArgs e)
         {
             this.Visibility = Visibility.Hidden;
             ModifierMateriel modifierMateriel = new ModifierMateriel();
             modifierMateriel.Show();
         }
 
-        private void Button_Click_2(object sender, RoutedEventArgs e)
+        private void BTPerso_Click(object sender, RoutedEventArgs e)
         {
             this.Visibility = Visibility.Hidden;
-            ModifierPersonnel modifierPersonnel = new ModifierPersonnel();
-            modifierPersonnel.Show();
+            ModifierPersonnelFinal modifierPersonnelFinal = new ModifierPersonnelFinal(p);
+            modifierPersonnelFinal.Show();
         }
 
-        private void Button_Click_3(object sender, RoutedEventArgs e)
+        private void BTAttri_Click(object sender, RoutedEventArgs e)
         {
             this.Visibility = Visibility.Hidden;
             ModifierAttribution modifierAttribution = new ModifierAttribution();

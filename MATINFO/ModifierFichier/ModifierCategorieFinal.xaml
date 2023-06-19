@@ -1,19 +1,45 @@
-﻿<Window x:Class="MATINFO.ModifierCategorieFinal"
-        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:MATINFO"
-        mc:Ignorable="d"
-        Title="ModifierCategorieFinal" Height="170" Width="400" MinHeight=" 170" MinWidth="400" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+﻿<Window
+    x:Class="MATINFO.ModifierCategorieFinal"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:MATINFO"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="ModifierCategorieFinal"
+    Width="400"
+    Height="170"
+    MinWidth="400"
+    MinHeight=" 170"
+    ResizeMode="NoResize"
+    WindowStartupLocation="CenterScreen"
+    mc:Ignorable="d">
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
+            <ColumnDefinition />
+            <ColumnDefinition />
         </Grid.ColumnDefinitions>
-        <Label Content="Nouveau nom :" Margin="15,39,0,0" HorizontalAlignment="Left" Width="94" Height="26" VerticalAlignment="Top"/>
-        <TextBox x:Name="tbModifierCategorieFinal" Margin="109,27,20,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="50" Grid.ColumnSpan="2"/>
-        <Button Content="Modifier" Margin="106,0,106,20" Grid.ColumnSpan="2" Height="32" VerticalAlignment="Bottom">
+        <Label
+            Width="94"
+            Height="26"
+            Margin="15,39,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Content="Nouveau nom :" />
+        <TextBox
+            x:Name="tbModifierCategorieFinal"
+            Grid.ColumnSpan="2"
+            Height="50"
+            Margin="109,27,20,0"
+            VerticalAlignment="Top"
+            TextWrapping="Wrap" />
+        <Button
+            x:Name="BTModi"
+            Grid.ColumnSpan="2"
+            Height="32"
+            Margin="106,0,106,20"
+            VerticalAlignment="Bottom"
+            Click="BTModi_Click"
+            Content="Modifier">
             <Button.Resources>
                 <Style TargetType="Border">
                     <Setter Property="CornerRadius" Value="10" />

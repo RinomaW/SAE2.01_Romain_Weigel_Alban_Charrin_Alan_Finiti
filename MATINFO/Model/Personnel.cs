@@ -144,7 +144,7 @@ namespace MATINFO.Model
         public void Delete()
         {
             DataAccess accesBD = new DataAccess();
-            String requete = "DELETE FROM Personnel WHERE nompersonnel = " + this.NomPersonnel + " , prenompersonnel = " + this.PrenomPersonnel + " , emailpersonnel = " + this.Email;
+            String requete = "DELETE FROM Personnel WHERE nompersonnel = \"" + this.NomPersonnel + "\" , prenompersonnel = \"" + this.PrenomPersonnel + "\" , emailpersonnel = \"" + this.Email + "\"";
             accesBD.SetData(requete);
         }
 
