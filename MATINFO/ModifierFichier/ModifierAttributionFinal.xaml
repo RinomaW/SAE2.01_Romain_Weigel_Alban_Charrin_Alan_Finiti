@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:MATINFO.ModifierFichier"
         xmlns:model="clr-namespace:MATINFO.Model"
         mc:Ignorable="d"
-        Title="ModifierAttributionFinal" Height="600" Width="500">
+        Title="ModifierAttributionFinal" Height="600" Width="500" WindowStartupLocation="CenterScreen">
     <Window.DataContext>
         <model:ApplicationData x:Name="applicationData" />
     </Window.DataContext>

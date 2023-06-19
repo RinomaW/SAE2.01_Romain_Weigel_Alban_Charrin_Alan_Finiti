@@ -5,6 +5,7 @@ using MATINFO.Supprimer;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -60,7 +61,8 @@ namespace MATINFO
                 ActionModifier Modifier = new ActionModifier();
                 Modifier.Show();
             }
-            
+            Refresh();
+
         }
 
         private void lvCategorie_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -74,23 +76,35 @@ namespace MATINFO
             {
                 DoubleClicSupprimer supprimerAttributionFinal = new DoubleClicSupprimer(lvAttribution.SelectedItem as Attribution);
                 supprimerAttributionFinal.Show();
+               
 
             }
             else if (lvMateriel.SelectedItem != null)
             {
                 DoubleClicSupprimer supprimerMaterielFinal = new DoubleClicSupprimer(lvMateriel.SelectedItem as Materiel);
                 supprimerMaterielFinal .Show();
+               
             }
             else if (lvCategorie.SelectedItem != null)
             {
                 DoubleClicSupprimer supprimerCategorieFinal = new DoubleClicSupprimer(lvCategorie.SelectedItem as Categorie);
                 supprimerCategorieFinal.Show();
+               
             }
             else
             {
                 CAPMSuppr supprimer = new CAPMSuppr();
                 supprimer.Show();
             }
+            Refresh();
+
+        }
+
+        public void Refresh()
+        {
+            lvAttribution.Items.Refresh();
+            lvCategorie.Items.Refresh();
+            lvMateriel.Items.Refresh();
         }
     }
 }
