@@ -24,13 +24,18 @@ namespace MATINFO.ModifierFichier
         public Personnel PersonnelSelectionne { get; set; }
         public ModifierPersonnelFinal( Personnel personnelSelectionne, Window owner)
         {
+            this.Owner = owner;
             InitializeComponent();
             this.PersonnelSelectionne= personnelSelectionne;
         }
 
         private void BTModi_Click(object sender, RoutedEventArgs e)
         {
-
+            this.PersonnelSelectionne.NomPersonnel = tbNomPersonnel.Text;
+            this.PersonnelSelectionne.PrenomPersonnel= tbPrenomPersonnel.Text;
+            this.PersonnelSelectionne.Email= tbEmailPersonnel.Text;
+            PersonnelSelectionne.Update();
+            this.Close();
         }
 
     }

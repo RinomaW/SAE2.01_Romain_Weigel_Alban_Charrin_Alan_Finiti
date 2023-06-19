@@ -21,16 +21,17 @@ namespace MATINFO.Mofifier
     public partial class ModifierMateriel : Window
     {
         public Materiel materielSelectionne;
-        public ModifierMateriel()
+        public ModifierMateriel(Window owner)
         {
+            this.Owner = owner;
             InitializeComponent();
         }
 
         private void BTModi_Click(object sender, RoutedEventArgs e)
         {
             this.Visibility= Visibility.Hidden;
-            materielSelectionne = lvMaterielSelectionne.SelectedItem as Materiel;
-            ModifierMaterielFinal modifierMaterielFinal = new ModifierMaterielFinal(materielSelectionne);
+            materielSelectionne = (Materiel)lvMaterielSelectionne.SelectedItem;
+            ModifierMaterielFinal modifierMaterielFinal = new ModifierMaterielFinal(materielSelectionne, this.Owner);
             modifierMaterielFinal.Show();
         }
 

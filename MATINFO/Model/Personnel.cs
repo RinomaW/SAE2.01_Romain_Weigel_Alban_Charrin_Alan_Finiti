@@ -178,7 +178,7 @@ namespace MATINFO.Model
 
         public void Update()
         {
-            String requete = "UPDATE Personnel SET emailpersonnel = " + this.Email + "nompersonnel = " + this.NomPersonnel + " , prenompersonnel = " + this.PrenomPersonnel + " WHERE idpersonnel = " + this.ID_Personnel;
+            String requete = "UPDATE Personnel SET emailpersonnel = '" + this.Email + "' AND nompersonnel = '" + this.NomPersonnel + "' AND prenompersonnel = '" + this.PrenomPersonnel + "' WHERE idpersonnel = " + this.ID_Personnel;
             DataAccess accesBD = new DataAccess();
             accesBD.SetData(requete);
         }
