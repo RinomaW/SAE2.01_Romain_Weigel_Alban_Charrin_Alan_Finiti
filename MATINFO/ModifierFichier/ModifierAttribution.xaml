@@ -53,7 +53,7 @@
             <ListView
                 x:Name="lvDateAttribution"
                 DataContext="{Binding SelectedItem, ElementName=lvMaterielAttribution}"
-                ItemsSource="{Binding LesAttributions} " SelectionMode="Multiple">
+                ItemsSource="{Binding LesAttributions}" SelectionMode="Multiple">
                 <ListView.View>
                     <GridView>
                         <GridViewColumn

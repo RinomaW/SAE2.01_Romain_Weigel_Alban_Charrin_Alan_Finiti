@@ -32,5 +32,6 @@ namespace MATINFO.Modifier
             ModifierPersonnelFinal modifierPersonnelFinal = new ModifierPersonnelFinal(lvModifierPersonnel.SelectedItem as Personnel);
             modifierPersonnelFinal.Show();
         }
+
     }
 }
