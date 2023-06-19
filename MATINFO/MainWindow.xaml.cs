@@ -63,10 +63,6 @@ namespace MATINFO
             
         }
 
-        private void lvCategorie_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-
-        }
 
         private void BTSuppr(object sender, RoutedEventArgs e)
         {
