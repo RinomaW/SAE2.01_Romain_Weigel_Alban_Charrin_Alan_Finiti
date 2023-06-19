@@ -35,7 +35,7 @@ namespace MATINFO.ModifierFichier
             this.AttributionModifiee.CommentaireAttribution = tbCommentaireAttribution.Text;
             this.AttributionModifiee.DateAttribution = DateTime.Parse(tbDate.Text);
             this.AttributionModifiee.IdMateriel = ((Materiel)cbMaterielChoisi.SelectedItem).ID_Materiel;
-            this.AttributionModifiee.IdPersonnels = ((Personnel)cbPersonnelChoisi.SelectedItem).ID_Personnel;
+            this.AttributionModifiee.IdPersonnel = ((Personnel)cbPersonnelChoisi.SelectedItem).ID_Personnel;
             AttributionModifiee.Update();
             this.Close();
         }

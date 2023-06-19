@@ -35,7 +35,6 @@ namespace MATINFO.Model
             this.Email = emailPersonnel;
             this.NomPersonnel = nomPersonnel;
             this.PrenomPersonnel = prenomPersonnel;
-            this.ID_Personnel++;
         }
         public string Email
         {
