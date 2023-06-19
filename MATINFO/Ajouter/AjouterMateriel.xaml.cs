@@ -25,9 +25,10 @@ namespace MATINFO
     public partial class AjouterMateriel : Window
     {
         
-        public AjouterMateriel()
+        public AjouterMateriel(Materiel mat)
         {
             InitializeComponent();
+            DataContext = mat;
         }
 
         private void TBNom_GotFocus(object sender, RoutedEventArgs e)
@@ -37,16 +38,20 @@ namespace MATINFO
 
         private void TBEmail_GotFocus(object sender, RoutedEventArgs e)
         {
-            this.TBEmail.Text = "";
+            this.TBRef.Text = "";
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-           //string texte = "insert into attribution values ('" +id perso ""+"" id materiel ""+"" DateOnly"" + ",'"+tbtexte +"')";
-           //DataAccess accesBD = new DataAccess();
-           //String requete = 
-           //accesBD.SetData(requete);
-            
+            if (string.IsNullOrWhiteSpace(TBNom.Text) && string.IsNullOrWhiteSpace(TBRef.Text) && string.IsNullOrWhiteSpace(TBCodeBarre.Text))
+                MessageBox.Show(this.Owner, "Pas possible!", "Pb", MessageBoxButton.OK, MessageBoxImage.Error);
+            else
+            {
+                new Materiel(TBCodeBarre.Text,TBNom.Text ,TBRef.Text, ((Categorie)cbCategorieChoix.SelectionBoxItem).ID_Categorie).Create();
+                new ApplicationData().Recharge();
+                this.Close();
+            }
+
         }
 
         private void TBComm_TextChanged(object sender, TextChangedEventArgs e)
@@ -55,9 +60,5 @@ namespace MATINFO
 
         }
 
-        private void TBPrenom_GotFocus(object sender, RoutedEventArgs e)
-        {
-            this.TBPrenom.Text = "";
-        }
     }
 }

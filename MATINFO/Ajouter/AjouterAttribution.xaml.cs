@@ -28,9 +28,10 @@ namespace MATINFO
         string idPerso;
         string idMate;
         DateTime date;
-        public AjouterAttribution()
+        public AjouterAttribution(Attribution atr)
         {
             InitializeComponent();
+            DataContext= atr;
         }
 
         private void TBComm_GotFocus(object sender, RoutedEventArgs e)

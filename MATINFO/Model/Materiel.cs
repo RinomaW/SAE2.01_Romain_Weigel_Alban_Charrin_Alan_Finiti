@@ -30,6 +30,14 @@ namespace MATINFO.Model
             this.ID_Materiel = idmateriel;
         }
 
+        public Materiel(string codeBarre, string nomMateriel, string reference, int idCategorie)
+        {
+            this.CodeBarre = codeBarre;
+            this.NomMateriel = nomMateriel;
+            this.Reference = reference;
+            this.IdCategorie = idCategorie;
+        }
+
         public string CodeBarre
         {
             get
@@ -120,6 +128,13 @@ namespace MATINFO.Model
             {
                 lesAttributions = value;
             }
+        }
+
+        public void Create()
+        {
+            String requete = "INSERT INTO Materiel (idCategorie,nommateriel, referenceconstructeurmateriel, codebarreinventaire) VALUES ('" + this.IdCategorie + "','" + this.NomMateriel + "','" + this.Reference + "','" + this.CodeBarre + "');";
+            DataAccess accesBD = new DataAccess();
+            accesBD.SetData(requete);
         }
 
         void Crud<Materiel>.Create()
