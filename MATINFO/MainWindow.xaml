@@ -29,7 +29,7 @@
             Margin="10,10,5,300"
             DataContext="{Binding SelectedItem, ElementName=lvMateriel}"
             ItemsSource="{Binding Path=LesAttributions}"
-            SelectionMode="Multiple">
+            SelectionMode="Multiple" SelectionChanged="lvAttribution_SelectionChanged">
             <ListView.View>
                 <GridView>
                     <GridViewColumn
@@ -59,7 +59,7 @@
                 Margin="10,300,75,10"
                 DataContext="{Binding SelectedItem, ElementName=lvCategorie}"
                 ItemsSource="{Binding LesMateriels}"
-                SelectionMode="Multiple">
+                SelectionMode="Multiple" SelectionChanged="lvMateriel_SelectionChanged_1">
                 <ListView.View>
                     <GridView>
                         <GridViewColumn
