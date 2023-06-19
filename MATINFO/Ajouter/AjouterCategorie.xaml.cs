@@ -21,7 +21,7 @@ namespace MATINFO
     /// </summary>
     public partial class AjouterCategorie : Window
     {
-        public AjouterCategorie(Categorie cat)
+        public AjouterCategorie(Categorie cat) 
         {
             InitializeComponent();
             this.DataContext= cat;

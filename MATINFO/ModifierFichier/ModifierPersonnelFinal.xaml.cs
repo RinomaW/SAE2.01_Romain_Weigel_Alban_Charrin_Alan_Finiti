@@ -20,6 +20,7 @@ namespace MATINFO.ModifierFichier
     /// </summary>
     public partial class ModifierPersonnelFinal : Window
     {
+       
         public Personnel PersonnelSelectionne { get; set; }
         public ModifierPersonnelFinal( Personnel personnelSelectionne)
         {

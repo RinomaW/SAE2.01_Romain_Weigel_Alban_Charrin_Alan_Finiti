@@ -84,13 +84,13 @@
                 </ListView.View>
             </ListView>
         </Grid>
-        <Button
+        <Button x:Name="BTAjout"
             Width="100"
             Height="25"
             Margin="10,0,0,225"
             HorizontalAlignment="Left"
             VerticalAlignment="Bottom"
-            Click="Button_Click"
+            Click="BTAjout"
             Content="Ajouter">
             <Button.Resources>
                 <Style TargetType="Border">
@@ -98,13 +98,13 @@
                 </Style>
             </Button.Resources>
         </Button>
-        <Button
+        <Button x:Name="BTModi"
             Width="100"
             Height="25"
             Margin="10,0,0,195"
             HorizontalAlignment="Left"
             VerticalAlignment="Bottom"
-            Click="Button_Click_1"
+            Click="BTModi"
             Content="Modifier"
             RenderTransformOrigin="-0.208,-2.158">
             <Button.Resources>
@@ -113,13 +113,13 @@
                 </Style>
             </Button.Resources>
         </Button>
-        <Button
+        <Button x:Name="BTSuppr"
             Width="100"
             Height="25"
             Margin="10,0,0,165"
             HorizontalAlignment="Left"
             VerticalAlignment="Bottom"
-            Click="Button_Click_2"
+            Click="BTSuppr"
             Content="Supprimer">
             <Button.Resources>
                 <Style TargetType="Border">

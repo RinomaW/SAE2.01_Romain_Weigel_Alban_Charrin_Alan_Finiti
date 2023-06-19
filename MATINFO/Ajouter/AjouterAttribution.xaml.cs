@@ -51,7 +51,7 @@ namespace MATINFO
             date = this.DPDate.SelectedDate.Value;
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void TBCreer_Click(object sender, RoutedEventArgs e)
         {
            /* String requete = "INSERT INTO attribution VALUES ('"+idPerso +"'," +idMate+"'," +date+"',"+"',"+tbtexte +"')";
             DataAccess accesBD = new DataAccess();
