@@ -149,14 +149,14 @@ namespace MATINFO.Model
             int idMat = Materiel.Find(nomMateriel).ID_Materiel;
             int idPerso = Personnel.Find(nomPersonnel).ID_Personnel;
             DataAccess accesBD = new DataAccess();
-            String requete = "UPDATE Attribution SET commentaireattribution = " + commentaireAttribution + ", idmateriel = " + idMat + ", idpersonnel = " + idPerso + " WHERE dateattribution = " + this.DateAttribution;
+            String requete = "UPDATE est_attribue SET commentaireattribution = " + commentaireAttribution + ", idmateriel = " + idMat + ", idpersonnel = " + idPerso + " WHERE dateattribution = " + this.DateAttribution;
             accesBD.SetData(requete);
         }
 
         public void Delete()
         {
             DataAccess accesBD = new DataAccess();
-            String requete = "DELETE FROM attribution WHERE dateattribution = \'" + this.dateAttribution + "\' AND idmateriel = \'" + this.IdMateriel + "\' AND idpersonnels = \'" + this.IdPersonnels + "\'";
+            String requete = "DELETE FROM est_attribue WHERE dateattribution = \'" + this.dateAttribution + "\' AND idmateriel = \'" + this.IdMateriel + "\' AND idpersonnels = \'" + this.IdPersonnels + "\'";
             accesBD.SetData(requete);
         }
 
