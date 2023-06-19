@@ -77,7 +77,7 @@
         </GroupBox>
 
         <Button
-            x:Name="BTSuppr"
+            x:Name="BTSupprAttr"
             Height="49"
             Margin="337,0,337,46"
             VerticalAlignment="Bottom"
