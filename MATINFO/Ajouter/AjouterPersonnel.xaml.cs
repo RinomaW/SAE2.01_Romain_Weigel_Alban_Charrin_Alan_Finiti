@@ -25,9 +25,10 @@ namespace MATINFO
     public partial class AjouterPersonnel : Window
     {
         
-        public AjouterPersonnel()
+        public AjouterPersonnel(Personnel per)
         {
             InitializeComponent();
+            DataContext= per;
         }
 
         private void TBNom_GotFocus(object sender, RoutedEventArgs e)
@@ -47,7 +48,7 @@ namespace MATINFO
                 MessageBox.Show(this.Owner, "Pas possible!", "Pb", MessageBoxButton.OK, MessageBoxImage.Error);
             else
             {
-                new Personnel(TBEmail.Text, TBNom.Text, TBPrenom.Text);
+                new Personnel(TBEmail.Text, TBNom.Text, TBPrenom.Text).Create();
                 new ApplicationData().Recharge();
                 this.Close();
             }
