@@ -12,7 +12,7 @@
     MinWidth="850"
     MinHeight="500"
     MaxWidth="1100"
-    mc:Ignorable="d" WindowStartupLocation="CenterScreen">
+    mc:Ignorable="d">
     <Window.DataContext>
         <model:ApplicationData x:Name="applicationData" />
     </Window.DataContext>
@@ -22,7 +22,7 @@
                 x:Name="lvMaterielAttribution"
                 Height="517"
                 Margin="0,0,0,0"
-                ItemsSource="{Binding Path=LesMateriels}" SelectionMode="Multiple">
+                ItemsSource="{Binding Path=LesMateriels}">
                 <ListView.View>
                     <GridView>
                         <GridViewColumn
@@ -52,7 +52,8 @@
             Header="Date d'attribution">
             <ListView
                 x:Name="lvDateAttribution"
-                DataContext="{Binding SelectedItem, ElementName=lvMaterielAttribution}" ItemsSource="{Binding LesAttributions}" SelectionMode="Multiple">
+                DataContext="{Binding SelectedItem, ElementName=lvMaterielAttribution}"
+                ItemsSource="{Binding LesAttributions}">
                 <ListView.View>
                     <GridView>
                         <GridViewColumn

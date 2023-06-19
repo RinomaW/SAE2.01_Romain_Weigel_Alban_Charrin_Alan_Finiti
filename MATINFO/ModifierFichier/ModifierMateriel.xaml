@@ -28,7 +28,7 @@
                 x:Name="lvMaterielSelectionne"
                 Height="307"
                 Margin="0,0,-2,0"
-                ItemsSource="{Binding Path=LesMateriels}" SelectionMode="Multiple">
+                ItemsSource="{Binding Path=LesMateriels}">
                 <ListView.View>
                     <GridView>
                         <GridViewColumn

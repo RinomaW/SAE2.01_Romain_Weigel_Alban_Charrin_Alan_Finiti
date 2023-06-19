@@ -46,11 +46,11 @@ namespace MATINFO.Supprimer
             {
                 this.DoubleClicCategorie.Delete();
             }
-            else if (this.DoubleClicAttribution != null)
+            if (this.DoubleClicAttribution != null)
             {
                 this.DoubleClicAttribution.Delete();
             }
-            else if (this.DoubleClicMateriel != null)
+            if (this.DoubleClicMateriel != null)
             {
                 this.DoubleClicMateriel.Delete();
             }

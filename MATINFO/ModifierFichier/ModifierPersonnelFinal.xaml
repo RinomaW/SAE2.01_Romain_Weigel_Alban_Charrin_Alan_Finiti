@@ -12,7 +12,7 @@
     MinWidth="500"
     MinHeight="500"
     ResizeMode="NoResize"
-    mc:Ignorable="d" WindowStartupLocation="CenterScreen">
+    mc:Ignorable="d">
     <Window.DataContext>
         <model:ApplicationData x:Name="applicationData" />
     </Window.DataContext>

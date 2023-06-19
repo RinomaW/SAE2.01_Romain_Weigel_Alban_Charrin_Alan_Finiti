@@ -29,8 +29,8 @@ namespace MATINFO.Modifier
         private void BTModi_Click(object sender, RoutedEventArgs e)
         {
             this.Visibility= Visibility.Hidden;
-            ModifierPersonnelFinal modifierPersonnelFinal = new ModifierPersonnelFinal(lvModifierPersonnel.SelectedItem as Personnel);
-            modifierPersonnelFinal.Show();
+            ModifierPersonnel modifierPersonnel = new ModifierPersonnel();
+            modifierPersonnel.Show();
         }
     }
 }
