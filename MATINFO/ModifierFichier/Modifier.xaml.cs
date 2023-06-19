@@ -28,6 +28,7 @@ namespace MATINFO
         public ActionModifier()
         {
             InitializeComponent();
+            
         }
 
         private void BTcateMBDWN(object sender, MouseButtonEventArgs e)

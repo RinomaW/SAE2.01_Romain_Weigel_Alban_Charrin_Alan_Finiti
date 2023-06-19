@@ -26,7 +26,7 @@ namespace MATINFO
     {
 
         public MainWindow()
-        {//feur
+        {
             InitializeComponent();
         }
 
@@ -69,7 +69,7 @@ namespace MATINFO
 
         private void BTSuppr(object sender, RoutedEventArgs e)
         {
-            //coubeh
+            
             if (lvAttribution.SelectedItem != null)
             {
                 DoubleClicSupprimer supprimerAttributionFinal = new DoubleClicSupprimer(lvAttribution.SelectedItem as Attribution);
