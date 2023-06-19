@@ -107,7 +107,7 @@ namespace MATINFO
 
         private void lvCategorie_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            if (e.AddedItems.Count > 0)
+            if (e.AddedItems.Count > 0) 
             {
                 ListBox listBox = sender as ListBox;
                 var valid = e.AddedItems[0];
