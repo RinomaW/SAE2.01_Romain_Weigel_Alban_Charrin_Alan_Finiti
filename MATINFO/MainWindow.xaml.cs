@@ -73,7 +73,15 @@ namespace MATINFO
             {
                
                 SupprimerAttribution supprA = new SupprimerAttribution(lvAttribution.SelectedItem as Attribution);
-                supprA.Show();
+                MessageBoxResult ConfDel = MessageBox.Show("Êtes vous sûr de vouloir supprimer l'attribution selectionnée", "Suppression", MessageBoxButton.YesNo);
+                if (ConfDel==MessageBoxResult.Yes)
+                {
+
+                }
+                else
+                {
+
+                }
 
             }
             else if (lvMateriel.SelectedItem != null)
