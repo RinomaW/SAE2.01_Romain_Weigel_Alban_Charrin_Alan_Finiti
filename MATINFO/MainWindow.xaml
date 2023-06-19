@@ -6,7 +6,7 @@
     xmlns:local="clr-namespace:MATINFO"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:model="clr-namespace:MATINFO.Model"
-    Title="MainWindow"
+    Title="MATINFO"
     Width="1200"
     Height="600"
     MinWidth="1200"
