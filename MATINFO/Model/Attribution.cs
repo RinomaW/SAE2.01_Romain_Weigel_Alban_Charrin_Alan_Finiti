@@ -147,7 +147,7 @@ namespace MATINFO.Model
         public void Update()
         {
             DataAccess accesBD = new DataAccess();
-            String requete = "UPDATE est_attribue SET commentaireattribution = '" + this.CommentaireAttribution + "' AND idmateriel = " + this.IdMateriel + " AND idpersonnel = " + this.IdPersonnels + " WHERE dateattribution = " + this.DateAttribution +"AND dateattribution = '" + this.DateAttribution;
+            String requete = "UPDATE est_attribue SET commentaireattribution = '" + this.CommentaireAttribution + "' AND idmateriel = " + this.IdMateriel + " AND idpersonnel = " + this.IdPersonnel + " WHERE dateattribution = " + this.DateAttribution +"AND dateattribution = '" + this.DateAttribution;
             accesBD.SetData(requete);
         }
 
