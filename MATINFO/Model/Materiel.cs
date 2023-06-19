@@ -145,7 +145,7 @@ namespace MATINFO.Model
         {
             
             DataAccess accesBD = new DataAccess();
-            String requete = "DELETE FROM Materiel WHERE nommateriel = \"" + this.NomMateriel + "\" , reference = \"" + this.Reference + "\" , codebarre = \"" + this.CodeBarre + "\" , idcategorie = \"" + this.IdCategorie + "\"";
+            String requete = "DELETE FROM Materiel WHERE nommateriel = \"" + this.NomMateriel + "\" AND reference = \"" + this.Reference + "\" AND codebarre = \"" + this.CodeBarre + "\" AND idcategorie = \"" + this.IdCategorie + "\"";
             accesBD.SetData(requete);
         }
 
