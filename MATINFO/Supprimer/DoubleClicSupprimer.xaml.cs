@@ -40,8 +40,9 @@ namespace MATINFO.Supprimer
             }
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void BTOui_Click(object sender, RoutedEventArgs e)
         {
+
             if (this.DoubleClicCategorie!= null) 
             {
                 this.DoubleClicCategorie.Delete();
@@ -57,7 +58,7 @@ namespace MATINFO.Supprimer
             this.Close();
         }
 
-        private void Button_Click_1(object sender, RoutedEventArgs e)
+        private void BTNom_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
         }

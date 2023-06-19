@@ -36,10 +36,6 @@ namespace MATINFO
             lvDateAttribution.SelectedItem = attribution;
         }
 
-      //  private void TBComm_GotFocus(object sender, RoutedEventArgs e)
-      //  {
-      //      this.TBComm.Text = "";
-      //  }
 
         private void BTSuppr_Click(object sender, RoutedEventArgs e)
         {

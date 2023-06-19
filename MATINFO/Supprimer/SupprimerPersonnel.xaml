@@ -26,13 +26,13 @@
             </ListView>
 
         </GroupBox>
-        <Button
+        <Button x:Name="BTSuppr"
             Width="169"
             Height="59"
             Margin="0,683,0,0"
             HorizontalAlignment="Center"
             VerticalAlignment="Top"
-            Click="Button_Click"
+            Click="BTSuppr_Click"
             Content="Supprimer">
             <Button.Resources>
                 <Style TargetType="Border">

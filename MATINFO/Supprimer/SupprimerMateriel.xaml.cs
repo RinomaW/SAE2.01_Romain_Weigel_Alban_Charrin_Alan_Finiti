@@ -34,7 +34,7 @@ namespace MATINFO
             lvMaterielSelectionne.SelectedItem = materiel;
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void BTSuppr_Click(object sender, RoutedEventArgs e)
         {
             Materiel materielSupprimee = lvMaterielSelectionne.SelectedItem as Materiel;
             materielSupprimee.Delete();

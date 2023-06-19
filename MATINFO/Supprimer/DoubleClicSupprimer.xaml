@@ -8,14 +8,14 @@
         Title="DoubleClicSupprimer" Height="200" Width="400" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     <Grid>
         <Label Content="Êtes-vous sûr de vouloir supprimer l'élément sélectionné ?" HorizontalAlignment="Left" Margin="40,38,0,0" VerticalAlignment="Top" Height="52" Width="380"/>
-        <Button Content="Oui" HorizontalAlignment="Left" Margin="98,132,0,0" VerticalAlignment="Top" Height="35" Width="60" Click="Button_Click">
+        <Button x:Name="BTOui" Content="Oui" HorizontalAlignment="Left" Margin="98,132,0,0" VerticalAlignment="Top" Height="35" Width="60" Click="BTOui_Click">
             <Button.Resources>
                 <Style TargetType="Border">
                     <Setter Property="CornerRadius" Value="10" />
                 </Style>
             </Button.Resources>
         </Button>
-        <Button Content="Non" HorizontalAlignment="Left" Margin="245,132,0,0" VerticalAlignment="Top" Height="35" Width="60" Click="Button_Click_1">
+        <Button x:Name="BTNom" Content="Non" HorizontalAlignment="Left" Margin="245,132,0,0" VerticalAlignment="Top" Height="35" Width="60" Click="BTNom_Click">
             <Button.Resources>
                 <Style TargetType="Border">
                     <Setter Property="CornerRadius" Value="10" />

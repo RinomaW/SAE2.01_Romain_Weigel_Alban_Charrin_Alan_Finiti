@@ -24,10 +24,7 @@ namespace MATINFO
     /// </summary>
     public partial class AjouterAttribution : Window
     {
-        string tbtexte;
-        string idPerso;
-        string idMate;
-        DateTime date;
+ 
         public AjouterAttribution(Attribution atr,Window owner)
         {
             this.Owner = owner;
@@ -42,26 +39,15 @@ namespace MATINFO
             this.TBComm.Text = "";
         }
 
-        private void TBComm_TextChanged(object sender, TextChangedEventArgs e)
-        {
-          string tbtexte = TBComm.Text;
 
-        }
-
-
-
-        private void DPDate_SelectedDateChanged(object sender, SelectionChangedEventArgs e)
-        {
-            date = this.DPDate.SelectedDate.Value;
-        }
 
         private void TBCreer_Click(object sender, RoutedEventArgs e)
         {
             if (string.IsNullOrWhiteSpace(TBComm.Text))
-                MessageBox.Show(this.Owner, "Pas possible!", "Pb", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show(this.Owner, "Impossible ! texte vide", "Erreur", MessageBoxButton.OK, MessageBoxImage.Error);
             else
             {
-                new Attribution(TBComm.Text, DateTime.Now, ((Materiel)cbMaterielChoix.SelectionBoxItem).ID_Materiel, ((Personnel)cbChoixPersonnel.SelectionBoxItem).ID_Personnel ).Create();
+                new Attribution(TBComm.Text, DPDate.SelectedDate.Value.Date, ((Materiel)cbMaterielChoix.SelectionBoxItem).ID_Materiel, ((Personnel)cbChoixPersonnel.SelectionBoxItem).ID_Personnel ).Create();
                 ((ApplicationData)Owner.DataContext).Recharge();
                 this.Close();
             }

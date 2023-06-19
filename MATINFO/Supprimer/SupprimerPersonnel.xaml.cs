@@ -26,12 +26,13 @@ namespace MATINFO
         {
             InitializeComponent();
         }
-        private void Button_Click(object sender, RoutedEventArgs e)
+
+
+        private void BTSuppr_Click(object sender, RoutedEventArgs e)
         {
-            Personnel personnelSupprimee = lvSupprimerPersonnel.SelectedItem as Personnel;
+             Personnel personnelSupprimee = lvSupprimerPersonnel.SelectedItem as Personnel;
             personnelSupprimee.Delete();
             this.Close();
         }
-
     }
 }
