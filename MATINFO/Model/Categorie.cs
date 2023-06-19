@@ -108,7 +108,7 @@ namespace MATINFO.Model
         public void Delete()
         {
             DataAccess accesBD = new DataAccess();
-            String requete = "DELETE FROM Categorie WHERE nomcategorie = \"" + this.nomCategorie + "\"";
+            String requete = "DELETE FROM categorie_materiel WHERE nomcategorie = '" + this.nomCategorie + "'";
             accesBD.SetData(requete);
         }
 

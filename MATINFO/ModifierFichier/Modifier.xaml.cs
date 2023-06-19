@@ -23,25 +23,11 @@ namespace MATINFO
     /// </summary>
     public partial class ActionModifier : Window
     {
-        private Personnel p; 
+        
 
         public ActionModifier()
         {
             InitializeComponent();
-            Personnel p = new Personnel();
-        }
-
-        public Personnel P
-        {
-            get
-            {
-                return p;
-            }
-
-            set
-            {
-                p = value;
-            }
         }
 
         private void BTcateMBDWN(object sender, MouseButtonEventArgs e)
@@ -68,7 +54,7 @@ namespace MATINFO
         private void BTPerso_Click(object sender, RoutedEventArgs e)
         {
             this.Visibility = Visibility.Hidden;
-            ModifierPersonnelFinal modifierPersonnelFinal = new ModifierPersonnelFinal(p);
+            ModifierPersonnel modifierPersonnelFinal = new ModifierPersonnel();
             modifierPersonnelFinal.Show();
         }
 

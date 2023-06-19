@@ -29,7 +29,6 @@ namespace MATINFO
         public MainWindow()
         {//feur
             InitializeComponent();
-            DataContext = applicationData;
         }
 
         private void BTAjout(object sender, RoutedEventArgs e)
@@ -72,6 +71,7 @@ namespace MATINFO
 
         private void BTSuppr(object sender, RoutedEventArgs e)
         {
+            //coubeh
             if (lvAttribution.SelectedItem != null)
             {
                 DoubleClicSupprimer supprimerAttributionFinal = new DoubleClicSupprimer(lvAttribution.SelectedItem as Attribution);
