@@ -71,19 +71,20 @@ namespace MATINFO
         {
             if (lvAttribution.SelectedItem != null)
             {
-                Attribution modifierAttributionFinal = lvAttribution.SelectedItem as Attribution;
-                modifierAttributionFinal.Delete();
+               
+                SupprimerAttribution supprA = new SupprimerAttribution(lvAttribution.SelectedItem as Attribution);
+                supprA.Show();
 
             }
             else if (lvMateriel.SelectedItem != null)
             {
-                Materiel modifierMaterielFinal = lvMateriel.SelectedItem as Materiel;
-                modifierMaterielFinal.Delete();
+                SupprimerMateriel supprM = new SupprimerMateriel(lvMateriel.SelectedItem as Materiel);
+                supprM.Show();
             }
             else if (lvCategorie.SelectedItem != null)
             {
-                Categorie modifierCategorieFinal = lvCategorie.SelectedItem as Categorie;
-                modifierCategorieFinal.Delete();
+                SupprimerCategorie supprC = new SupprimerCategorie(lvCategorie.SelectedItem as Categorie);
+                supprC.Show();
             }
             else
             {
