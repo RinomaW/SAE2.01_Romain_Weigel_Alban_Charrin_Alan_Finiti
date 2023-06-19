@@ -14,7 +14,7 @@ namespace MATINFO.Model
     {
         private string commentaireAttribution;
         private int idMateriel;
-        private int idPersonnels;
+        private int idPersonnel;
         private DateTime dateAttribution;
         private Personnel unPersonnel;
         private Materiel unMateriel;
@@ -24,7 +24,7 @@ namespace MATINFO.Model
             this.CommentaireAttribution = commentaireAttribution;
             this.DateAttribution = DateTime.Today;
             this.IdMateriel = idMateriel;
-            this.IdPersonnels = idPersonnels;
+            this.IdPersonnel = idPersonnels;
         }
 
         public Attribution(string commentaireAttribution, DateTime dateAttribution, int idMateriel, int idPersonnels)
@@ -32,7 +32,7 @@ namespace MATINFO.Model
             this.CommentaireAttribution = commentaireAttribution;
             this.DateAttribution = dateAttribution;
             this.IdMateriel = idMateriel;
-            this.IdPersonnels = idPersonnels;
+            this.IdPersonnel = idPersonnels;
         }
         public Attribution() { }
 
@@ -75,16 +75,16 @@ namespace MATINFO.Model
             }
         }
 
-        public int IdPersonnels
+        public int IdPersonnel
         {
             get
             {
-                return idPersonnels;
+                return idPersonnel;
             }
 
             set
             {
-                idPersonnels = value;
+                idPersonnel = value;
             }
         }
 
@@ -135,7 +135,7 @@ namespace MATINFO.Model
         public void Create()
         {
             DataAccess accesBD = new DataAccess();
-            String requete = "INSERT INTO est_attribue (idpersonnel, idmateriel, dateattribution, commentaireattribution) values('" + this.IdPersonnels + "','" + this.IdMateriel + "','" + this.DateAttribution +"','" + this.CommentaireAttribution +"');";
+            String requete = "INSERT INTO est_attribue (idpersonnel, idmateriel, dateattribution, commentaireattribution) values('" + this.IdPersonnel + "', '" + this.IdMateriel + "', '" + this.DateAttribution +"', '" + this.CommentaireAttribution +"');";
             accesBD.SetData(requete);
         }
 
@@ -147,14 +147,14 @@ namespace MATINFO.Model
         public void Update()
         {
             DataAccess accesBD = new DataAccess();
-            String requete = "UPDATE est_attribue SET commentaireattribution = " + commentaireAttribution + ", idmateriel = " + this.IdMateriel + ", idpersonnel = " + this.IdPersonnels + " WHERE dateattribution = " + this.DateAttribution;
+            String requete = "UPDATE est_attribue SET commentaireattribution = " + commentaireAttribution + ", idmateriel = " + this.IdMateriel + ", idpersonnel = " + this.IdPersonnel + " WHERE dateattribution = " + this.DateAttribution;
             accesBD.SetData(requete);
         }
 
         public void Delete()
         {
             DataAccess accesBD = new DataAccess();
-            String requete = "DELETE FROM est_attribue WHERE dateattribution = \'" + this.dateAttribution + "\' AND idmateriel = \'" + this.IdMateriel + "\' AND idpersonnel = \'" + this.IdPersonnels + "\'";
+            String requete = "DELETE FROM est_attribue WHERE dateattribution = \'" + this.dateAttribution + "\' AND idmateriel = \'" + this.IdMateriel + "\' AND idpersonnel = \'" + this.IdPersonnel + "\'";
             accesBD.SetData(requete);
         }
 
@@ -172,6 +172,5 @@ namespace MATINFO.Model
         {
             throw new NotImplementedException();
         }
-
     }
 }

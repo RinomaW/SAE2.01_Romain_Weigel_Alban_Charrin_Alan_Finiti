@@ -186,7 +186,7 @@ namespace MATINFO.Model
         public static Personnel Find(string nomPersonnel)
         {
             ObservableCollection<Personnel> LesPersonnels = new ObservableCollection<Personnel>();
-            Personnel pers = null;
+            Personnel pers = new Personnel();
             foreach (Personnel p in LesPersonnels)
             {
                 if (p.NomPersonnel == nomPersonnel)

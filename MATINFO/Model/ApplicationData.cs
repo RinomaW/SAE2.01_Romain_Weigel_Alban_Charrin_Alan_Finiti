@@ -56,7 +56,7 @@ namespace MATINFO.Model
 
             foreach (Attribution uneAtr in LesAttributions.ToList())
             {
-                uneAtr.UnPersonnel = LesPersonnels.ToList().Find(g => g.ID_Personnel == uneAtr.IdPersonnels);
+                uneAtr.UnPersonnel = LesPersonnels.ToList().Find(g => g.ID_Personnel == uneAtr.IdPersonnel);
             }
 
             foreach (Materiel unMat in LesMateriels.ToList())
@@ -68,7 +68,7 @@ namespace MATINFO.Model
             foreach (Personnel unPer in LesPersonnels.ToList())
             {
                 unPer.LesAttributions = new ObservableCollection<Attribution>(
-                LesAttributions.ToList().FindAll(e => e.IdPersonnels == unPer.ID_Personnel));
+                LesAttributions.ToList().FindAll(e => e.IdPersonnel == unPer.ID_Personnel));
             }
         }
     }

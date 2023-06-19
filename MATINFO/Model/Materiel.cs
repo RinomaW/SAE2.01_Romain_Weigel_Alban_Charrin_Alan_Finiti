@@ -191,7 +191,7 @@ namespace MATINFO.Model
         public static Materiel Find(string nomMateriel)
         {
             ObservableCollection<Materiel> LesMateriels = new ObservableCollection<Materiel>();
-            Materiel mat = null;
+            Materiel mat = new Materiel();
             foreach (Materiel m in LesMateriels)
             {
                 if (m.NomMateriel == nomMateriel)
