@@ -26,6 +26,8 @@ namespace MATINFO.ModifierFichier
             this.Owner = owner;
             InitializeComponent();
             this.AttributionModifiee= attributionModifiee;
+            this.lbNomPersonnel.Content = AttributionModifiee.UnPersonnel.NomPersonnel.ToString();
+            this.lbPrenomPersonnel.Content = AttributionModifiee.UnPersonnel.NomPersonnel.ToString();
         }
 
         private void BTModi_Click(object sender, RoutedEventArgs e)
