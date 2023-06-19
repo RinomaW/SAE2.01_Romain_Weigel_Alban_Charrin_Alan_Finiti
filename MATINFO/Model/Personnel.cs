@@ -21,6 +21,7 @@ namespace MATINFO.Model
 
         public Personnel()
         {
+
         }
 
         public Personnel(string emailPersonnel, string nomPersonnel, string prenomPersonnel, int iD_Personnel)

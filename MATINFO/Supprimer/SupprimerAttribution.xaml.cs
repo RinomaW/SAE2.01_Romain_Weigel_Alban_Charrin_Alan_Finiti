@@ -43,10 +43,9 @@ namespace MATINFO
 
         private void BTSuppr_Click(object sender, RoutedEventArgs e)
         {
-            
             Attribution attributionSupprimee = lvDateAttribution.SelectedItem as Attribution;
             attributionSupprimee.Delete();
-            
+            this.Close();
         }
 
 
