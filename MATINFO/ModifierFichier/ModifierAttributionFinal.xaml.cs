@@ -33,7 +33,7 @@ namespace MATINFO.ModifierFichier
         private void BTModi_Click(object sender, RoutedEventArgs e)
         {
             this.AttributionModifiee.CommentaireAttribution = tbCommentaireAttribution.Text;
-            this.AttributionModifiee.DateAttribution = DateTime.Parse(tbDate.Text);
+            this.AttributionModifiee.DateAttribution = dpDateModifiee.SelectedDate.Value.Date;
             this.AttributionModifiee.IdMateriel = ((Materiel)cbMaterielChoisi.SelectedItem).ID_Materiel;
             this.AttributionModifiee.IdPersonnel = ((Personnel)cbPersonnelChoisi.SelectedItem).ID_Personnel;
             AttributionModifiee.Update();

@@ -45,14 +45,10 @@ namespace MATINFO.Model
 
             set
             {
-                if (value.Length > 0 && value.Contains("@") && value.IndexOf("@") < value.LastIndexOf(".") && value.LastIndexOf(".") < value.Length - 1)
-                {
-                    emailPersonnel = value;
-                }
-                else
-                {
+                if (!(value.Length > 0 && value.Contains("@") && value.IndexOf("@") < value.LastIndexOf(".") && value.LastIndexOf(".") < value.Length - 1))
                     throw new ArgumentException("Le format de l'email est incorrect.");
-                }
+                emailPersonnel = value;
+                
             }
         }
 
@@ -134,7 +130,7 @@ namespace MATINFO.Model
             DataAccess accesBD = new DataAccess();
             accesBD.SetData(requete);
         }
-
+        
         void Crud<Personnel>.Create()
         {
             throw new NotImplementedException();
