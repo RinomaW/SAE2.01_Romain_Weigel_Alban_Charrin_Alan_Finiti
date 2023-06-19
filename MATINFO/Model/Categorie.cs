@@ -98,10 +98,10 @@ namespace MATINFO.Model
             throw new NotImplementedException();
         }
 
-        public void Update(string nomChangement)
+        public void Update()
         {
-            DataAccess accesBD= new DataAccess();
-            String requete = "UPDATE categorie_materiel SET nomcategorie = " + nomChangement + " WHERE nomcategorie = " +this.nomCategorie;
+            DataAccess accesBD = new DataAccess();
+            String requete = "UPDATE categorie_materiel SET nomcategorie = '" + this.NomCategorie + "' WHERE idcategorie =" + this.ID_Categorie;
             accesBD.SetData(requete);
         }
 
