@@ -179,7 +179,7 @@ namespace MATINFO.Model
         // Changer le string idcat en un id : pour le moment, il ne peut prendre en argument que le nom de la catégorie
         public void Update()
         {
-            String requete = "UPDATE Materiel SET codebarre = " + codeBarre + " , nommateriel = "+ this.NomMateriel+" , reference = "+ this.Reference + " , idcategorie = " + this.IdCategorie + " WHERE idmateriel = " + this.ID_Materiel;
+            String requete = "UPDATE materiel SET codebarre = '" + this.CodeBarre + "' AND nommateriel = '"+ this.NomMateriel+"' AND reference = '"+ this.Reference + "' AND idcategorie = " + this.IdCategorie + " WHERE idmateriel = " + this.ID_Materiel;
             DataAccess accesBD = new DataAccess();
             accesBD.SetData(requete);
         }
