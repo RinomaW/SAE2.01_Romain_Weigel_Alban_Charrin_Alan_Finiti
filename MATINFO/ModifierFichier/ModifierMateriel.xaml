@@ -45,7 +45,7 @@
                             Header="Référence" />
                         <GridViewColumn
                             Width="100"
-                            DisplayMemberBinding="{Binding IdCategorie}"
+                            DisplayMemberBinding="{Binding UneCategorie.NomCategorie}"
                             Header="Categorie" />
                     </GridView>
                 </ListView.View>
