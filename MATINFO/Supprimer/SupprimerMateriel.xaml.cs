@@ -38,6 +38,7 @@ namespace MATINFO
         {
             Materiel materielSupprimee = lvMaterielSelectionne.SelectedItem as Materiel;
             materielSupprimee.Delete();
+            this.Close();
         }
 
         

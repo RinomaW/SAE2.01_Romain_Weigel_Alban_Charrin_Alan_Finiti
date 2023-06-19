@@ -52,6 +52,7 @@ namespace MATINFO
                 new Materiel(TBCodeBarre.Text,TBNom.Text ,TBRef.Text, ((Categorie)cbCategorieChoix.SelectionBoxItem).ID_Categorie).Create();
                 ((MainWindow)Owner).applicationData.Recharge();
                 this.Visibility = Visibility.Hidden;
+                this.Close();
             }
 
         }
