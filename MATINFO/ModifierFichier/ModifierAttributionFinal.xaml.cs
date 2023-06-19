@@ -27,7 +27,7 @@ namespace MATINFO.ModifierFichier
             this.AttributionModifiee= attributionModifiee;
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void BTModi_Click(object sender, RoutedEventArgs e)
         {
             AttributionModifiee.Update(tbCommentaireAttribution.Text,"PC", "Jérôme");
         }

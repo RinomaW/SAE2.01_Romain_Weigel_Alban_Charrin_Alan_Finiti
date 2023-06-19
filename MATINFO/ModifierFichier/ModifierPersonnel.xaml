@@ -23,13 +23,13 @@
             </ListView>
 
         </GroupBox>
-        <Button
+        <Button x:Name="BTModi"
             Width="169"
             Height="59"
             Margin="0,683,0,0"
             HorizontalAlignment="Center"
             VerticalAlignment="Top"
-            Click="Button_Click"
+            Click="BTModi_Click"
             Content="Modifier">
             <Button.Resources>
                 <Style TargetType="Border">

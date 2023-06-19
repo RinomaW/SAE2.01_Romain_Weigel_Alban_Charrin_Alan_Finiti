@@ -30,14 +30,14 @@ namespace MATINFO
             DataContext = applicationData;
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void BTAjout(object sender, RoutedEventArgs e)
         {
             CAPM CAPM = new CAPM();
             
             CAPM.Show();
         }
 
-        private void Button_Click_1(object sender, RoutedEventArgs e)
+        private void BTModi(object sender, RoutedEventArgs e)
         {
             if(lvAttribution.SelectedItem!= null) 
             {
@@ -67,7 +67,7 @@ namespace MATINFO
 
         }
 
-        private void Button_Click_2(object sender, RoutedEventArgs e)
+        private void BTSuppr(object sender, RoutedEventArgs e)
         {
             if (lvAttribution.SelectedItem != null)
             {

@@ -40,7 +40,7 @@ namespace MATINFO
             this.TBEmail.Text = "";
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void BTCreer_Click(object sender, RoutedEventArgs e)
         {
            //string texte = "insert into attribution values ('" +id perso ""+"" id materiel ""+"" DateOnly"" + ",'"+tbtexte +"')";
            //DataAccess accesBD = new DataAccess();

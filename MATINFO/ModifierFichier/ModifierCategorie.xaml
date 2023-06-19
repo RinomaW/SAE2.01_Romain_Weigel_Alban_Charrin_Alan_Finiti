@@ -26,13 +26,13 @@
                 </GridView>
             </ListView.View>
         </ListView>
-        <Button
+        <Button x:Name="BTModi"
             Width="110"
             Height="32"
             Margin="0,0,0,42"
             HorizontalAlignment="Center"
             VerticalAlignment="Bottom"
-            Click="Button_Click"
+            Click="BTModi_Click"
             Content="Modifier">
             <Button.Resources>
                 <Style TargetType="Border">

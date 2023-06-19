@@ -20,6 +20,7 @@ namespace MATINFO.ModifierFichier
     /// </summary>
     public partial class ModifierPersonnelFinal : Window
     {
+       
         public Personnel PersonnelSelectionne { get; set; }
         public ModifierPersonnelFinal( Personnel personnelSelectionne)
         {
@@ -27,9 +28,10 @@ namespace MATINFO.ModifierFichier
             this.PersonnelSelectionne= personnelSelectionne;
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void ButtBTModi_Clickon_Click(object sender, RoutedEventArgs e)
         {
             PersonnelSelectionne.Update(tbNomPersonnel.Text,tbPrenomPersonnel.Text,tbEmailPersonnel.Text);
         }
+
     }
 }
