@@ -32,9 +32,9 @@ namespace MATINFO.ModifierFichier
         private void BTModi_Click(object sender, RoutedEventArgs e)
         {
             this.PersonnelSelectionne.NomPersonnel = tbNomPersonnel.Text;
-            this.PersonnelSelectionne.PrenomPersonnel= tbPrenomPersonnel.Text;
-            this.PersonnelSelectionne.Email= tbEmailPersonnel.Text;
-            PersonnelSelectionne.Update();
+            this.PersonnelSelectionne.PrenomPersonnel = tbPrenomPersonnel.Text;
+            this.PersonnelSelectionne.Email = tbEmailPersonnel.Text;
+            this.PersonnelSelectionne.Update();
             this.Close();
         }
 
