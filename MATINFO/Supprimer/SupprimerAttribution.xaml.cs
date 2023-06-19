@@ -41,7 +41,7 @@ namespace MATINFO
       //      this.TBComm.Text = "";
       //  }
 
-        private void BTSuppr(object sender, RoutedEventArgs e)
+        private void BTSuppr_Click(object sender, RoutedEventArgs e)
         {
             
             Attribution attributionSupprimee = lvDateAttribution.SelectedItem as Attribution;
@@ -49,6 +49,6 @@ namespace MATINFO
             
         }
 
-        
+
     }
 }
