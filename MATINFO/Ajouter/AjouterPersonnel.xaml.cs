@@ -47,7 +47,7 @@ namespace MATINFO
                 MessageBox.Show(this.Owner, "Pas possible!", "Pb", MessageBoxButton.OK, MessageBoxImage.Error);
             else
             {
-                new Personnel(TBEmail.Text, TBNom.Text, TBPrenom.Text).Create();
+                new Personnel(TBEmail.Text, TBNom.Text, TBPrenom.Text);
                 new ApplicationData().Recharge();
                 this.Close();
             }
