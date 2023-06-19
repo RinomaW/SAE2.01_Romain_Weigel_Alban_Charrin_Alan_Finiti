@@ -4,37 +4,72 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:local="clr-namespace:MATINFO"
-    xmlns:model="clr-namespace:MATINFO.Model"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:model="clr-namespace:MATINFO.Model"
     Title="SupprimerAttribution"
-    Height="800" Width="1000" MinHeight="500" MinWidth="850" MaxWidth="1100"
+    Width="1000"
+    Height="800"
+    MinWidth="850"
+    MinHeight="500"
+    MaxWidth="1100"
+    ResizeMode="NoResize"
     WindowStartupLocation="CenterScreen"
-    mc:Ignorable="d" ResizeMode="NoResize">
+    mc:Ignorable="d">
     <Window.DataContext>
         <model:ApplicationData x:Name="applicationData" />
     </Window.DataContext>
     <Grid>
-        <GroupBox Header="Matériel" Margin="45,102,401,132">
-            <ListView x:Name="lvMaterielAttribution" ItemsSource="{Binding Path=LesMateriels}" Margin="0,0,0,0" Height="517">
+        <GroupBox Margin="45,102,401,132" Header="Matériel">
+            <ListView
+                x:Name="lvMaterielAttribution"
+                Height="517"
+                Margin="0,0,0,0"
+                ItemsSource="{Binding Path=LesMateriels}">
                 <ListView.View>
                     <GridView>
-                        <GridViewColumn Header="Nom" Width ="120" DisplayMemberBinding="{Binding NomMateriel}"/>
-                        <GridViewColumn Header="Code Barre" Width ="130" DisplayMemberBinding="{Binding CodeBarre}"/>
-                        <GridViewColumn Header="Référence" Width ="130" DisplayMemberBinding="{Binding Reference}"/>
-                        <GridViewColumn Header="Nom Catégorie" Width ="140" DisplayMemberBinding="{Binding IdCategorie}"/>
+                        <GridViewColumn
+                            Width="120"
+                            DisplayMemberBinding="{Binding NomMateriel}"
+                            Header="Nom" />
+                        <GridViewColumn
+                            Width="130"
+                            DisplayMemberBinding="{Binding CodeBarre}"
+                            Header="Code Barre" />
+                        <GridViewColumn
+                            Width="130"
+                            DisplayMemberBinding="{Binding Reference}"
+                            Header="Référence" />
+                        <GridViewColumn
+                            Width="140"
+                            DisplayMemberBinding="{Binding IdCategorie}"
+                            Header="Nom Catégorie" />
                     </GridView>
                 </ListView.View>
             </ListView>
         </GroupBox>
-        <GroupBox Header="Date d'attribution" Margin="0,102,42,132" HorizontalAlignment="Right" Width="343">
-            <ListView x:Name="lvDateAttribution" 
-                      DataContext="{Binding SelectedItem, ElementName=lvMaterielAttribution}"
-                      ItemsSource="{Binding LesAttributions}">
+        <GroupBox
+            Width="343"
+            Margin="0,102,42,132"
+            HorizontalAlignment="Right"
+            Header="Date d'attribution">
+            <ListView
+                x:Name="lvDateAttribution"
+                DataContext="{Binding SelectedItem, ElementName=lvMaterielAttribution}"
+                ItemsSource="{Binding LesAttributions}">
                 <ListView.View>
                     <GridView>
-                        <GridViewColumn Header="Date" Width="100" DisplayMemberBinding="{Binding Path = DateAttribution}"/>
-                        <GridViewColumn Header="Nom matériel" Width="115" DisplayMemberBinding="{Binding Path = IdMateriel}"/>
-                        <GridViewColumn Header="Nom personnel" Width="110" DisplayMemberBinding="{Binding Path = IdPersonnel}"/>
+                        <GridViewColumn
+                            Width="100"
+                            DisplayMemberBinding="{Binding Path=DateAttribution}"
+                            Header="Date" />
+                        <GridViewColumn
+                            Width="115"
+                            DisplayMemberBinding="{Binding Path=IdMateriel}"
+                            Header="Nom matériel" />
+                        <GridViewColumn
+                            Width="110"
+                            DisplayMemberBinding="{Binding Path=IdPersonnel}"
+                            Header="Nom personnel" />
                     </GridView>
                 </ListView.View>
             </ListView>
@@ -42,7 +77,13 @@
         </GroupBox>
 
         <Button
-                Content="Supprimer" Margin="337,0,337,46" Click="Button_Click" Height="49" VerticalAlignment="Bottom" FontSize="16" >
+            x:Name="BTSuppr"
+            Height="49"
+            Margin="337,0,337,46"
+            VerticalAlignment="Bottom"
+            Click="BTSuppr_Click"
+            Content="Supprimer"
+            FontSize="16">
             <Button.Resources>
                 <Style TargetType="Border">
                     <Setter Property="CornerRadius" Value="30" />
