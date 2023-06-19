@@ -5,9 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MATINFO.Supprimer"
         mc:Ignorable="d"
-        Title="DoubleClicSupprimer" Height="200" Width="400" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+        Title="DoubleClicSupprimer" Height="220" Width="400" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     <Grid>
-        <Label Content="Êtes-vous sûr de vouloir supprimer l'élément sélectionné ?" HorizontalAlignment="Left" Margin="40,38,0,0" VerticalAlignment="Top" Height="52" Width="380"/>
+        <Label Content="Êtes-vous sûr de vouloir supprimer l'élément sélectionné ?&#xD;&#xA;" HorizontalAlignment="Left" Margin="40,38,0,0" VerticalAlignment="Top" Height="52" Width="380"/>
         <Button Content="Oui" HorizontalAlignment="Left" Margin="98,132,0,0" VerticalAlignment="Top" Height="35" Width="60" Click="Button_Click">
             <Button.Resources>
                 <Style TargetType="Border">
@@ -22,6 +22,7 @@
                 </Style>
             </Button.Resources>
         </Button>
+        <Label Content="(supprimer un personnel ou un matériel supprimera également les attributions liées à ce dernier)" HorizontalAlignment="Left" Margin="22,64,0,0" VerticalAlignment="Top" Height="52" Width="385" FontSize="8"/>
 
     </Grid>
 </Window>

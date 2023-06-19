@@ -47,7 +47,8 @@ namespace MATINFO
             else
             {
                 new Categorie(TBNomCate.Text).Create();
-                new ApplicationData().Recharge();
+                //new ApplicationData().Recharge();
+                new MainWindow().Refresh();
                 this.Close();
             }
         }

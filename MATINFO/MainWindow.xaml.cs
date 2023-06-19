@@ -9,6 +9,7 @@ using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
+using System.Windows.Automation;
 using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Documents;
@@ -82,7 +83,7 @@ namespace MATINFO
             else if (lvMateriel.SelectedItem != null)
             {
                 DoubleClicSupprimer supprimerMaterielFinal = new DoubleClicSupprimer(lvMateriel.SelectedItem as Materiel);
-                supprimerMaterielFinal .Show();
+                supprimerMaterielFinal.Show();
                
             }
             else if (lvCategorie.SelectedItem != null)
@@ -96,7 +97,7 @@ namespace MATINFO
                 CAPMSuppr supprimer = new CAPMSuppr();
                 supprimer.Show();
             }
-            Refresh();
+           Refresh();
 
         }
 

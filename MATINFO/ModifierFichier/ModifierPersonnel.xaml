@@ -12,7 +12,7 @@
     </Window.DataContext>
     <Grid>
         <GroupBox Header="Personnels" Margin="50,0,50,140" FontSize ="16" Height="587" VerticalAlignment="Bottom">
-            <ListView x:Name="lvModifierPersonnel" ItemsSource="{Binding Path = LesPersonnels}" Margin="0,0,0,0" Height="543" >
+            <ListView x:Name="lvModifierPersonnel" ItemsSource="{Binding Path = LesPersonnels}" Margin="0,0,0,0" Height="543" SelectionMode="Multiple">
                 <ListView.View>
                     <GridView>
                         <GridViewColumn DisplayMemberBinding="{Binding NomPersonnel}" Header="Nom" Width="90"/>
