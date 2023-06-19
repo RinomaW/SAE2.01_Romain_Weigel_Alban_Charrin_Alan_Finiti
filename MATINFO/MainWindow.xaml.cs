@@ -3,6 +3,7 @@ using MATINFO.ModifierFichier;
 using MATINFO.Mofifier;
 using MATINFO.Supprimer;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Security.Cryptography.X509Certificates;
@@ -106,6 +107,22 @@ namespace MATINFO
             lvAttribution.Items.Refresh();
             lvCategorie.Items.Refresh();
             lvMateriel.Items.Refresh();
+        }
+
+        private void lvCategorie_SelectionChanged_1(object sender, SelectionChangedEventArgs e)
+        {
+            if (e.AddedItems.Count > 0)
+            {
+                ListBox listBox = sender as ListBox;
+                var valid = e.AddedItems[0];
+                foreach (var item in new ArrayList(listBox.SelectedItems))
+                {
+                    if (item != valid)
+                    {
+                        listBox.SelectedItems.Remove(item);
+                    }
+                }
+            }
         }
     }
 }

@@ -52,8 +52,7 @@
             Header="Date d'attribution">
             <ListView
                 x:Name="lvDateAttribution"
-                DataContext="{Binding SelectedItem, ElementName=lvMaterielAttribution}"
-                ItemsSource="{Binding LesAttributions}" SelectionMode="Multiple">
+                DataContext="{Binding SelectedItem, ElementName=lvMaterielAttribution}" ItemsSource="{Binding LesAttributions}" SelectionMode="Multiple">
                 <ListView.View>
                     <GridView>
                         <GridViewColumn
