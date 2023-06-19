@@ -28,7 +28,6 @@ namespace MATINFO
         public MainWindow()
         {//feur
             InitializeComponent();
-            DataContext = applicationData;
         }
 
         private void BTAjout(object sender, RoutedEventArgs e)

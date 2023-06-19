@@ -23,25 +23,11 @@ namespace MATINFO
     /// </summary>
     public partial class ActionModifier : Window
     {
-        private Personnel p; 
+        
 
         public ActionModifier()
         {
             InitializeComponent();
-            Personnel p = new Personnel();
-        }
-
-        public Personnel P
-        {
-            get
-            {
-                return p;
-            }
-
-            set
-            {
-                p = value;
-            }
         }
 
         private void BTcateMBDWN(object sender, MouseButtonEventArgs e)
