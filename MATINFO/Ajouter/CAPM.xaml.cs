@@ -24,13 +24,11 @@ namespace MATINFO
             InitializeComponent();
         }
 
-      
-
 
         private void BTCate_Click(object sender, RoutedEventArgs e)
         {
             this.Visibility = Visibility.Hidden;
-            AjouterCategorie ajoutCate = new AjouterCategorie();
+            AjouterCategorie ajoutCate = new AjouterCategorie(new Model.Categorie());
             ajoutCate.Show();
         }
 

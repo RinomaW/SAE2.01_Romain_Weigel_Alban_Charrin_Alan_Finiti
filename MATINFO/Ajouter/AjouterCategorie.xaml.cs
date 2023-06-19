@@ -21,9 +21,10 @@ namespace MATINFO
     /// </summary>
     public partial class AjouterCategorie : Window
     {
-        public AjouterCategorie()
+        public AjouterCategorie(Categorie cat)
         {
             InitializeComponent();
+            this.DataContext= cat;
         }
 
         string texte;
@@ -38,11 +39,19 @@ namespace MATINFO
             this.TBNomCate.Text = "";
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void ButCreer_Click(object sender, RoutedEventArgs e)
         {
-           
+            // on doit déclencher la mise à jour du binding
+            if (string.IsNullOrWhiteSpace(TBNomCate.Text))
+                MessageBox.Show(this.Owner, "Pas possible!", "Pb", MessageBoxButton.OK, MessageBoxImage.Error);
+            else
+            {
+                new Categorie(TBNomCate.Text).Create();
+                new ApplicationData().Recharge();
+                this.Close();
+            }
         }
 
-        
+
     }
 }

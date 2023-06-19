@@ -30,7 +30,7 @@
             <Button
                 Width="200"
                 Height="30"
-                Click="Button_Click"
+                Click="ButCreer_Click"
                 Content="Créer">
                 <Button.Resources>
                     <Style TargetType="Border">

@@ -86,9 +86,9 @@ namespace MATINFO.Model
         }
 
 
-        public void Create(string texte)
+        public void Create()
         {
-            String requete = "INSERT INTO categorie VALUES ('" + texte + "')";
+            String requete = "INSERT INTO categorie_materiel (nomcategorie) VALUES ('" + this.nomCategorie + "');";
             DataAccess accesBD = new DataAccess();
             accesBD.SetData(requete);
         }
