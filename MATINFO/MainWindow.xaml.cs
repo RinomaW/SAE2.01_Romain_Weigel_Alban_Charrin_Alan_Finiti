@@ -5,6 +5,7 @@ using MATINFO.Supprimer;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -131,9 +132,8 @@ namespace MATINFO
                 }
             }
         }
-
-
-        private void lvAttribution_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        
+    private void lvAttribution_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             if (e.AddedItems.Count > 0)
             {
