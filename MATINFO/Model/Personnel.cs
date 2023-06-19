@@ -35,7 +35,7 @@ namespace MATINFO.Model
             this.Email = emailPersonnel;
             this.NomPersonnel = nomPersonnel;
             this.PrenomPersonnel = prenomPersonnel;
-            this.ID_Personnel ++;
+            this.ID_Personnel++;
         }
         public string Email
         {
@@ -46,7 +46,14 @@ namespace MATINFO.Model
 
             set
             {
+                if (value.Length > 0 && value.Contains("@") && value.IndexOf("@") < value.LastIndexOf(".") && value.LastIndexOf(".") < value.Length - 1)
+                {
                     emailPersonnel = value;
+                }
+                else
+                {
+                    throw new ArgumentException("Le format de l'email est incorrect.");
+                }
             }
         }
 
@@ -59,10 +66,14 @@ namespace MATINFO.Model
 
             set
             {
-                int number;
-                if (int.TryParse(value, out number))
-                    throw new ArgumentException("que en string");
-                else nomPersonnel = value.ToUpper();
+                if (!string.IsNullOrWhiteSpace(value) && !ContainsSpecialCharacters(value))
+                {
+                    nomPersonnel = value;
+                }
+                else
+                {
+                    throw new ArgumentException("Le format du nom est incorrect.");
+                }
             }
         }
 
@@ -70,13 +81,26 @@ namespace MATINFO.Model
         {
             get
             {
-                return this.prenomPersonnel;
+                return prenomPersonnel;
             }
 
             set
             {
-                this.prenomPersonnel = value.Substring(0, 1).ToUpper() + value.Substring(1);
+                if (!string.IsNullOrWhiteSpace(value) && !ContainsSpecialCharacters(value))
+                {
+                    prenomPersonnel = value;
+                }
+                else
+                {
+                    throw new ArgumentException("Le format du nom est incorrect.");
+                }
             }
+        }
+
+        private bool ContainsSpecialCharacters(string value)
+        {
+            string specialCharacters = "~#-_;:!@£$%^&*()+=<>?/\\|{}[]`¨µ§€¤";
+            return value.IndexOfAny(specialCharacters.ToCharArray()) != -1;
         }
 
         public int ID_Personnel
@@ -168,7 +192,7 @@ namespace MATINFO.Model
             return pers;
         }
     }
-    
+
     public class Personnels
     {
     }

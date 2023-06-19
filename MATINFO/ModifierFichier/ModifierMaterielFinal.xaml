@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:MATINFO.Mofifier"
         xmlns:model="clr-namespace:MATINFO.Model"
         mc:Ignorable="d"
-        Title="ModifierMaterielFinal" Height="500" Width="500" MinHeight ="500" MinWidth="500" WindowStartupLocation="CenterScreen">
+        Title="ModifierMaterielFinal" Height="500" Width="500" MinHeight ="500" MinWidth="500" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
 
     <Window.DataContext>
         <model:ApplicationData x:Name="applicationData" />
@@ -26,7 +26,7 @@
         <TextBox x:Name="tbNom" Margin="250,50,27,0" TextWrapping="Wrap" Text ="{Binding Path =LesMateriels, BindingGroupName= Nom }" VerticalAlignment="Top" Height="38" FontSize="16"/>
         <TextBox x:Name="tbCodeBarre" Margin="250,122,27,0" TextWrapping="Wrap" Text ="{Binding XPath= LesMateriels,BindingGroupName= CodeBarre}" VerticalAlignment="Top" Height="38" FontStyle="Italic" FontSize="16"/>
         <TextBox x:Name="tbRef" Margin="250,198,27,0" TextWrapping="Wrap" Text ="{Binding Path =LesMateriels, BindingGroupName= Reference}" VerticalAlignment="Top" Height="42" FontStyle="Italic" FontSize="16"/>
-        <ComboBox x:Name="cbCategorieChoix" Margin="250,285,27,0" SelectedIndex="0"  ItemsSource="{Binding LesCategories}" DisplayMemberPath="NomCategorie" SelectedValuePath="IdCategorie" VerticalAlignment="Top" Height="30" RenderTransformOrigin="0.5,0.5">
+        <ComboBox x:Name="cbCategorieChoix" Margin="250,284,0,0" SelectedIndex="0"  ItemsSource="{Binding LesCategories}" DisplayMemberPath="NomCategorie" SelectedValuePath="IdCategorie" HorizontalAlignment="Left" VerticalAlignment="Top" Width="223" Height="30" RenderTransformOrigin="0.5,0.5">
             <ComboBox.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform ScaleY="1"/>
@@ -36,6 +36,7 @@
                 </TransformGroup>
             </ComboBox.RenderTransform>
         </ComboBox>
+
 
     </Grid>
 </Window>

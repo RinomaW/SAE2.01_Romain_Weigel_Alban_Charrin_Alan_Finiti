@@ -44,15 +44,7 @@ namespace MATINFO
 
         }
 
-        private void CBPersonnel_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            idPerso = CBPersonnel.Text;
-        }
 
-        private void CBMateriel_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            idMate = CBMateriel.Text;
-        }
 
         private void DPDate_SelectedDateChanged(object sender, SelectionChangedEventArgs e)
         {

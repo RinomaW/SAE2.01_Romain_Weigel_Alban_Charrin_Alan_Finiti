@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:MATINFO.Mofifier"
         xmlns:model="clr-namespace:MATINFO.Model"
         mc:Ignorable="d"
-        Title="ModifierMateriel" Height="435" Width="498" MinHeight="500" MinWidth="500" WindowStartupLocation="CenterScreen">
+        Title="ModifierMateriel" Height="435" Width="498" MinHeight="500" MinWidth="500" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
     <Window.DataContext>
         <model:ApplicationData x:Name="applicationData" />
     </Window.DataContext>

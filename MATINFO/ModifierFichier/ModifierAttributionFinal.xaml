@@ -26,9 +26,27 @@
         <Label Content=" :" HorizontalAlignment="Left" Margin="422,119,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.894,0.653" FontSize="20" FontWeight="Bold"/>
         <TextBox x:Name="tbCommentaireAttribution" HorizontalAlignment="Left" Margin="29,165,0,0" TextWrapping="Wrap" Text="{Binding Path=LesAttributions ,BindingGroupName= CommentaireAttribution}" VerticalAlignment="Top" Width="427" Height="41"/>
         <Label Content="Nom Personnel :" HorizontalAlignment="Left" Margin="29,0,0,0" VerticalAlignment="Center" Width="170" Height="39" FontSize="20" FontWeight="Bold"/>
-        <ComboBox x:Name="cbPersonnelChoisi" HorizontalAlignment="Left" Margin="231,283,0,0" VerticalAlignment="Top" Width="186" Height="29" ItemsSource="{Binding LesPersonnels}"/>
+        <ComboBox x:Name="cbPersonnelChoisi" HorizontalAlignment="Left" Margin="231,283,0,0" VerticalAlignment="Top" Width="186" Height="29" SelectedIndex="0"  ItemsSource="{Binding LesPersonnels}" DisplayMemberPath="NomPersonnel" SelectedValuePath="IdPersonnel" RenderTransformOrigin="0.5,0.5">
+            <ComboBox.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleY="1"/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </ComboBox.RenderTransform>
+        </ComboBox>
         <Label Content="Nom Matériel :" HorizontalAlignment="Left" Margin="29,352,0,0" VerticalAlignment="Top" Height="49" Width="156" FontSize="20" FontWeight="Bold"/>
-        <ComboBox x:Name="cbMaterielChoisi" HorizontalAlignment="Left" Margin="231,361,0,0" VerticalAlignment="Top" Width="186" Height="29" ItemsSource="{Binding LesMateriels}"/>
+        <ComboBox x:Name="cbMaterielChoisi" HorizontalAlignment="Left" Margin="231,361,0,0" VerticalAlignment="Top" Width="186" Height="29" SelectedIndex="0"  ItemsSource="{Binding LesMateriels}" DisplayMemberPath="NomMateriel" SelectedValuePath="IdMateriel" RenderTransformOrigin="0.5,0.5">
+            <ComboBox.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleY="1"/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </ComboBox.RenderTransform>
+        </ComboBox>
 
 
     </Grid>

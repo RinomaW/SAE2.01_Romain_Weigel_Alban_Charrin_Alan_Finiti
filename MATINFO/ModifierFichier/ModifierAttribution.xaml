@@ -24,12 +24,14 @@
             </ListView>
         </GroupBox>
         <GroupBox Header="Date d'attribution" Margin="0,102,42,132" HorizontalAlignment="Right" Width="343">
-            <ListView x:Name="lvDateAttribution" ItemsSource="{Binding LesAttributions}">
+            <ListView x:Name="lvDateAttribution" 
+                      DataContext="{Binding SelectedItem, ElementName=lvMaterielAttribution}"
+                      ItemsSource="{Binding LesAttributions}">
                 <ListView.View>
                     <GridView>
-                        <GridViewColumn Header="Date" Width="100" DisplayMemberBinding="{Binding DateAttribution}"/>
-                        <GridViewColumn Header="Nom matériel" Width="115" DisplayMemberBinding="{Binding IdMateriel}"/>
-                        <GridViewColumn Header="Nom personnel" Width="110" DisplayMemberBinding="{Binding IdMateriel}"/>
+                        <GridViewColumn Header="Date" Width="100" DisplayMemberBinding="{Binding Path = DateAttribution}"/>
+                        <GridViewColumn Header="Nom matériel" Width="115" DisplayMemberBinding="{Binding Path = IdMateriel}"/>
+                        <GridViewColumn Header="Nom personnel" Width="110" DisplayMemberBinding="{Binding Path = IdPersonnel}"/>
                     </GridView>
                 </ListView.View>
             </ListView>
