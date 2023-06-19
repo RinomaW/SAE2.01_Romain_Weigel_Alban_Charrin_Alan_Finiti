@@ -34,6 +34,7 @@ namespace MATINFO
             InitializeComponent();
             DataContext= atr;
             cbMaterielChoix.ItemsSource = ((ApplicationData)owner.DataContext).LesMateriels;
+            cbChoixPersonnel.ItemsSource = ((ApplicationData)owner.DataContext).LesPersonnels;
         }
 
         private void TBComm_GotFocus(object sender, RoutedEventArgs e)
@@ -56,10 +57,15 @@ namespace MATINFO
 
         private void TBCreer_Click(object sender, RoutedEventArgs e)
         {
-           /* String requete = "INSERT INTO attribution VALUES ('"+idPerso +"'," +idMate+"'," +date+"',"+"',"+tbtexte +"')";
-            DataAccess accesBD = new DataAccess();
-           accesBD.SetData(requete);*/
-            
+            if (string.IsNullOrWhiteSpace(TBComm.Text))
+                MessageBox.Show(this.Owner, "Pas possible!", "Pb", MessageBoxButton.OK, MessageBoxImage.Error);
+            else
+            {
+                new Attribution(TBComm.Text, DateTime.Now, ((Materiel)cbMaterielChoix.SelectionBoxItem).ID_Materiel, ((Personnel)cbChoixPersonnel.SelectionBoxItem).ID_Personnel ).Create();
+                ((ApplicationData)Owner.DataContext).Recharge();
+                this.Close();
+            }
+
         }
 
         

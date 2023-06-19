@@ -50,7 +50,7 @@ namespace MATINFO
             else
             {
                 new Materiel(TBCodeBarre.Text,TBNom.Text ,TBRef.Text, ((Categorie)cbCategorieChoix.SelectionBoxItem).ID_Categorie).Create();
-                new ApplicationData().Recharge();
+                ((ApplicationData)Owner.DataContext).Recharge();
                 this.Close();
             }
 

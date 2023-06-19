@@ -132,10 +132,10 @@ namespace MATINFO.Model
             return LesAttribution;
         }
 
-        public void Create(Materiel materiel, Personnel personnel)
+        public void Create()
         {
             DataAccess accesBD = new DataAccess();
-            String requete = "INSERT INTO attribution values('" + this.dateAttribution + "' AND idmateriel = '" + this.IdMateriel + "' AND idpersonnels = '" + this.IdPersonnels +"'";
+            String requete = "INSERT INTO est_attribue (idpersonnel, idmateriel, dateattribution, commentaireattribution) values('" + this.IdPersonnels + "','" + this.IdMateriel + "','" + this.DateAttribution +"','" + this.CommentaireAttribution +"');";
             accesBD.SetData(requete);
         }
 
@@ -175,9 +175,5 @@ namespace MATINFO.Model
             throw new NotImplementedException();
         }
 
-        public void Create()
-        {
-            throw new NotImplementedException();
-        }
     }
 }
