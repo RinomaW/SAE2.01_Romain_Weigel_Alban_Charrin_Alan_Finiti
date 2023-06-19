@@ -42,8 +42,7 @@ namespace MATINFO
             if(lvAttribution.SelectedItem!= null) 
             {
                 ModifierAttributionFinal modifierAttributionFinal = new ModifierAttributionFinal(lvAttribution.SelectedItem as Attribution);
-                modifierAttributionFinal.Show();
-                
+                modifierAttributionFinal.Show();                
             }
             else if (lvMateriel.SelectedItem != null)
             {
