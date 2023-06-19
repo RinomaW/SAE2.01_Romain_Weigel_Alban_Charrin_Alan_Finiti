@@ -15,9 +15,7 @@
     WindowStartupLocation="CenterScreen"
     mc:Ignorable="d">
 
-    <Window.DataContext>
-        <model:ApplicationData x:Name="applicationData" />
-    </Window.DataContext>
+   
     <Grid>
         <StackPanel>
             <StackPanel Height="50" Orientation="Horizontal">

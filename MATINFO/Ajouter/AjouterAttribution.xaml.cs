@@ -28,10 +28,12 @@ namespace MATINFO
         string idPerso;
         string idMate;
         DateTime date;
-        public AjouterAttribution(Attribution atr)
+        public AjouterAttribution(Attribution atr,Window owner)
         {
+            this.Owner = owner;
             InitializeComponent();
             DataContext= atr;
+            cbMaterielChoix.ItemsSource = ((ApplicationData)owner.DataContext).LesMateriels;
         }
 
         private void TBComm_GotFocus(object sender, RoutedEventArgs e)
