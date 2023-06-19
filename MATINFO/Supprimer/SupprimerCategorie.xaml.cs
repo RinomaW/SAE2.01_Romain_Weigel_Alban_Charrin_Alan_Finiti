@@ -40,6 +40,8 @@ namespace MATINFO
         {
             Categorie categorieSupprimee = lvSupprimerCategorie.SelectedItem as Categorie;
             categorieSupprimee.Delete();
+            ((ApplicationData)Owner.DataContext).Recharge();
+            this.Close();
         }
 
         
