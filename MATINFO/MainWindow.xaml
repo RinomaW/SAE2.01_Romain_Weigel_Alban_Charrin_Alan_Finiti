@@ -75,7 +75,7 @@
                 Height="275"
                 Margin="10,10,75,300"
                 VerticalAlignment="Top"
-                ItemsSource="{Binding LesCategories}" SelectionMode="Multiple">
+                ItemsSource="{Binding LesCategories}" SelectionMode="Multiple" SelectionChanged="lvCategorie_SelectionChanged_1">
                 <ListView.View>
                     <GridView>
                         <GridViewColumn
