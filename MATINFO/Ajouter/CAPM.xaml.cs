@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MATINFO.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -28,28 +29,28 @@ namespace MATINFO
         private void BTCate_Click(object sender, RoutedEventArgs e)
         {
             this.Visibility = Visibility.Hidden;
-            AjouterCategorie ajoutCate = new AjouterCategorie(new Model.Categorie());
+            AjouterCategorie ajoutCate = new AjouterCategorie(new Categorie());
             ajoutCate.Show();
         }
 
         private void BTAttri_Click(object sender, RoutedEventArgs e)
         {
             this.Visibility = Visibility.Hidden;
-            AjouterAttribution ajoutAttri = new AjouterAttribution();
+            AjouterAttribution ajoutAttri = new AjouterAttribution(new Attribution());
             ajoutAttri.Show();
         }
 
         private void BTPerso_Click(object sender, RoutedEventArgs e)
         {
             this.Visibility = Visibility.Hidden;
-            AjouterPersonnel ajoutPerso = new AjouterPersonnel();
+            AjouterPersonnel ajoutPerso = new AjouterPersonnel(new Personnel());
             ajoutPerso.Show();
         }
 
         private void BPMate_Click(object sender, RoutedEventArgs e)
         {
             this.Visibility = Visibility.Hidden;
-            AjouterMateriel ajoutMate = new AjouterMateriel();
+            AjouterMateriel ajoutMate = new AjouterMateriel(new Materiel());
             ajoutMate.Show();
         }
 

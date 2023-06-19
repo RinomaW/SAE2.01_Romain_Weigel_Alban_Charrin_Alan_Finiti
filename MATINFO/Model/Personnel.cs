@@ -129,6 +129,13 @@ namespace MATINFO.Model
             }
         }
 
+        public void Create()
+        {
+            String requete = "INSERT INTO personnel (emailpersonnel,nompersonnel, prenompersonnel) VALUES ('" + this.emailPersonnel + "','" + this.nomPersonnel + "','" + this.prenomPersonnel + "');";
+            DataAccess accesBD = new DataAccess();
+            accesBD.SetData(requete);
+        }
+
         void Crud<Personnel>.Create()
         {
             throw new NotImplementedException();

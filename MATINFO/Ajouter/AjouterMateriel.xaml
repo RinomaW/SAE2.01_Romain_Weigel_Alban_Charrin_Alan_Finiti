@@ -4,15 +4,16 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:local="clr-namespace:MATINFO"
-    xmlns:model="clr-namespace:MATINFO.Model"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:model="clr-namespace:MATINFO.Model"
     Title="AjouterMateriel"
     Width="300"
     Height="355"
     MinWidth="300"
     MinHeight="300"
+    ResizeMode="NoResize"
     WindowStartupLocation="CenterScreen"
-    mc:Ignorable="d" ResizeMode="NoResize">
+    mc:Ignorable="d">
 
     <Window.DataContext>
         <model:ApplicationData x:Name="applicationData" />
@@ -45,10 +46,9 @@
                     Content="Code Barre :"
                     FontSize="14" />
                 <TextBox
-                    x:Name="TBPrenom"
+                    x:Name="TBCodeBarre"
                     Width="180"
                     Height="21"
-                    GotFocus="TBPrenom_GotFocus"
                     TextWrapping="Wrap" />
             </StackPanel>
             <Rectangle
@@ -62,7 +62,7 @@
                     Content="Ref :"
                     FontSize="14" />
                 <TextBox
-                    x:Name="TBEmail"
+                    x:Name="TBRef"
                     Width="180"
                     Height="21"
                     GotFocus="TBEmail_GotFocus"
@@ -75,7 +75,7 @@
                     Height="30"
                     Content="Categorie :"
                     FontSize="14" />
-                <ComboBox x:Name="cbCategorieChoix" Margin="0,20,0,0" SelectedIndex="0"  ItemsSource="{Binding LesCategories}" DisplayMemberPath="NomCategorie" SelectedValuePath="IdCategorie" HorizontalAlignment="Left" VerticalAlignment="Top" Width="180" Height="30" RenderTransformOrigin="0.5,0.5" Grid.ColumnSpan="2">
+                <ComboBox x:Name="cbCategorieChoix" SelectedIndex="0"  ItemsSource="{Binding LesCategories}" DisplayMemberPath="NomCategorie" SelectedValuePath="ID_Categorie" Width="160" Height="23" RenderTransformOrigin="0.5,0.5">
                     <ComboBox.RenderTransform>
                         <TransformGroup>
                             <ScaleTransform ScaleY="1"/>
