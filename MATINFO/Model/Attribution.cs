@@ -156,7 +156,7 @@ namespace MATINFO.Model
         public void Delete()
         {
             DataAccess accesBD = new DataAccess();
-            String requete = "DELETE FROM attribution WHERE dateattribution = " + this.dateAttribution + " AND idmateriel = " + this.IdMateriel + " AND idpersonnels = " + this.IdPersonnels;
+            String requete = "DELETE FROM attribution WHERE dateattribution = \'" + this.dateAttribution + "\' AND idmateriel = \'" + this.IdMateriel + "\' AND idpersonnels = \'" + this.IdPersonnels + "\'";
             accesBD.SetData(requete);
         }
 
