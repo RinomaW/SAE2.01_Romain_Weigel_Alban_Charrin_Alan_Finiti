@@ -28,7 +28,8 @@
             Grid.Column="0"
             Margin="10,10,5,300"
             DataContext="{Binding SelectedItem, ElementName=lvMateriel}"
-            ItemsSource="{Binding Path=LesAttributions}">
+            ItemsSource="{Binding Path=LesAttributions}"
+            SelectionMode="Multiple">
             <ListView.View>
                 <GridView>
                     <GridViewColumn
@@ -57,7 +58,8 @@
                 Grid.Column="2"
                 Margin="10,300,75,10"
                 DataContext="{Binding SelectedItem, ElementName=lvCategorie}"
-                ItemsSource="{Binding LesMateriels}">
+                ItemsSource="{Binding LesMateriels}"
+                SelectionMode="Multiple">
                 <ListView.View>
                     <GridView>
                         <GridViewColumn
@@ -73,7 +75,7 @@
                 Height="275"
                 Margin="10,10,75,300"
                 VerticalAlignment="Top"
-                ItemsSource="{Binding LesCategories}">
+                ItemsSource="{Binding LesCategories}" SelectionMode="Multiple">
                 <ListView.View>
                     <GridView>
                         <GridViewColumn
