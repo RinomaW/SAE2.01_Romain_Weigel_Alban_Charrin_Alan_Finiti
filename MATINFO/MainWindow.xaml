@@ -128,6 +128,7 @@
                 </Style>
             </Button.Resources>
         </Button>
+        <Button x:Name="BTRefresh" Content="Rafraichir" HorizontalAlignment="Left" Margin="750,389,0,0" VerticalAlignment="Top" Click="BTRefresh_Click"/>
 
     </Grid>
 </Window>
