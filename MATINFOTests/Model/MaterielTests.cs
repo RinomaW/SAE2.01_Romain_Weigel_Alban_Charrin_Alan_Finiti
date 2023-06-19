@@ -11,52 +11,37 @@ namespace MATINFO.Model.Tests
     [TestClass()]
     public class MaterielTests
     {
-        [TestMethod()]
-        public void MaterielTest()
+        [TestInitialize()]
+        public void Init()
         {
-            Assert.Fail();
+
         }
 
         [TestMethod()]
-        public void MaterielTest1()
+        [ExpectedException(typeof(ArgumentException), "Code barre non unique")]
+        public void PersonnelTestCodeBarreUnique()
         {
-            Assert.Fail();
+            Materiel m1 = new Materiel("XXFGXXURXG123IUEHI53WAOUHSE52XES523EXE","MCKANAR","AE-6AYHEIDB",3);
+            Materiel m2 = new Materiel("XXFGXXURXG123IUEHI53WAOUHSE52XES523EXE", "MCKANAR", "AE-6AYHEIDB", 3);
         }
 
         [TestMethod()]
-        public void MaterielTest2()
+        [ExpectedException(typeof(ArgumentException), "pas de numéro ou de caractère spéciaux (~#-_) dans le code barre")]
+        public void PersonnelTestCodeBarreCaracSpe()
         {
-            Assert.Fail();
+            Materiel m1 = new Materiel("XXFGXXURXG123IUEHI5((((3WAOUHSE52XES523EXE", "MCKANAR", "AE-6AYHEIDB", 3);
+            Materiel m2 = new Materiel("XXFGXXURXG123IUEHI53~~~~~~WAOUHSE52XES523EXE", "MCKANAR", "AE-6AYHEIDB", 3);
+            Materiel m3 = new Materiel("XXFGXXURXG123IUEHI53######WAOUHSE52XES523EXE", "MCKANAR", "AE-6AYHEIDB", 3);
+            Materiel m4 = new Materiel("XXFGXXURXG123IUEHI53------WAOUHSE52XES523EXE", "MCKANAR", "AE-6AYHEIDB", 3);
+            Materiel m5 = new Materiel("XXFGXXURXG123IUEHI53______WAOUHSE52XES523EXE", "MCKANAR", "AE-6AYHEIDB", 3);
+            Materiel m6 = new Materiel("XXFGXXURXG123IUEHI53{{{{{WAOUHSE52XES523EXE", "MCKANAR", "AE-6AYHEIDB", 3);
+            Materiel m7 = new Materiel("XXFGXXURXG123IUEHI53[[[[[WAOUHSE52XES523EXE", "MCKANAR", "AE-6AYHEIDB", 3);
+            Materiel m8 = new Materiel("XXFGXXURXG123IUEHI53||||WAOUHSE52XES523EXE", "MCKANAR", "AE-6AYHEIDB", 3);
+            Materiel m9 = new Materiel("XXFGXXURXG123IUEHI53)))))))WAOUHSE52XES523EXE", "MCKANAR", "AE-6AYHEIDB", 3);
+            Materiel m10 = new Materiel("XXFGXXURXG123IUEHI5]]]]]]3WAOUHSE52XES523EXE", "MCKANAR", "AE-6AYHEIDB", 3);
+            Materiel m11 = new Materiel("XXFGXXURXG123IUEHI53WAOUHSE5}}}}}}}2XES523EXE", "MCKANAR", "AE-6AYHEIDB", 3);
         }
 
-        [TestMethod()]
-        public void CreateTest()
-        {
-            Assert.Fail();
-        }
-
-        [TestMethod()]
-        public void DeleteTest()
-        {
-            Assert.Fail();
-        }
-
-        [TestMethod()]
-        public void FindAllTest()
-        {
-            Assert.Fail();
-        }
-
-        [TestMethod()]
-        public void UpdateTest()
-        {
-            Assert.Fail();
-        }
-
-        [TestMethod()]
-        public void FindTest()
-        {
-            Assert.Fail();
-        }
+       
     }
 }

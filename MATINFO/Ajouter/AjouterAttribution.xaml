@@ -43,7 +43,7 @@
                     Height="52"
                     GotFocus="TBComm_GotFocus"
                     Text="Commentaire"
-                    TextWrapping="Wrap" TextChanged="TBComm_TextChanged" VerticalAlignment="Bottom" />
+                    TextWrapping="Wrap"  VerticalAlignment="Bottom" />
             </StackPanel>
             <Rectangle Height="15" Stroke="#00000000" Width="100"/>
             <StackPanel
