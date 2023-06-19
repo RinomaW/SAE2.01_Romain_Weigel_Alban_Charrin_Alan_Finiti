@@ -1,6 +1,7 @@
 ﻿using MATINFO.Model;
 using MATINFO.ModifierFichier;
 using MATINFO.Mofifier;
+using MATINFO.Supprimer;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -71,28 +72,19 @@ namespace MATINFO
         {
             if (lvAttribution.SelectedItem != null)
             {
-               
-                SupprimerAttribution supprA = new SupprimerAttribution(lvAttribution.SelectedItem as Attribution);
-                MessageBoxResult ConfDel = MessageBox.Show("Êtes vous sûr de vouloir supprimer l'attribution selectionnée", "Suppression", MessageBoxButton.YesNo);
-                if (ConfDel==MessageBoxResult.Yes)
-                {
-
-                }
-                else
-                {
-
-                }
+                DoubleClicSupprimer supprimerAttributionFinal = new DoubleClicSupprimer(lvAttribution.SelectedItem as Attribution);
+                supprimerAttributionFinal.Show();
 
             }
             else if (lvMateriel.SelectedItem != null)
             {
-                SupprimerMateriel supprM = new SupprimerMateriel(lvMateriel.SelectedItem as Materiel);
-                supprM.Show();
+                DoubleClicSupprimer supprimerMaterielFinal = new DoubleClicSupprimer(lvMateriel.SelectedItem as Materiel);
+                supprimerMaterielFinal .Show();
             }
             else if (lvCategorie.SelectedItem != null)
             {
-                SupprimerCategorie supprC = new SupprimerCategorie(lvCategorie.SelectedItem as Categorie);
-                supprC.Show();
+                DoubleClicSupprimer supprimerCategorieFinal = new DoubleClicSupprimer(lvCategorie.SelectedItem as Categorie);
+                supprimerCategorieFinal.Show();
             }
             else
             {

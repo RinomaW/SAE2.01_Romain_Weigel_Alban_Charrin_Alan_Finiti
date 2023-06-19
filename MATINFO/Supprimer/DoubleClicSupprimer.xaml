@@ -1,0 +1,27 @@
+﻿<Window x:Class="MATINFO.Supprimer.DoubleClicSupprimer"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MATINFO.Supprimer"
+        mc:Ignorable="d"
+        Title="DoubleClicSupprimer" Height="200" Width="400" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Label Content="Êtes-vous sûr de vouloir supprimer l'élément sélectionné ?" HorizontalAlignment="Left" Margin="40,38,0,0" VerticalAlignment="Top" Height="52" Width="380"/>
+        <Button Content="Oui" HorizontalAlignment="Left" Margin="98,132,0,0" VerticalAlignment="Top" Height="35" Width="60" Click="Button_Click">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="10" />
+                </Style>
+            </Button.Resources>
+        </Button>
+        <Button Content="Non" HorizontalAlignment="Left" Margin="245,132,0,0" VerticalAlignment="Top" Height="35" Width="60" Click="Button_Click_1">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="10" />
+                </Style>
+            </Button.Resources>
+        </Button>
+
+    </Grid>
+</Window>
