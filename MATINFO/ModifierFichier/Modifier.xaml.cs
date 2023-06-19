@@ -68,7 +68,7 @@ namespace MATINFO
         private void BTPerso_Click(object sender, RoutedEventArgs e)
         {
             this.Visibility = Visibility.Hidden;
-            ModifierPersonnelFinal modifierPersonnelFinal = new ModifierPersonnelFinal(p);
+            ModifierPersonnel modifierPersonnelFinal = new ModifierPersonnel();
             modifierPersonnelFinal.Show();
         }
 
