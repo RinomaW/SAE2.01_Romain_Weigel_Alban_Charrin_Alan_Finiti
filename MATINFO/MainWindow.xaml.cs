@@ -149,11 +149,5 @@ namespace MATINFO
             }
         }
 
-        private void BTRefresh_Click(object sender, RoutedEventArgs e)
-        {
-            lvAttribution.Items.Refresh();
-            lvCategorie.Items.Refresh();
-            lvMateriel.Items.Refresh();
-        }
     }
 }
