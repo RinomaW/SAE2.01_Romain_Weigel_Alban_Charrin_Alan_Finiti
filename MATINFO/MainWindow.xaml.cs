@@ -1,4 +1,6 @@
 ﻿using MATINFO.Model;
+using MATINFO.ModifierFichier;
+using MATINFO.Mofifier;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -37,8 +39,27 @@ namespace MATINFO
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            ActionModifier Modifier = new ActionModifier();
-            Modifier.Show();
+            if(lvAttribution.SelectedItem!= null) 
+            {
+                ModifierAttributionFinal modifierAttributionFinal = new ModifierAttributionFinal(lvAttribution.SelectedItem as Attribution);
+                modifierAttributionFinal.Show();
+            }
+            else if (lvMateriel.SelectedItem != null)
+            {
+                ModifierMaterielFinal modifierMaterielFinal = new ModifierMaterielFinal(lvMateriel.SelectedItem as Materiel);
+                modifierMaterielFinal.Show();
+            }
+            else if(lvCategorie.SelectedItem != null)
+            {
+                ModifierCategorieFinal modifierCategorieFinal = new ModifierCategorieFinal(lvCategorie.SelectedItem as Categorie);
+                modifierCategorieFinal.Show();
+            }
+            else
+            {
+                ActionModifier Modifier = new ActionModifier();
+                Modifier.Show();
+            }
+            
         }
 
         private void lvCategorie_SelectionChanged(object sender, SelectionChangedEventArgs e)

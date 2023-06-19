@@ -21,14 +21,20 @@ namespace MATINFO
     /// </summary>
     public partial class SupprimerCategorie : Window
     {
+        public Categorie Categorie { get; set; }
         public SupprimerCategorie()
         {
             InitializeComponent();
         }
 
-        string texte;
+        public SupprimerCategorie(Categorie categorie)
+        {
+            InitializeComponent();
+            this.Categorie = categorie;
+            lvSupprimerCategorie.SelectedItem= categorie;
+        }
 
-        
+
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {

@@ -16,7 +16,6 @@ namespace MATINFO.Model
         private int idCategorie;
         private int iD_Materiel;
         ObservableCollection<Attribution> lesAttributions;
-        private IDCATEGORIES_[] iDCATEGORIES_s;
         public Materiel()
         {
         }
@@ -131,7 +130,7 @@ namespace MATINFO.Model
         {
             
             DataAccess accesBD = new DataAccess();
-            String requete = "DELETE FROM Materiel WHERE nommateriel = " + this.NomMateriel + ", reference = " + this.Reference + ", codebarre = " + this.CodeBarre + ", idcategorie = " + this.IdCategorie;
+            String requete = "DELETE FROM Materiel WHERE nommateriel = \"" + this.NomMateriel + "\" , reference = \"" + this.Reference + "\" , codebarre = \"" + this.CodeBarre + "\" , idcategorie = \"" + this.IdCategorie + "\"";
             accesBD.SetData(requete);
         }
 

@@ -19,46 +19,29 @@ using System.Windows.Shapes;
 namespace MATINFO
 {
 
-    /// <summary>
-    /// Logique d'interaction pour AjouterAttribution.xaml
-    /// </summary>
+    
     public partial class SupprimerMateriel : Window
     {
-        
+        public Materiel Materiel { get; set; }
         public SupprimerMateriel()
         {
             InitializeComponent();
         }
+        public SupprimerMateriel(Materiel materiel)
+        {
+            InitializeComponent();
+            this.Materiel = materiel;
+            lvMaterielSelectionne.SelectedItem = materiel;
+        }
 
-      // private void TBNom_GotFocus(object sender, RoutedEventArgs e)
-      // {
-      //    this.TBNom.Text = "";
-      // }
-      //
-      // private void TBEmail_GotFocus(object sender, RoutedEventArgs e)
-      // {
-      //    this.TBEmail.Text = "";
-      // }
-      //
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            //string texte = "insert into attribution values ('" +id perso ""+"" id materiel ""+"" DateOnly"" + ",'"+tbtexte +"')";
-            //DataAccess accesBD = new DataAccess();
-            //String requete = 
-            //accesBD.SetData(requete);
             Materiel materielSupprimee = lvMaterielSelectionne.SelectedItem as Materiel;
             materielSupprimee.Delete();
         }
 
-        private void TBComm_TextChanged(object sender, TextChangedEventArgs e)
-        {
-            //string tbtexte = TBComm.Text;
+        
 
-        }
-
-       //private void TBPrenom_GotFocus(object sender, RoutedEventArgs e)
-       //{
-       //    this.TBPrenom.Text = "";
-       //}
+       
     }
 }
