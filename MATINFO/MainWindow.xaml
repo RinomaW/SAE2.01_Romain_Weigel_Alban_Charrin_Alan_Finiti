@@ -50,7 +50,7 @@
                 </GridView>
             </ListView.View>
         </ListView>
-        
+
         <Grid Grid.Column="2">
             <ListView
                 x:Name="lvMateriel"
@@ -84,21 +84,23 @@
                 </ListView.View>
             </ListView>
         </Grid>
-        <Button x:Name="BTAjout2"
+        <Button
+            x:Name="BTAjout2"
             Width="100"
             Height="25"
             Margin="10,0,0,225"
             HorizontalAlignment="Left"
             VerticalAlignment="Bottom"
             Click="BTAjout"
-            Content="Ajouter">
+            Content=" Ajouter">
             <Button.Resources>
                 <Style TargetType="Border">
                     <Setter Property="CornerRadius" Value="10" />
                 </Style>
             </Button.Resources>
         </Button>
-        <Button x:Name="BTModi2"
+        <Button
+            x:Name="BTModi2"
             Width="100"
             Height="25"
             Margin="10,0,0,195"
@@ -113,7 +115,8 @@
                 </Style>
             </Button.Resources>
         </Button>
-        <Button x:Name="BTSuppr2"
+        <Button
+            x:Name="BTSuppr2"
             Width="100"
             Height="25"
             Margin="10,0,0,165"
