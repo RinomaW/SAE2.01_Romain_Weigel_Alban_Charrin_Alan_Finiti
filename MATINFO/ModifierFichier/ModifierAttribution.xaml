@@ -39,7 +39,7 @@
                             Header="Référence" />
                         <GridViewColumn
                             Width="140"
-                            DisplayMemberBinding="{Binding IdCategorie}"
+                            DisplayMemberBinding="{Binding UneCategorie.NomCategorie}"
                             Header="Nom Catégorie" />
                     </GridView>
                 </ListView.View>
@@ -62,11 +62,11 @@
                             Header="Date" />
                         <GridViewColumn
                             Width="115"
-                            DisplayMemberBinding="{Binding Path=IdMateriel}"
+                            DisplayMemberBinding="{Binding Path=UnMateriel.NomMateriel}"
                             Header="Nom matériel" />
                         <GridViewColumn
                             Width="110"
-                            DisplayMemberBinding="{Binding Path=IdPersonnel}"
+                            DisplayMemberBinding="{Binding Path=UnPersonnel.NomPersonnel}"
                             Header="Nom personnel" />
                     </GridView>
                 </ListView.View>
