@@ -54,6 +54,7 @@ namespace MATINFO.Supprimer
             {
                 this.DoubleClicMateriel.Delete();
             }
+            this.Visibility = Visibility.Hidden;
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
